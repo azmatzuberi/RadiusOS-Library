@@ -1,0 +1,5 @@
+{
+  "versions": [
+    { "fieldLibraryVersion": "field-library-v9", "minRadiusOS": "0.0", "maxRadiusOS": "1.8" }
+  ]
+}
