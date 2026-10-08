@@ -1001,7 +1001,7 @@
         "LUNGS AND AIRWAYS",
         "LUNG BASES"
       ],
-      "absorbs": ["pleura", "airways"],
+      "absorbs": ["pleura"],
       "terms": [
         "lung",
         "lungs",
@@ -2491,7 +2491,6 @@
         "fetal cardiac activity",
         "fetal heart rate",
         "fetal heart motion",
-        "fetal cardiac activity",
         "fetal biometry",
         "biometry",
         "biparietal diameter",
