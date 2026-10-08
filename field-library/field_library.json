@@ -577,6 +577,7 @@
         "OROPHARYNX",
         "HYPOPHARYNX",
         "LARYNX",
+        "AIRWAY",
         "MUCOSAL SURFACES",
         "AERODIGESTIVE TRACT",
         "UPPER AIRWAY"
@@ -628,12 +629,11 @@
       ],
       "defaultNormalPlaceholder": "[Normal and symmetric without mucosal lesion, mass, or abscess. The airway is patent and the vocal cords are symmetric.]"
     },
-    "thyroid_and_parathyroid": {
-      "label": "THYROID AND PARATHYROID",
+    "thyroid": {
+      "label": "THYROID",
       "headerAliases": [
         "THYROID",
         "THYROID GLAND",
-        "PARATHYROID GLANDS",
         "THYROID BED",
         "THYROID UPTAKE"
       ],
@@ -667,17 +667,12 @@
         "cold nodule",
         "hot nodule",
         "hyperfunctioning nodule",
-        "parathyroid",
-        "parathyroid gland",
-        "parathyroid adenoma",
-        "sestamibi",
         "thyroiditis",
         "hashimoto thyroiditis",
         "hypothyroidism",
         "hyperthyroidism",
         "graves disease",
         "thyroglossal duct cyst",
-        "parathyroid glands",
         "cold nodules",
         "hot nodules",
         "hyperfunctioning nodules",
@@ -687,7 +682,6 @@
         "total thyroidectomy",
         "hemithyroidectomy",
         "thyroid lobectomy",
-        "parathyroidectomy",
         "ti-rads 1",
         "ti-rads one",
         "tirads 1",
@@ -720,7 +714,28 @@
         "tr five",
         "acr ti-rads"
       ],
-      "defaultNormalPlaceholder": "[Normal in size without discrete nodule. No enlarged parathyroid gland is identified.]"
+      "defaultNormalPlaceholder": "[Normal in size without discrete nodule.]"
+    },
+    "parathyroid_glands": {
+      "label": "PARATHYROID GLANDS",
+      "headerAliases": [
+        "PARATHYROID",
+        "PARATHYROID GLANDS"
+      ],
+      "terms": [
+        "parathyroid",
+        "parathyroid gland",
+        "parathyroid adenoma",
+        "sestamibi",
+        "parathyroid glands",
+        "parathyroidectomy",
+        "parathyroid scan",
+        "hyperparathyroidism",
+        "parathyroid hyperplasia",
+        "ectopic parathyroid",
+        "parathyroid adenomas"
+      ],
+      "defaultNormalPlaceholder": "[No enlarged parathyroid gland is identified.]"
     },
     "soft_tissues_of_the_neck": {
       "label": "SOFT TISSUES OF THE NECK",
@@ -732,7 +747,7 @@
         "NECK BASE",
         "BRACHIAL PLEXUS"
       ],
-      "absorbs": ["pharynx_and_larynx", "salivary_glands_and_oral_cavity", "thyroid_and_parathyroid", "carotid_and_vertebral_arteries"],
+      "absorbs": ["pharynx_and_larynx", "salivary_glands_and_oral_cavity", "carotid_and_vertebral_arteries"],
       "terms": [
         "soft tissue neck",
         "soft tissues of the neck",
@@ -763,7 +778,10 @@
         "CAROTID ARTERIES",
         "VERTEBRAL ARTERIES",
         "EXTRACRANIAL CAROTID ARTERIES",
-        "CERVICAL VASCULATURE"
+        "CERVICAL VASCULATURE",
+        "CAROTID DUPLEX",
+        "CAROTID ULTRASOUND",
+        "CAROTID DOPPLER"
       ],
       "terms": [
         "carotid",
@@ -789,7 +807,28 @@
         "nascet",
         "nascet criteria",
         "ecst",
-        "nascet stenosis"
+        "nascet stenosis",
+        "grayscale",
+        "spectral analysis",
+        "spectral broadening",
+        "turbulence",
+        "aliasing",
+        "color flow aliasing",
+        "end diastolic velocity",
+        "peak velocity",
+        "peak and end velocities",
+        "antegrade",
+        "antegrade flow",
+        "luminal narrowing",
+        "luminal diameter narrowing",
+        "plaquing",
+        "atherosclerotic plaquing",
+        "hemodynamically significant stenosis",
+        "common carotid artery",
+        "external carotid artery",
+        "cca",
+        "ica",
+        "eca"
       ],
       "defaultNormalPlaceholder": "[Patent without hemodynamically significant stenosis, occlusion, or dissection.]"
     },
@@ -1083,6 +1122,7 @@
         "TRACHEA",
         "CENTRAL AIRWAYS"
       ],
+      "absorbs": ["thyroid", "parathyroid_glands"],
       "terms": [
         "airway",
         "airways",
@@ -1363,7 +1403,8 @@
         "diaphragmatic hernias",
         "hemidiaphragms",
         "diaphragms",
-        "chest ports"
+        "chest ports",
+        "sternotomy"
       ],
       "defaultNormalPlaceholder": "[No mass, fluid collection, or subcutaneous emphysema. The diaphragms are normal in position and contour without free subdiaphragmatic air.]"
     },
@@ -1702,6 +1743,7 @@
         "accessory spleen",
         "splenule",
         "splenic hilum",
+        "splenic calcifications",
         "upper pole of the spleen",
         "splenic upper pole",
         "lower pole of the spleen",
@@ -2322,6 +2364,7 @@
         "prostatectomy",
         "radical prostatectomy",
         "transurethral resection of the prostate",
+        "radiation seeds",
         "turp",
         "pi-rads 1",
         "pi-rads one",
@@ -2448,7 +2491,7 @@
         "fetal cardiac activity",
         "fetal heart rate",
         "fetal heart motion",
-        "cardiac activity",
+        "fetal cardiac activity",
         "fetal biometry",
         "biometry",
         "biparietal diameter",
@@ -3365,7 +3408,6 @@
         "arthroplasties",
         "total knee arthroplasty",
         "tka",
-        "sternotomy",
         "total hip arthroplasty",
         "tha",
         "reverse shoulder arthroplasty",
@@ -3431,6 +3473,7 @@
         "atherosclerosis",
         "atherosclerotic disease",
         "atherosclerotic calcification",
+        "Ascending aortic aneurysm",
         "aorta",
         "aortic",
         "abdominal aorta",
@@ -3446,6 +3489,7 @@
         "smv",
         "celiac artery",
         "celiac axis",
+        "flow voids",
         "inferior mesenteric artery",
         "splenic vein",
         "splenic artery",
@@ -3550,9 +3594,9 @@
       "defaultNormalPlaceholder": "[Patent without deep or superficial venous thrombosis.]"
     },
     "inferior_vena_cava": {
-      "label": "IVC",
+      "label": "INFERIOR VENA CAVA",
       "headerAliases": [
-        "INFERIOR VENA CAVA",
+        "IVC",
         "INFERIOR VENA CAVA AND FILTER"
       ],
       "terms": [
@@ -3875,7 +3919,10 @@
         "coronal reformats",
         "sagittal reformats",
         "multiplanar reformats",
-        "slice thickness"
+        "slice thickness",
+        "duplex imaging",
+        "standard duplex imaging",
+        "duplex ultrasound"
       ],
       "defaultNormalPlaceholder": "[Standard protocol images were obtained.]"
     },
