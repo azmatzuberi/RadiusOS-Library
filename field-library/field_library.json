@@ -59,7 +59,7 @@
         "thalamic",
         "corpus callosum",
         "callosal",
-        "splenium  of the corpus callosum",
+        "splenium of the corpus callosum",
         "genu of the corpus callosum",
         "cerebellum",
         "cerebellar",
@@ -163,7 +163,6 @@
         "cerebral perfusion",
         "brain death scan",
         "tau pet",
-        "cortical thickness",
         "temporal pole",
         "frontal pole",
         "occipital pole",
@@ -184,7 +183,6 @@
         "SULCI AND VENTRICLES"
       ],
       "terms": [
-        "ventricles",
         "cerebral ventricle",
         "cerebral ventricles",
         "lateral ventricle",
@@ -203,18 +201,12 @@
         "shunt catheter",
         "choroid plexus",
         "csf spaces",
-        "sulci",
         "basal cistern",
         "basal cisterns",
-        "cistern",
-        "cisterns",
         "quadrigeminal plate cistern",
         "suprasellar cistern",
         "prepontine cistern",
         "cisterna magna",
-        "ventricle",
-        "csf space",
-        "sulcus",
         "choroid plexuses",
         "frontal horns",
         "occipital horns",
@@ -294,7 +286,6 @@
         "subdural",
         "subdural space",
         "subdural hematoma",
-        "epidural",
         "epidural space",
         "subarachnoid",
         "subarachnoid space",
@@ -305,8 +296,6 @@
         "meningeal",
         "leptomeningeal",
         "pachymeningeal",
-        "dura",
-        "dural",
         "extra-axial collections",
         "subdural spaces",
         "epidural spaces",
@@ -350,7 +339,6 @@
         "tension pneumocephalus",
         "subdural empyema",
         "intracranial hypotension",
-        "brain sagging",
         "subdural effusion",
         "interhemispheric fissure"
       ],
@@ -922,8 +910,6 @@
         "paranasal sinuses",
         "sinus disease",
         "sinus opacification",
-        "mucosal thickening",
-        "air-fluid level",
         "maxillary sinus",
         "maxillary sinuses",
         "antrum of highmore",
@@ -948,8 +934,6 @@
         "mastoid air cells",
         "mastoid effusion",
         "osteomeatal complexes",
-        "air-fluid levels",
-        "air fluid level",
         "mastoid effusions",
         "functional endoscopic sinus surgery",
         "antrostomy",
@@ -993,11 +977,8 @@
         "fungal sinusitis",
         "allergic fungal sinusitis",
         "invasive fungal sinusitis",
-        "fungal ball",
         "opacified sinus",
         "opacified sinuses",
-        "complete opacification",
-        "partial opacification",
         "sclerotic sinus walls",
         "mastoiditis",
         "coalescent mastoiditis",
@@ -2256,7 +2237,6 @@
         "blunt cerebrovascular injury",
         "string sign",
         "string of beads",
-        "near occlusion",
         "carotid near occlusion",
         "high resistance waveform",
         "low resistance waveform",
@@ -2327,7 +2307,9 @@
         "brachiocephalic stenosis",
         "subclavian stenosis",
         "carotid-subclavian bypass",
-        "carotid-carotid bypass"
+        "carotid-carotid bypass",
+        "near occlusion of the internal carotid artery",
+        "near occlusion of the carotid"
       ],
       "defaultNormalPlaceholder": "[Patent without hemodynamically significant stenosis, occlusion, or dissection.]"
     },
@@ -2714,14 +2696,11 @@
         "old granulomatous disease",
         "prior granulomatous disease",
         "pulmonary scarring",
-        "parenchymal scarring",
-        "linear scarring",
         "lung scarring",
         "apical scarring",
         "subpleural scarring",
         "pulmonary fibrosis",
         "idiopathic pulmonary fibrosis",
-        "fibrotic changes",
         "fibrotic lung disease",
         "usual interstitial pneumonia",
         "uip pattern",
@@ -2777,8 +2756,6 @@
         "lung lesions",
         "pulmonary lesions",
         "spiculated nodule",
-        "spiculated mass",
-        "lobulated nodule",
         "lung cancer",
         "lung carcinoma",
         "lung malignancy",
@@ -2883,7 +2860,6 @@
         "mac lung disease",
         "upper lobe predominant",
         "lower lobe predominant",
-        "peripheral predominant",
         "basilar predominant",
         "subpleural distribution",
         "upper lobe",
@@ -2927,7 +2903,6 @@
         "enlarging nodule",
         "enlarging nodules",
         "volume doubling time",
-        "solid component",
         "ground-glass component",
         "lung cancer screening",
         "lung screening",
@@ -3309,7 +3284,7 @@
         "sleeve pneumonectomy",
         "bronchiolitis obliterans syndrome"
       ],
-      "defaultNormalPlaceholder": "[Patent to the segmental level. The trachea is midline and normal in caliber without bronchial wall thickening or bronchiectasis.]"
+      "defaultNormalPlaceholder": "[The trachea is midline and normal in caliber.]"
     },
     "mediastinum": {
       "label": "MEDIASTINUM",
@@ -3442,7 +3417,7 @@
         "sternotomy mediastinitis",
         "mediastinal staging"
       ],
-      "defaultNormalPlaceholder": "[Normal in contour and width without lymphadenopathy. ]"
+      "defaultNormalPlaceholder": "[Normal in contour and width without obvious lymphadenopathy.]"
     },
     "hila": {
       "label": "HILA",
@@ -3519,7 +3494,6 @@
         "hilar region mass",
         "hilar lung mass",
         "central lung mass",
-        "central mass",
         "central perihilar mass",
         "garland triad",
         "lambda sign",
@@ -3597,7 +3571,6 @@
         "hypertrophic cardiomyopathy",
         "cardiac hypertrophy",
         "ventricular hypertrophy",
-        "concentric hypertrophy",
         "atrial enlargement",
         "atrial dilatation",
         "biatrial enlargement",
@@ -3687,7 +3660,6 @@
         "myocardial edema",
         "myocarditis",
         "late gadolinium enhancement",
-        "delayed enhancement",
         "myocardial enhancement",
         "myocardial viability",
         "viable myocardium",
@@ -3731,7 +3703,9 @@
         "inferolateral wall",
         "anteroseptal wall",
         "apical septum",
-        "basal septum"
+        "basal septum",
+        "concentric left ventricular hypertrophy",
+        "myocardial delayed enhancement"
       ],
       "defaultNormalPlaceholder": "[No cardiomegaly. ]"
     },
@@ -3828,8 +3802,6 @@
         "intermediate probability",
         "very low probability",
         "normal perfusion scan",
-        "segmental defect",
-        "segmental defects",
         "subsegmental defect",
         "subsegmental defects",
         "wedge-shaped defect",
@@ -3838,7 +3810,9 @@
         "macroaggregated albumin",
         "xenon ventilation",
         "dtpa aerosol",
-        "aerosol ventilation"
+        "aerosol ventilation",
+        "segmental filling defect",
+        "segmental filling defects"
       ],
       "defaultNormalPlaceholder": "[Normal in caliber without filling defect to suggest pulmonary embolism.]"
     },
@@ -4193,7 +4167,6 @@
         "suspicious calcifications",
         "nipple",
         "areolar complex",
-        "skin thickening",
         "nipple retraction",
         "nipple discharge",
         "breast implant",
@@ -4409,7 +4382,10 @@
         "cooper ligament",
         "cooper's ligaments",
         "coopers ligaments",
-        "nipple areolar complex"
+        "nipple areolar complex",
+        "breast skin thickening",
+        "spiculated breast mass",
+        "skin thickening of the breast"
       ],
       "defaultNormalPlaceholder": "[No suspicious mass, architectural distortion, or suspicious calcifications. The skin, nipples, and any implants are normal.]"
     },
@@ -4506,7 +4482,6 @@
         "fatty liver",
         "steatotic liver",
         "focal fatty infiltration",
-        "focal fat",
         "focal fatty sparing",
         "fat sparing",
         "geographic steatosis",
@@ -4633,7 +4608,6 @@
         "microwave ablation",
         "radiofrequency ablation of the liver",
         "hepatic ablation",
-        "ablation cavity",
         "liver span",
         "liver size",
         "craniocaudal span",
@@ -4657,7 +4631,8 @@
         "trisegmentectomy",
         "hepatobiliary phase",
         "hepatobiliary contrast",
-        "gadoxetic acid"
+        "gadoxetic acid",
+        "liver hypertrophy"
       ],
       "defaultNormalPlaceholder": "[Normal in size and contour without focal lesion. The hepatic vasculature is patent.]"
     },
@@ -4917,7 +4892,6 @@
         "pancreatic pseudoaneurysm",
         "splenic vein thrombosis",
         "splenic vein occlusion",
-        "vascular encasement",
         "celiac encasement",
         "pancreatic cancer staging",
         "borderline resectable",
@@ -5351,7 +5325,6 @@
         "parapelvic cyst",
         "parapelvic cysts",
         "renal cortical thickness",
-        "cortical thinning",
         "renal cortical thinning",
         "renal size",
         "renal length",
@@ -5577,7 +5550,6 @@
         "ileus",
         "pneumatosis intestinalis",
         "target sign",
-        "mural enhancement",
         "diverticular abscess",
         "pericolic fat stranding",
         "appendiceal mucocele",
@@ -6021,15 +5993,10 @@
         "uterine rupture",
         "uterine artery",
         "uterine artery embolization",
-        "post embolization",
         "retained products of conception",
         "uterine perforation",
-        "cervical stenosis",
-        "cervical mass",
         "cervical cancer",
         "cervical carcinoma",
-        "cervical thickening",
-        "cervical canal",
         "endocervical polyp",
         "myometrial thickening",
         "myometrial invasion",
@@ -6051,7 +6018,8 @@
         "uterine dimensions",
         "uterine size",
         "arcuate vessels",
-        "arcuate calcification"
+        "arcuate calcification",
+        "cervical os stenosis"
       ],
       "defaultNormalPlaceholder": "[Normal in size without obvious masses.]"
     },
@@ -6322,7 +6290,6 @@
         "prostatic base",
         "prostatic capsule",
         "prostate biopsy",
-        "post biopsy hemorrhage",
         "periprostatic fat",
         "periprostatic venous plexus"
       ],
@@ -6359,7 +6326,6 @@
         "salpingitis",
         "tubal dilatation",
         "dilated fallopian tube",
-        "dilated tube",
         "tubal clips",
         "salpingectomy",
         "tubal ring",
@@ -6521,7 +6487,6 @@
         "testicular fracture",
         "testicular trauma",
         "testicular infarct",
-        "segmental infarct",
         "testicular atrophy",
         "atrophic testis",
         "testicular volume",
@@ -7076,12 +7041,9 @@
         "vertebra plana",
         "retropulsed fragment",
         "retropulsed bone fragment",
-        "bone marrow edema",
-        "diffuse marrow replacement",
         "heterogeneous marrow",
         "red marrow reconversion",
         "marrow reconversion",
-        "fatty marrow",
         "endplate changes",
         "endplate edema",
         "endplate sclerosis",
@@ -7217,7 +7179,6 @@
         "posterior ligamentous complex",
         "plc injury",
         "ligamentous injury",
-        "ligament injury",
         "posterior cervical soft tissues",
         "epidural lipomatosis",
         "epidural phlegmon",
@@ -7239,9 +7200,7 @@
         "postoperative seroma",
         "postoperative fluid collection",
         "dural leak",
-        "csf collection",
-        "surgical bed",
-        "surgical tract"
+        "csf collection"
       ],
       "defaultNormalPlaceholder": "[Paraspinal soft tissues are unremarkable.]"
     },
@@ -7379,7 +7338,6 @@
         "dural sac",
         "spinal canal",
         "canal stenosis",
-        "central stenosis",
         "epidural fat",
         "epidural collection",
         "neural foramen",
@@ -8345,7 +8303,6 @@
         "metacarpal subluxation",
         "metacarpal head erosion",
         "erosive arthropathy",
-        "central erosions",
         "gull wing",
         "gull-wing deformity",
         "chondrocalcinosis of the hand",
@@ -8369,7 +8326,6 @@
         "glass foreign body",
         "wooden foreign body",
         "needle fragment",
-        "gas in the soft tissues",
         "soft tissue swelling of the finger",
         "finger swelling",
         "digit swelling",
@@ -8690,7 +8646,6 @@
         "reverse segond",
         "arcuate sign",
         "fibular head fracture",
-        "marrow contusion",
         "pivot shift injury",
         "kissing contusions",
         "cartilage defect",
@@ -8868,7 +8823,6 @@
         "fibular fracture",
         "fibula fracture",
         "tibia and fibula fracture",
-        "segmental fracture",
         "comminuted tibial fracture",
         "open tibial fracture",
         "tibial plafond fracture",
@@ -9543,7 +9497,6 @@
         "brodie abscess",
         "sequestrum",
         "involucrum",
-        "sinus tract",
         "bone abscess",
         "osteitis",
         "osteomyelitis with abscess",
@@ -9593,7 +9546,11 @@
         "bony spur",
         "bone spur",
         "periostitis",
-        "osteoblastic activity"
+        "osteoblastic activity",
+        "bone marrow edema",
+        "diffuse marrow replacement",
+        "fatty marrow",
+        "marrow contusion"
       ],
       "defaultNormalPlaceholder": "[No acute fracture or aggressive osseous lesion. ]"
     },
@@ -9611,8 +9568,6 @@
         "joint effusion",
         "joint space",
         "osteoarthritis",
-        "erosion",
-        "erosions",
         "chondrocalcinosis",
         "articular cartilage",
         "cartilage",
@@ -9770,7 +9725,8 @@
         "nonerosive arthritis",
         "deforming arthritis",
         "joint deformity",
-        "joint contracture"
+        "joint contracture",
+        "erosions of the joint"
       ],
       "defaultNormalPlaceholder": "[Joint spaces are preserved without effusion, erosion, or chondral defect.]"
     },
@@ -9964,7 +9920,6 @@
         "IMPLANTS AND HARDWARE"
       ],
       "terms": [
-        "implant",
         "implants",
         "hardware",
         "orthopedic hardware",
@@ -10479,7 +10434,8 @@
         "vascular malformation",
         "venous malformation",
         "obstructive thrombus",
-        "total occlusion"
+        "total occlusion",
+        "vascular encasement"
       ],
       "defaultNormalPlaceholder": "[No aortic aneurysm. No significant atherosclerotic disease.]"
     },
@@ -10617,7 +10573,6 @@
         "drug-coated balloon",
         "drug-eluting stent",
         "catheter-directed thrombolysis",
-        "in-stent stenosis",
         "neointimal hyperplasia",
         "intimal hyperplasia",
         "pseudoaneurysm of the femoral artery",
@@ -10627,12 +10582,10 @@
         "retroperitoneal hematoma after access",
         "access site complication",
         "vascular closure device",
-        "compression device",
         "arteriotomy site",
         "femoral access site",
         "brachial access site",
         "radial access site",
-        "peripheral arterial",
         "lower extremity arteries",
         "upper extremity arteries",
         "extremity arteries",
@@ -11075,7 +11028,8 @@
         "vein graft occlusion",
         "vein graft aneurysm",
         "stent fracture",
-        "stent occlusion"
+        "stent occlusion",
+        "in-stent stenosis"
       ],
       "defaultNormalPlaceholder": "[Patent and well positioned. No endoleak, restenosis, or thrombosis.]"
     },
@@ -11288,7 +11242,6 @@
         "castleman",
         "castleman disease",
         "sarcoidosis",
-        "lymphoma",
         "hodgkin lymphoma",
         "non-hodgkin lymphoma",
         "lymphomatous involvement",
@@ -11576,7 +11529,6 @@
         "three-phase bone scan",
         "flow phase",
         "blood pool phase",
-        "delayed phase",
         "delayed images",
         "early images",
         "perfusion phase",
@@ -11596,7 +11548,6 @@
         "wedge-shaped perfusion defect",
         "stripe sign",
         "prima facie",
-        "normal perfusion",
         "normal ventilation",
         "lung shunt fraction",
         "lung shunt",
@@ -11610,7 +11561,6 @@
         "non-obstructive pattern",
         "nonobstructive pattern",
         "indeterminate pattern",
-        "cortical defect",
         "gastric emptying scan",
         "delayed gastric emptying",
         "rapid gastric emptying",
@@ -11673,7 +11623,6 @@
         "h/cl ratio",
         "perugini",
         "perugini grade",
-        "focal on diffuse",
         "homogeneous uptake",
         "pertechnetate",
         "datscan",
@@ -11856,7 +11805,6 @@
         "hepatic artery embolization",
         "portal vein embolization",
         "portal vein embolization with hypertrophy",
-        "liver hypertrophy",
         "future liver remnant",
         "thermal ablation",
         "ablation zone",
@@ -12278,9 +12226,7 @@
       "headerAliases": [
         "IV CONTRAST",
         "CONTRAST ADMINISTRATION",
-        "CONTRAST AND FLUOROSCOPY",
-        "FLUOROSCOPY TIME",
-        "RADIATION DOSE"
+        "CONTRAST AND FLUOROSCOPY"
       ],
       "terms": [
         "intravenous contrast",
@@ -12293,10 +12239,6 @@
         "iodinated contrast",
         "contrast reaction",
         "contrast volume",
-        "fluoroscopy time",
-        "dose area product",
-        "air kerma",
-        "radiation dose",
         "rectal contrast",
         "positive oral contrast",
         "negative oral contrast",
@@ -12324,7 +12266,41 @@
         "definity contrast",
         "definity bubbles"
       ],
-      "defaultNormalPlaceholder": "[Administered intravenously without immediate adverse reaction. Fluoroscopy time and radiation dose are documented in the procedural record.]"
+      "defaultNormalPlaceholder": "[Administered intravenously without immediate adverse reaction.]"
+    },
+    "radiation_dose_and_fluoroscopy_time": {
+      "label": "RADIATION DOSE AND FLUOROSCOPY TIME",
+      "headerAliases": [
+        "FLUOROSCOPY TIME",
+        "RADIATION DOSE",
+        "FLUOROSCOPY TIME AND RADIATION DOSE",
+        "RADIATION EXPOSURE",
+        "FLUOROSCOPY AND RADIATION DOSE"
+      ],
+      "terms": [
+        "fluoroscopy time",
+        "dose area product",
+        "air kerma",
+        "radiation dose",
+        "fluoroscopic time",
+        "total fluoroscopy time",
+        "fluoroscopy time was",
+        "cumulative air kerma",
+        "reference air kerma",
+        "kerma area product",
+        "cumulative dose",
+        "cumulative radiation dose",
+        "total radiation dose",
+        "patient radiation dose",
+        "radiation exposure",
+        "effective dose",
+        "estimated effective dose",
+        "dose length product",
+        "total dose length product",
+        "fluoroscopy minutes",
+        "fluoroscopy dose"
+      ],
+      "defaultNormalPlaceholder": "[Fluoroscopy time and radiation dose are documented in the procedural record.]"
     },
     "comparison": {
       "label": "COMPARISON",
@@ -12338,6 +12314,7 @@
         "compared to",
         "prior study",
         "prior exam",
+        "prior report",
         "no prior",
         "no comparison",
         "outside study"
@@ -12496,7 +12473,6 @@
         "post-surgical changes",
         "postoperative changes",
         "post-operative changes",
-        "status post",
         "surgical site",
         "surgical cavity",
         "resection cavity",
@@ -12697,10 +12673,7 @@
         "impression",
         "in summary",
         "in conclusion",
-        "impressions",
-        "intracranial abnormality",
-        "cardiopulmonary process",
-        "cardiopulmonary abnormality"
+        "impressions"
       ],
       "defaultNormalPlaceholder": "[Dictated by the interpreting radiologist.]"
     },
@@ -12709,6 +12682,7 @@
       "headerAliases": [
         "RECOMMENDATIONS",
         "FOLLOW-UP",
+        "RECOMMEND",
         "FOLLOW-UP RECOMMENDATIONS"
       ],
       "terms": [
