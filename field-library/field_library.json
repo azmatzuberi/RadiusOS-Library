@@ -2553,7 +2553,7 @@
         "supraclavicular lymphadenopathy",
         "cervical lymph node chain"
       ],
-      "defaultNormalPlaceholder": "[No enlarged or morphologically abnormal cervical lymph nodes. No necrotic nodes or extranodal extension.]"
+      "defaultNormalPlaceholder": "[No enlarged or morphologically abnormal cervical lymph nodes.]"
     },
     "lungs": {
       "label": "LUNGS",
@@ -2917,7 +2917,7 @@
         "respiratory distress syndrome",
         "lung aeration"
       ],
-      "defaultNormalPlaceholder": "[Clear and well aerated bilaterally. No consolidation, edema, atelectasis, or suspicious pulmonary nodule.]"
+      "defaultNormalPlaceholder": "[Clear and well aerated. No focal consolidation, edema, or atelectasis.]"
     },
     "pleura": {
       "label": "PLEURA",
@@ -3413,7 +3413,7 @@
         "sternotomy mediastinitis",
         "mediastinal staging"
       ],
-      "defaultNormalPlaceholder": "[Normal in contour and width without obvious lymphadenopathy.]"
+      "defaultNormalPlaceholder": "[Normal contour without widening.]"
     },
     "hila": {
       "label": "HILA",
@@ -3495,7 +3495,7 @@
         "lambda sign",
         "potato nodes"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and contour bilaterally without hilar mass or adenopathy.]"
+      "defaultNormalPlaceholder": "[Normal in size and contour without mass.]"
     },
     "heart": {
       "label": "HEART",
@@ -3703,7 +3703,7 @@
         "concentric left ventricular hypertrophy",
         "myocardial delayed enhancement"
       ],
-      "defaultNormalPlaceholder": "[No cardiomegaly. ]"
+      "defaultNormalPlaceholder": "[No cardiomegaly.]"
     },
     "pulmonary_arteries": {
       "label": "PULMONARY ARTERIES",
@@ -3810,7 +3810,7 @@
         "segmental filling defect",
         "segmental filling defects"
       ],
-      "defaultNormalPlaceholder": "[Normal in caliber without filling defect to suggest pulmonary embolism.]"
+      "defaultNormalPlaceholder": "[Normal in caliber.]"
     },
     "thoracic_aorta_and_great_vessels": {
       "label": "THORACIC AORTA AND GREAT VESSELS",
@@ -3943,7 +3943,7 @@
         "chest wall collaterals",
         "chest wall venous collaterals"
       ],
-      "defaultNormalPlaceholder": "[Normal in caliber without aneurysm or dissection. The great vessels are patent and normal in caliber.]"
+      "defaultNormalPlaceholder": "[Normal in caliber without aneurysm.]"
     },
     "chest_wall": {
       "label": "CHEST WALL",
@@ -4383,7 +4383,7 @@
         "spiculated breast mass",
         "skin thickening of the breast"
       ],
-      "defaultNormalPlaceholder": "[No suspicious mass, architectural distortion, or suspicious calcifications. The skin, nipples, and any implants are normal.]"
+      "defaultNormalPlaceholder": "[No suspicious mass or calcification. The skin and nipples are normal.]"
     },
     "liver": {
       "label": "LIVER",
@@ -4598,7 +4598,7 @@
         "gadoxetic acid",
         "liver hypertrophy"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and contour without focal lesion. The hepatic vasculature is patent.]"
+      "defaultNormalPlaceholder": "[Normal in size and contour without focal lesion.]"
     },
     "biliary_system": {
       "label": "BILIARY SYSTEM",
@@ -4963,7 +4963,8 @@
         "liver spleen scan",
         "heat damaged red blood cell",
         "splenic uptake",
-        "functional asplenia"
+        "functional asplenia",
+        "splenic calcification"
       ],
       "defaultNormalPlaceholder": "[Normal in size and appearance without focal lesion.]"
     },
@@ -5049,7 +5050,7 @@
         "periadrenal fat",
         "periadrenal stranding"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and configuration bilaterally without nodule or mass.]"
+      "defaultNormalPlaceholder": "[Normal in size and configuration without nodule or mass.]"
     },
     "kidneys": {
       "label": "KIDNEYS",
@@ -5330,7 +5331,7 @@
         "renal biopsy",
         "post biopsy renal"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and appearance bilaterally without hydronephrosis, calculus, or solid mass.]"
+      "defaultNormalPlaceholder": "[Normal in size and appearance without hydronephrosis, calculus, or solid mass.]"
     },
     "bowel": {
       "label": "BOWEL",
@@ -6007,7 +6008,7 @@
         "endometrial hyperintensity",
         "endometrial enhancement"
       ],
-      "defaultNormalPlaceholder": "[Normal in thickness.]"
+      "defaultNormalPlaceholder": "[Normal in thickness for menstrual status.]"
     },
     "ovaries": {
       "label": "OVARIES",
@@ -6108,7 +6109,7 @@
         "ovarian cystectomy",
         "ovarian lesion"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and appearance bilaterally.]"
+      "defaultNormalPlaceholder": "[Normal in size and appearance.]"
     },
     "prostate": {
       "label": "PROSTATE",
@@ -6278,7 +6279,7 @@
         "uterosacral ligaments",
         "parametrial invasion"
       ],
-      "defaultNormalPlaceholder": "[Normal bilaterally without mass or hydrosalpinx.]"
+      "defaultNormalPlaceholder": "[Normal without mass or hydrosalpinx.]"
     },
     "cul_de_sac": {
       "label": "CUL-DE-SAC",
@@ -6436,7 +6437,7 @@
         "penile prosthesis",
         "corpus cavernosum"
       ],
-      "defaultNormalPlaceholder": "[Testes are normal in size bilaterally. No mass, hydrocele, or varicocele.]"
+      "defaultNormalPlaceholder": "[Testes are normal in size. No mass, hydrocele, or varicocele.]"
     },
     "fetus": {
       "label": "FETUS",
@@ -6572,7 +6573,7 @@
         "t sign",
         "intrauterine pregnancy"
       ],
-      "defaultNormalPlaceholder": "[Single live intrauterine gestation in cephalic presentation. Cardiac activity is present with a normal rate and biometry is consistent with the stated gestational age. Visualized fetal anatomy appears normal.]"
+      "defaultNormalPlaceholder": "[Single live intrauterine gestation with normal cardiac activity. Biometry is consistent with the stated gestational age. Visualized fetal anatomy appears normal.]"
     },
     "placenta_and_amniotic_fluid": {
       "label": "PLACENTA AND AMNIOTIC FLUID",
@@ -6735,7 +6736,7 @@
         "maternal gallbladder",
         "maternal adnexal mass"
       ],
-      "defaultNormalPlaceholder": "[Cervix is normal in length and closed. The maternal adnexa are normal bilaterally without mass.]"
+      "defaultNormalPlaceholder": "[Cervix is normal in length and closed. The maternal adnexa are normal without mass.]"
     },
     "spine": {
       "label": "SPINE",
@@ -7233,7 +7234,7 @@
         "nucleoplasty",
         "provocative discography"
       ],
-      "defaultNormalPlaceholder": "[Preserved disc spaces. ]"
+      "defaultNormalPlaceholder": "[Preserved disc spaces.]"
     },
     "spinal_canal_and_cord": {
       "label": "SPINAL CANAL AND CORD",
@@ -7405,7 +7406,7 @@
         "dorsal column stimulator",
         "stimulator leads"
       ],
-      "defaultNormalPlaceholder": "[The spinal cord is normal in caliber without compression. The central canal and neural foramina are patent without stenosis or nerve root impingement.]"
+      "defaultNormalPlaceholder": "[No significant canal or neural foraminal stenosis.]"
     },
     "shoulder": {
       "label": "SHOULDER",
@@ -7599,7 +7600,7 @@
         "sternoclavicular dislocation",
         "pectoralis major tear"
       ],
-      "defaultNormalPlaceholder": "[Normal alignment without fracture or dislocation. The rotator cuff and labrum are intact and the acromioclavicular joint is normal.]"
+      "defaultNormalPlaceholder": "[Normal alignment without fracture or dislocation. The acromioclavicular joint is normal.]"
     },
     "humerus": {
       "label": "HUMERUS",
@@ -8619,7 +8620,7 @@
         "lateral compartment",
         "intercondylar notch"
       ],
-      "defaultNormalPlaceholder": "[Normal alignment with preserved joint spaces and no effusion. The menisci, cruciate and collateral ligaments, and extensor mechanism are intact.]"
+      "defaultNormalPlaceholder": "[Normal alignment with preserved joint spaces and no effusion.]"
     },
     "femur": {
       "label": "FEMUR",
@@ -9472,7 +9473,7 @@
         "fatty marrow",
         "marrow contusion"
       ],
-      "defaultNormalPlaceholder": "[No acute fracture or aggressive osseous lesion. ]"
+      "defaultNormalPlaceholder": "[No acute fracture or aggressive osseous lesion.]"
     },
     "joints_and_cartilage": {
       "label": "JOINTS AND CARTILAGE",
@@ -10618,7 +10619,7 @@
         "common iliac artery velocity",
         "common iliac artery peak systolic velocity"
       ],
-      "defaultNormalPlaceholder": "[No aortic aneurysm. No significant atherosclerotic disease.]"
+      "defaultNormalPlaceholder": "[No aneurysm. Patent without hemodynamically significant stenosis or occlusion.]"
     },
     "veins": {
       "label": "VEINS",
@@ -10883,7 +10884,7 @@
         "ovarian vein syndrome",
         "pelvic varices"
       ],
-      "defaultNormalPlaceholder": "[Patent without deep or superficial venous thrombosis.]"
+      "defaultNormalPlaceholder": "[Patent without thrombosis.]"
     },
     "inferior_vena_cava": {
       "label": "INFERIOR VENA CAVA",
@@ -11081,7 +11082,7 @@
         "tips stent",
         "tips patency"
       ],
-      "defaultNormalPlaceholder": "[Patent and well positioned. No endoleak, restenosis, or thrombosis.]"
+      "defaultNormalPlaceholder": "[Patent and well positioned without restenosis or thrombosis.]"
     },
     "transplant": {
       "label": "TRANSPLANT",
@@ -11164,7 +11165,7 @@
         "reduced-size graft",
         "allograft nephropathy"
       ],
-      "defaultNormalPlaceholder": "[Normal in size with patent vasculature. No perigraft collection or hydronephrosis.]"
+      "defaultNormalPlaceholder": "[Normal in appearance with patent vasculature and no perigraft collection.]"
     },
     "lymph_nodes": {
       "label": "LYMPH NODES",
@@ -11706,7 +11707,7 @@
         "midazolam",
         "monitored anesthesia care"
       ],
-      "defaultNormalPlaceholder": "[Informed written consent was obtained and a time out was performed. Moderate sedation was administered with continuous monitoring by nursing staff.]"
+      "defaultNormalPlaceholder": "[Informed consent was obtained and a time out was performed.]"
     },
     "procedure": {
       "label": "PROCEDURE",
@@ -12327,7 +12328,7 @@
         "definity contrast",
         "definity bubbles"
       ],
-      "defaultNormalPlaceholder": "[Administered intravenously without immediate adverse reaction.]"
+      "defaultNormalPlaceholder": "[Contrast was administered without immediate adverse reaction.]"
     },
     "radiation_dose_and_fluoroscopy_time": {
       "label": "RADIATION DOSE AND FLUOROSCOPY TIME",
