@@ -170,7 +170,7 @@
         "small vessel ischemic disease",
         "small vessel disease"
       ],
-      "defaultNormalPlaceholder": "[No acute infarct, hemorrhage, mass, or mass effect. Gray-white differentiation is preserved. No midline shift.]"
+      "defaultNormalPlaceholder": "[No acute infarct, hemorrhage, mass, or mass effect.]"
     },
     "ventricles_and_csf_spaces": {
       "label": "VENTRICLES AND CSF SPACES",
@@ -269,7 +269,7 @@
         "mega cisterna magna",
         "enlarged cisterna magna"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and configuration without hydrocephalus. The basal cisterns are patent and the sulci are appropriate for age.]"
+      "defaultNormalPlaceholder": "[Normal in size and configuration without hydrocephalus.]"
     },
     "extra_axial_spaces_and_meninges": {
       "label": "EXTRA-AXIAL SPACES AND MENINGES",
@@ -342,7 +342,7 @@
         "subdural effusion",
         "interhemispheric fissure"
       ],
-      "defaultNormalPlaceholder": "[No extra-axial fluid collection or hemorrhage. No abnormal meningeal thickening.]"
+      "defaultNormalPlaceholder": "[No extra-axial fluid collection or hemorrhage.]"
     },
     "pituitary_and_sella": {
       "label": "PITUITARY AND SELLA",
@@ -410,7 +410,7 @@
         "parasellar region",
         "suprasellar region"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and appearance. No sellar, suprasellar, or pineal region mass.]"
+      "defaultNormalPlaceholder": "[Normal in size and appearance. No sellar, suprasellar, or pineal mass.]"
     },
     "cranial_nerves": {
       "label": "CRANIAL NERVES",
@@ -463,7 +463,6 @@
         "neurovascular compression",
         "vascular loop",
         "cranial nerve palsy",
-        "cranial neuropathy",
         "facial nerve palsy",
         "bell palsy",
         "bell's palsy",
@@ -632,7 +631,7 @@
         "transverse sinus thrombosis",
         "sigmoid sinus thrombosis"
       ],
-      "defaultNormalPlaceholder": "[Normal in course and caliber without aneurysm, stenosis, or occlusion. The dural venous sinuses are patent.]"
+      "defaultNormalPlaceholder": "[Normal in course and caliber without aneurysm, stenosis, or occlusion.]"
     },
     "skull_and_scalp": {
       "label": "SKULL AND SCALP",
@@ -735,7 +734,6 @@
         "meningocele",
         "cephalocele",
         "scalp laceration",
-        "scalp swelling",
         "scalp contusion",
         "subgaleal hematoma",
         "subperiosteal hematoma",
@@ -757,7 +755,7 @@
         "raindrop skull",
         "salt and pepper skull"
       ],
-      "defaultNormalPlaceholder": "[Intact without fracture or aggressive osseous lesion. No scalp swelling, hematoma, or radiopaque foreign body.]"
+      "defaultNormalPlaceholder": "[Intact without fracture or aggressive osseous lesion. No scalp hematoma or radiopaque foreign body.]"
     },
     "orbits": {
       "label": "ORBITS",
@@ -801,7 +799,6 @@
         "preseptal cellulitis",
         "postseptal cellulitis",
         "periorbital cellulitis",
-        "periorbital swelling",
         "periorbital edema",
         "subperiosteal abscess",
         "orbital abscess",
@@ -882,7 +879,7 @@
         "coloboma",
         "staphyloma"
       ],
-      "defaultNormalPlaceholder": "[Globes are intact and normal in contour. The optic nerves, extraocular muscles, lacrimal glands, and orbital fat are normal without mass, fracture, or inflammatory change.]"
+      "defaultNormalPlaceholder": "[Globes are intact. The optic nerves, extraocular muscles, lacrimal glands, and orbital fat are normal without mass, fracture, or inflammatory change.]"
     },
     "paranasal_sinuses_and_mastoids": {
       "label": "PARANASAL SINUSES AND MASTOIDS",
@@ -1015,7 +1012,7 @@
         "nasal packing",
         "sinus stent"
       ],
-      "defaultNormalPlaceholder": "[Clear and well aerated without mucosal thickening or air-fluid level. The nasal cavity is patent with a midline septum and the mastoid air cells are clear.]"
+      "defaultNormalPlaceholder": "[Clear and well aerated without mucosal thickening or air-fluid level.]"
     },
     "temporal_bones": {
       "label": "TEMPORAL BONES",
@@ -1182,9 +1179,6 @@
         "transverse temporal bone fracture",
         "otic capsule",
         "perilymph fistula",
-        "sensorineural hearing loss",
-        "conductive hearing loss",
-        "pulsatile tinnitus",
         "external auditory canal stenosis",
         "external auditory canal atresia",
         "aural atresia",
@@ -1192,7 +1186,7 @@
         "surfer's ear",
         "keratosis obturans"
       ],
-      "defaultNormalPlaceholder": "[Normal with an intact ossicular chain and a clear middle ear. The internal auditory canals and inner ear structures are normal without mass.]"
+      "defaultNormalPlaceholder": "[Normal with an intact ossicular chain and a clear middle ear.]"
     },
     "facial_bones": {
       "label": "FACIAL BONES",
@@ -1260,7 +1254,6 @@
         "noe fracture",
         "panfacial fracture",
         "midface fracture",
-        "facial trauma",
         "facial fracture",
         "alveolar ridge",
         "alveolar bone",
@@ -1389,7 +1382,7 @@
         "mandibular reconstruction plate",
         "fibula free flap"
       ],
-      "defaultNormalPlaceholder": "[Intact and normally aligned without acute fracture. No periapical lucency or aggressive dental disease.]"
+      "defaultNormalPlaceholder": "[Intact and normally aligned without acute fracture.]"
     },
     "salivary_glands_and_oral_cavity": {
       "label": "SALIVARY GLANDS AND ORAL CAVITY",
@@ -1510,7 +1503,7 @@
         "salivary gland uptake",
         "sialorrhea"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and appearance without calculus, mass, or inflammatory change.]"
+      "defaultNormalPlaceholder": "[Normal in appearance without calculus, mass, or inflammatory change.]"
     },
     "pharynx_and_larynx": {
       "label": "PHARYNX AND LARYNX",
@@ -1579,7 +1572,6 @@
         "tonsillar carcinoma",
         "peritonsillar abscess",
         "peritonsillar phlegmon",
-        "tonsillitis",
         "adenoid hypertrophy",
         "adenoidal hypertrophy",
         "adenoid pad",
@@ -1619,7 +1611,6 @@
         "cricoid cartilage",
         "thyroid cartilage fracture",
         "laryngeal fracture",
-        "laryngeal trauma",
         "laryngeal cartilage",
         "laryngeal cartilages",
         "laryngeal calcification",
@@ -1655,7 +1646,6 @@
         "pharyngeal constrictors",
         "pharyngeal mass",
         "pharyngeal lesion",
-        "pharyngeal fullness",
         "pharyngeal mucosal space",
         "pharyngeal airway",
         "oropharyngeal airway",
@@ -1664,7 +1654,6 @@
         "nasopharyngeal mass",
         "nasopharyngeal carcinoma",
         "nasopharyngeal cancer",
-        "nasopharyngeal fullness",
         "nasopharyngeal soft tissue",
         "nasopharyngeal tonsil",
         "torus tubarius",
@@ -1710,7 +1699,7 @@
         "head and neck cancer",
         "head and neck squamous cell carcinoma"
       ],
-      "defaultNormalPlaceholder": "[Normal and symmetric without mucosal lesion, mass, or abscess. The airway is patent and the vocal cords are symmetric.]"
+      "defaultNormalPlaceholder": "[The airway is patent.]"
     },
     "thyroid": {
       "label": "THYROID",
@@ -1989,8 +1978,8 @@
       ],
       "defaultNormalPlaceholder": "[No enlarged parathyroid gland is identified.]"
     },
-    "soft_tissues_of_the_neck": {
-            "label": "NECK",
+    "neck": {
+      "label": "NECK",
       "headerAliases": [
         "NECK SOFT TISSUES",
         "NECK",
@@ -2121,7 +2110,7 @@
         "nuchal soft tissues",
         "nuchal ligament"
       ],
-      "defaultNormalPlaceholder": "[No mass, fluid collection, or abnormal soft tissue thickening. The deep neck spaces and brachial plexus are normal.]"
+      "defaultNormalPlaceholder": "[No mass, fluid collection, or abnormal soft tissue thickening. The deep neck spaces are normal.]"
     },
     "carotid_and_vertebral_arteries": {
       "label": "CAROTID AND VERTEBRAL ARTERIES",
@@ -2522,7 +2511,7 @@
         "supraclavicular lymphadenopathy",
         "cervical lymph node chain"
       ],
-      "defaultNormalPlaceholder": "[No enlarged or morphologically abnormal cervical lymph nodes.]"
+      "defaultNormalPlaceholder": "[No pathologically enlarged cervical lymph nodes.]"
     },
     "lungs": {
       "label": "LUNGS",
@@ -2866,18 +2855,14 @@
         "native lungs",
         "lung volume reduction surgery",
         "lung resection",
-        "nodule follow-up",
         "nodule follow up",
         "nodule growth",
         "enlarging nodule",
         "enlarging nodules",
         "volume doubling time",
         "ground-glass component",
-        "lung cancer screening",
-        "lung screening",
         "low dose ct chest",
         "low-dose ct chest",
-        "lung cancer screening ct",
         "pack year",
         "pack years",
         "nodule assessment",
@@ -3128,7 +3113,6 @@
         "airway stent",
         "airway stents",
         "airway patency",
-        "bronchitis",
         "cylindrical bronchiectasis",
         "cystic bronchiectasis",
         "varicose bronchiectasis",
@@ -3382,7 +3366,7 @@
         "sternotomy mediastinitis",
         "mediastinal staging"
       ],
-      "defaultNormalPlaceholder": "[Normal contour without widening.]"
+      "defaultNormalPlaceholder": "[Unremarkable.]"
     },
     "hila": {
       "label": "HILA",
@@ -3464,7 +3448,7 @@
         "lambda sign",
         "potato nodes"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and contour without mass.]"
+      "defaultNormalPlaceholder": "[Unremarkable.]"
     },
     "heart": {
       "label": "HEART",
@@ -3942,7 +3926,6 @@
         "diaphragms",
         "chest ports",
         "sternotomy",
-        "chest wall swelling",
         "chest wall hematoma",
         "chest wall abscess",
         "chest wall lesion",
@@ -4323,7 +4306,6 @@
         "category c",
         "category d",
         "mammographic density",
-        "screening mammogram",
         "diagnostic mammogram",
         "bi-rads assessment",
         "bi-rads category",
@@ -4352,7 +4334,7 @@
         "spiculated breast mass",
         "skin thickening of the breast"
       ],
-      "defaultNormalPlaceholder": "[No suspicious mass or calcification. The skin and nipples are normal.]"
+      "defaultNormalPlaceholder": "[No suspicious mass or calcification.]"
     },
     "liver": {
       "label": "LIVER",
@@ -4505,7 +4487,6 @@
         "hepatic masses",
         "hepatic laceration",
         "liver laceration",
-        "hepatic trauma",
         "subcapsular hematoma",
         "subcapsular hepatic hematoma",
         "perihepatic fluid",
@@ -4567,7 +4548,7 @@
         "gadoxetic acid",
         "liver hypertrophy"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and contour without focal lesion.]"
+      "defaultNormalPlaceholder": "[Unremarkable.]"
     },
     "biliary_system": {
       "label": "BILIARY SYSTEM",
@@ -4727,7 +4708,7 @@
         "cholecystectomy bed",
         "gallbladder fossa fluid"
       ],
-      "defaultNormalPlaceholder": "[Gallbladder is normal without calculus or wall thickening. The bile ducts are normal in caliber without intrahepatic or extrahepatic biliary dilatation.]"
+      "defaultNormalPlaceholder": "[Gallbladder is normal without calculus or wall thickening. No biliary dilatation.]"
     },
     "pancreas": {
       "label": "PANCREAS",
@@ -4830,7 +4811,6 @@
         "disconnected duct",
         "pancreatic transection",
         "pancreatic laceration",
-        "pancreatic trauma",
         "pancreatic stent",
         "pancreaticojejunostomy",
         "pancreaticojejunal anastomosis",
@@ -4843,7 +4823,7 @@
         "pancreatic enzymes",
         "necrotic collection"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and contour without mass, ductal dilatation, or peripancreatic inflammation.]"
+      "defaultNormalPlaceholder": "[No ductal dilatation or peripancreatic inflammation.]"
     },
     "spleen": {
       "label": "SPLEEN",
@@ -4878,7 +4858,6 @@
         "splenic rupture",
         "splenic hematoma",
         "splenic injury",
-        "splenic trauma",
         "splenic abscess",
         "splenic cyst",
         "splenic hemangioma",
@@ -4935,7 +4914,7 @@
         "functional asplenia",
         "splenic calcification"
       ],
-      "defaultNormalPlaceholder": "[Normal in size and appearance without focal lesion.]"
+      "defaultNormalPlaceholder": "[No splenomegaly.]"
     },
     "adrenal_glands": {
       "label": "ADRENAL GLANDS",
@@ -5147,7 +5126,6 @@
         "renal hematoma",
         "perinephric hematoma",
         "subcapsular renal hematoma",
-        "renal trauma",
         "renal injury",
         "urinoma",
         "nutcracker syndrome",
@@ -5348,7 +5326,6 @@
         "esophageal wall thickening",
         "hiatal hernia",
         "type 1 hiatal hernia",
-        "constipation",
         "duodenum",
         "duodenal",
         "duodenal sweep",
@@ -5503,7 +5480,7 @@
         "gastrointestinal stromal tumor",
         "small bowel tumor"
       ],
-      "defaultNormalPlaceholder": "[Normal in caliber and wall thickness without obstruction, inflammatory change, pneumatosis, or free intraperitoneal air. The appendix is normal where visualized.]"
+      "defaultNormalPlaceholder": "[Normal in caliber and wall thickness without obstruction or inflammatory change.]"
     },
     "peritoneum_and_mesentery": {
       "label": "PERITONEUM AND MESENTERY",
@@ -5768,7 +5745,7 @@
         "radiation proctitis",
         "pelvic fistula"
       ],
-      "defaultNormalPlaceholder": "[The urinary bladder is normally distended with a thin wall and no intraluminal lesion. The visualized reproductive organs are normal in size and appearance without mass. No free fluid, collection, or pelvic mass.]"
+      "defaultNormalPlaceholder": "[No pelvic mass or collection.]"
     },
     "bladder": {
       "label": "BLADDER",
@@ -5967,7 +5944,6 @@
         "endometrial canal",
         "endometrial lining",
         "endometrial stripe thickness",
-        "postmenopausal bleeding",
         "tamoxifen changes",
         "saline infusion",
         "endometrial ablation",
@@ -5977,7 +5953,7 @@
         "endometrial hyperintensity",
         "endometrial enhancement"
       ],
-      "defaultNormalPlaceholder": "[Normal in thickness for menstrual status.]"
+      "defaultNormalPlaceholder": "[Normal in thickness for menstrual status and age.]"
     },
     "ovaries": {
       "label": "OVARIES",
@@ -6212,7 +6188,6 @@
         "complex adnexal mass",
         "adnexal abscess",
         "adnexal hematoma",
-        "adnexal tenderness",
         "pyosalpinx",
         "salpingitis",
         "tubal dilatation",
@@ -6364,8 +6339,6 @@
         "scrotal wall thickening",
         "scrotal edema",
         "scrotal abscess",
-        "scrotal swelling",
-        "scrotal pain",
         "scrotal hernia",
         "inguinoscrotal hernia",
         "dilated pampiniform plexus",
@@ -6376,7 +6349,6 @@
         "tunica vaginalis fluid",
         "testicular rupture",
         "testicular fracture",
-        "testicular trauma",
         "testicular infarct",
         "testicular atrophy",
         "atrophic testis",
@@ -6947,7 +6919,6 @@
         "atypical hemangioma",
         "vertebral metastasis",
         "vertebral metastases",
-        "mixed lytic and sclerotic",
         "ivory vertebra",
         "picture frame vertebra",
         "vertebral lesion",
@@ -7190,7 +7161,6 @@
         "disc contacting the cord",
         "cord flattening",
         "disc abnormality",
-        "discogenic pain",
         "discitis",
         "disc infection",
         "disc space infection",
@@ -7738,7 +7708,6 @@
         "ulnar nerve",
         "ulnar nerve thickening",
         "ulnar nerve subluxation",
-        "ulnar neuropathy",
         "radial tunnel",
         "posterior interosseous nerve",
         "median nerve",
@@ -7823,7 +7792,6 @@
         "forearm abscess",
         "forearm soft tissue mass",
         "forearm mass",
-        "forearm swelling",
         "forearm muscle",
         "forearm muscles",
         "forearm flexors",
@@ -8006,7 +7974,6 @@
         "wrist fracture",
         "wrist dislocation",
         "wrist instability",
-        "wrist pain",
         "wrist mass",
         "wrist soft tissue mass",
         "wrist lesion",
@@ -8218,8 +8185,6 @@
         "wooden foreign body",
         "needle fragment",
         "soft tissue swelling of the finger",
-        "finger swelling",
-        "digit swelling",
         "trigger thumb",
         "metacarpal head",
         "metacarpal shaft",
@@ -8243,8 +8208,7 @@
         "hand soft tissue",
         "hand bones",
         "hand fracture",
-        "hand injury",
-        "hand trauma"
+        "hand injury"
       ],
       "defaultNormalPlaceholder": "[Intact without fracture, dislocation, or aggressive osseous lesion.]"
     },
@@ -8376,7 +8340,6 @@
         "gluteus medius tear",
         "gluteus minimus tear",
         "gluteal tendon tear",
-        "greater trochanteric pain syndrome",
         "trochanteric bursitis",
         "greater trochanteric bursitis",
         "iliopsoas bursitis",
@@ -9151,7 +9114,6 @@
         "foot cellulitis",
         "foot soft tissue gas",
         "foot soft tissue swelling",
-        "foot swelling",
         "foot edema",
         "foot foreign body",
         "plantar foreign body",
@@ -10423,7 +10385,6 @@
         "anterior tibial",
         "posterior tibial",
         "peroneal artery",
-        "claudication",
         "triphasic waveform",
         "femoral arteries",
         "popliteal arteries",
@@ -10434,10 +10395,7 @@
         "peripheral arterial disease",
         "peripheral vascular disease",
         "lower extremity arterial disease",
-        "intermittent claudication",
         "critical limb ischemia",
-        "rest pain",
-        "tissue loss",
         "femoropopliteal occlusion",
         "femoropopliteal disease",
         "aortoiliac occlusive disease",
@@ -11354,7 +11312,7 @@
         "chylous leak",
         "chylous ascites"
       ],
-      "defaultNormalPlaceholder": "[No enlarged or morphologically abnormal lymph nodes by size criteria.]"
+      "defaultNormalPlaceholder": "[No pathologically enlarged lymph nodes.]"
     },
     "radiotracer_distribution": {
       "label": "RADIOTRACER DISTRIBUTION",
