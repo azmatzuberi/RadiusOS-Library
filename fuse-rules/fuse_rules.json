@@ -1,0 +1,1885 @@
+{
+ "$schema": "./fuse_rules.schema.json",
+ "version": 1,
+ "retired_rule_ids": [],
+ "_readme": {
+  "purpose": "RadiusOS clinical insight rules. Dictation stream -> trigger -> measurement + context -> recommendation text.",
+  "how_it_works": [
+   "1. If any trigger phrase is heard, the rule activates.",
+   "2. Extract the size nearest the trigger and convert to mm (cm x 10). If several lesions are dictated, use the 'measure.use' value (largest or most_suspicious).",
+   "3. Read context words (from dictation, clinical history, or order indication) to fill each context key.",
+   "4. Walk 'recommendations' top to bottom; the first one whose 'when' conditions all match is output.",
+   "5. If a key listed in 'ask_if_missing' is not found, show that prompt instead of guessing.",
+   "6. Match the longest phrase first (e.g. 'bosniak 2f' before 'bosniak 2').",
+   "7. An empty 'when': {} is the default and always matches; keep it last.",
+   "8. 'defaults' fills a context key when nothing is dictated.",
+   "9. A rule with 'derive' computes a context key (e.g. TI-RADS level, Bosniak class) from dictated features when the key itself was not dictated."
+  ],
+  "condition_keys": {
+   "size_gt / size_gte / size_lt / size_lte": "lesion size in mm",
+   "solid_gt / solid_gte / solid_lt / solid_lte": "solid component size in mm (part-solid nodules)",
+   "age_gt / age_gte / age_lt / age_lte": "patient age in years",
+   "any other key": "must equal the context value, e.g. \"menopause\": \"post\"",
+   "hu_gt / hu_gte / hu_lt / hu_lte": "attenuation in Hounsfield units"
+  },
+  "status": "DRAFT - every threshold and output string must be reviewed by a radiologist before clinical use.",
+  "version": "2026.11.06b"
+ },
+ "shared_context": {
+  "menopause": {
+   "post": [
+    "postmenopausal",
+    "post menopausal",
+    "post-menopausal"
+   ],
+   "pre": [
+    "premenopausal",
+    "pre menopausal",
+    "non-menopausal",
+    "nonmenopausal",
+    "reproductive age"
+   ]
+  },
+  "age": {
+   "extract": "age",
+   "note": "number before 'year old' / 'yo' / 'y/o', or from patient demographics"
+  },
+  "exam": {
+   "scope": "patient",
+   "screening": [
+    "lung cancer screening",
+    "low dose ct",
+    "low-dose ct",
+    "ldct",
+    "lung-rads",
+    "lung rads"
+   ],
+   "diagnostic": []
+  },
+  "risk": {
+   "scope": "patient",
+   "high": [
+    "high risk",
+    "smoker",
+    "smoking history",
+    "pack year",
+    "pack-year"
+   ],
+   "low": [
+    "low risk",
+    "never smoker",
+    "nonsmoker",
+    "non-smoker"
+   ]
+  }
+ },
+ "rules": [
+  {
+   "id": "endometrium",
+   "finding": "Endometrial stripe thickness",
+   "guideline": "ACOG Committee Opinion 734 (2018); SRU consensus",
+   "destination": "recommendation",
+   "triggers": [
+    "endometrial stripe thickness",
+    "endometrial stripe",
+    "endometrial thickness",
+    "endometrial echo complex",
+    "endometrium measures",
+    "endometrial strip"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "single"
+   },
+   "context": {
+    "menopause": "shared",
+    "bleeding": {
+     "scope": "patient",
+     "yes": [
+      "postmenopausal bleeding",
+      "vaginal bleeding",
+      "pmb",
+      "spotting"
+     ],
+     "no": [
+      "no bleeding",
+      "asymptomatic",
+      "denies bleeding"
+     ]
+    }
+   },
+   "ask_if_missing": {
+    "menopause": "Menopausal status not stated."
+   },
+   "recommendations": [
+    {
+     "when": {
+      "menopause": "post",
+      "bleeding": "yes",
+      "size_gt": 4
+     },
+     "output": "Endometrial thickness greater than 4 mm in a postmenopausal patient with bleeding. Recommend endometrial sampling/biopsy."
+    },
+    {
+     "when": {
+      "menopause": "post",
+      "bleeding": "yes",
+      "size_lte": 4
+     },
+     "output": "Endometrial thickness of 4 mm or less, reassuring in the setting of postmenopausal bleeding. Further evaluation if bleeding persists."
+    },
+    {
+     "when": {
+      "menopause": "post",
+      "size_gt": 11
+     },
+     "output": "Thickened endometrium in a postmenopausal patient. Recommend endometrial biopsy."
+    },
+    {
+     "when": {
+      "menopause": "post",
+      "bleeding": "no",
+      "size_lte": 11
+     },
+     "output": "No routine further evaluation needed in an asymptomatic postmenopausal patient; clinical correlation."
+    },
+    {
+     "when": {
+      "menopause": "post",
+      "size_gt": 4
+     },
+     "output": "If there is postmenopausal bleeding, recommend endometrial sampling/biopsy."
+    },
+    {
+     "when": {
+      "menopause": "pre"
+     },
+     "output": "Follow-up if clinically indicated. Correlate with phase of patient's menstrual cycle."
+    }
+   ]
+  },
+  {
+   "id": "ovarian_cyst",
+   "finding": "Adnexal / ovarian cyst",
+   "guideline": "ACR O-RADS US v2022",
+   "destination": "recommendation",
+   "triggers": [
+    "ovarian cyst",
+    "adnexal cyst",
+    "simple cyst of the ovary",
+    "left ovarian cyst",
+    "right ovarian cyst",
+    "hemorrhagic cyst",
+    "dermoid",
+    "endometrioma"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "largest",
+    "note": "maximum diameter"
+   },
+   "context": {
+    "menopause": "shared",
+    "cyst_type": {
+     "simple": [
+      "simple",
+      "anechoic",
+      "thin walled"
+     ],
+     "hemorrhagic": [
+      "hemorrhagic",
+      "reticular",
+      "lacy",
+      "retractile clot"
+     ],
+     "dermoid": [
+      "dermoid",
+      "mature teratoma"
+     ],
+     "endometrioma": [
+      "endometrioma",
+      "ground glass echoes"
+     ],
+     "complex": [
+      "solid component",
+      "papillary projection",
+      "mural nodule",
+      "irregular",
+      "thick septation",
+      "internal vascularity"
+     ]
+    }
+   },
+   "ask_if_missing": {
+    "menopause": "Menopausal status not stated.",
+    "cyst_type": "Cyst type not stated (simple, hemorrhagic, dermoid, endometrioma, complex)."
+   },
+   "recommendations": [
+    {
+     "when": {
+      "cyst_type": "complex"
+     },
+     "category": "O-RADS 3-5",
+     "output": "Complex adnexal lesion. Recommend O-RADS categorization; further evaluation with US specialist or pelvic MRI and gynecologic referral (gyn-oncology if O-RADS 5)."
+    },
+    {
+     "when": {
+      "size_gte": 100
+     },
+     "category": "O-RADS 3",
+     "output": "Adnexal cyst 10 cm or larger. Recommend US specialist or pelvic MRI and gynecology referral."
+    },
+    {
+     "when": {
+      "cyst_type": "simple",
+      "menopause": "pre",
+      "size_lte": 30
+     },
+     "category": "O-RADS 1",
+     "output": "Likely physiologic follicle. No follow-up needed."
+    },
+    {
+     "when": {
+      "cyst_type": "simple",
+      "menopause": "pre",
+      "size_lte": 50
+     },
+     "category": "O-RADS 2",
+     "output": "Simple ovarian cyst. No follow-up needed."
+    },
+    {
+     "when": {
+      "cyst_type": "simple",
+      "menopause": "pre"
+     },
+     "category": "O-RADS 2",
+     "output": "Simple ovarian cyst greater than 5 cm. Recommend follow-up pelvic ultrasound in 12 months."
+    },
+    {
+     "when": {
+      "cyst_type": "simple",
+      "menopause": "post",
+      "size_lte": 30
+     },
+     "category": "O-RADS 2",
+     "output": "Simple ovarian cyst 3 cm or less. No follow-up needed."
+    },
+    {
+     "when": {
+      "cyst_type": "simple",
+      "menopause": "post"
+     },
+     "category": "O-RADS 2",
+     "output": "Simple ovarian cyst greater than 3 cm in a postmenopausal patient. Recommend follow-up pelvic ultrasound in 12 months."
+    },
+    {
+     "when": {
+      "cyst_type": "hemorrhagic",
+      "menopause": "pre",
+      "size_lte": 50
+     },
+     "category": "O-RADS 2",
+     "output": "Typical hemorrhagic cyst. No follow-up needed."
+    },
+    {
+     "when": {
+      "cyst_type": "hemorrhagic",
+      "menopause": "pre"
+     },
+     "category": "O-RADS 2",
+     "output": "Hemorrhagic cyst greater than 5 cm. Recommend follow-up pelvic ultrasound in 2-3 months."
+    },
+    {
+     "when": {
+      "cyst_type": "hemorrhagic",
+      "menopause": "post"
+     },
+     "category": "O-RADS 2",
+     "output": "Hemorrhagic-appearing cyst in a postmenopausal patient. Recommend confirmation with follow-up ultrasound in 2-3 months, US specialist, or MRI; gynecology referral."
+    },
+    {
+     "when": {
+      "cyst_type": "dermoid"
+     },
+     "category": "O-RADS 2",
+     "output": "Typical dermoid cyst. If not surgically excised, recommend follow-up ultrasound in 12 months; gynecology referral."
+    },
+    {
+     "when": {
+      "cyst_type": "endometrioma"
+     },
+     "category": "O-RADS 2",
+     "output": "Typical endometrioma. If not surgically excised, recommend follow-up ultrasound in 12 months; gynecology referral."
+    }
+   ],
+   "notes": [
+    "If stable at 12-month follow-up, O-RADS v2022 suggests US at 24 months from initial exam; if decreased, no further surveillance."
+   ]
+  },
+  {
+   "id": "lung_rads",
+   "finding": "Lung cancer screening nodule (Lung-RADS)",
+   "guideline": "ACR Lung-RADS v2022",
+   "destination": "recommendation",
+   "requires": {
+    "exam": "screening"
+   },
+   "triggers": [
+    "nodule",
+    "pulmonary nodule",
+    "lung nodule",
+    "ground glass nodule",
+    "part solid nodule",
+    "subsolid nodule"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "most_suspicious",
+    "reduce": "mean",
+    "precision": 1,
+    "solid_terms": [
+     "solid component"
+    ],
+    "note": "Mean diameter to one decimal. Score every nodule; report the HIGHEST category."
+   },
+   "context": {
+    "nodule_type": {
+     "solid": [
+      "solid"
+     ],
+     "part_solid": [
+      "part solid",
+      "part-solid",
+      "semi solid",
+      "mixed attenuation"
+     ],
+     "ground_glass": [
+      "ground glass",
+      "ground-glass",
+      "nonsolid",
+      "non-solid",
+      "ggo",
+      "ggn"
+     ],
+     "benign": [
+      "calcified",
+      "popcorn calcification",
+      "fat containing",
+      "perifissural",
+      "benign calcification"
+     ]
+    },
+    "timing": {
+     "baseline": [
+      "baseline",
+      "first screening",
+      "no prior"
+     ],
+     "new": [
+      "new"
+     ],
+     "growing": [
+      "growing",
+      "enlarging",
+      "increased in size",
+      "interval growth"
+     ],
+     "stable": [
+      "stable",
+      "unchanged"
+     ]
+    }
+   },
+   "ask_if_missing": {
+    "nodule_type": "Nodule type not stated (solid, part-solid, ground glass).",
+    "timing": "Baseline, new, growing, or stable?"
+   },
+   "recommendations": [
+    {
+     "when": {
+      "nodule_type": "benign"
+     },
+     "category": "Lung-RADS 1",
+     "severity": 1,
+     "output": "Lung-RADS 1. Continue annual screening with LDCT in 12 months."
+    },
+    {
+     "when": {
+      "timing": "stable"
+     },
+     "category": "Lung-RADS 2",
+     "severity": 2,
+     "output": "Lung-RADS 2 (nodule unchanged for 3 months or more). Continue annual screening with LDCT in 12 months.",
+     "note": "Check stepped-management rules for a 4A or 4B nodule stable at its 3-month follow-up."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "timing": "baseline",
+      "size_lt": 6
+     },
+     "category": "Lung-RADS 2",
+     "severity": 2,
+     "output": "Lung-RADS 2. Continue annual screening with LDCT in 12 months."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "timing": "baseline",
+      "size_gte": 6,
+      "size_lt": 8
+     },
+     "category": "Lung-RADS 3",
+     "severity": 3,
+     "output": "Lung-RADS 3. Recommend LDCT in 6 months."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "timing": "baseline",
+      "size_gte": 8,
+      "size_lt": 15
+     },
+     "category": "Lung-RADS 4A",
+     "severity": 4,
+     "output": "Lung-RADS 4A. Recommend LDCT in 3 months; PET/CT may be considered for solid nodule 8 mm or larger."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "timing": "baseline",
+      "size_gte": 15
+     },
+     "category": "Lung-RADS 4B",
+     "severity": 5,
+     "output": "Lung-RADS 4B. Recommend diagnostic chest CT with or without contrast, PET/CT and/or tissue sampling depending on probability of malignancy and comorbidities."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "timing": "new",
+      "size_lt": 4
+     },
+     "category": "Lung-RADS 2",
+     "severity": 2,
+     "output": "Lung-RADS 2. Continue annual screening with LDCT in 12 months."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "timing": "new",
+      "size_gte": 4,
+      "size_lt": 6
+     },
+     "category": "Lung-RADS 3",
+     "severity": 3,
+     "output": "Lung-RADS 3. Recommend LDCT in 6 months."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "timing": "new",
+      "size_gte": 6,
+      "size_lt": 8
+     },
+     "category": "Lung-RADS 4A",
+     "severity": 4,
+     "output": "Lung-RADS 4A. Recommend LDCT in 3 months."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "timing": "new",
+      "size_gte": 8
+     },
+     "category": "Lung-RADS 4B",
+     "severity": 5,
+     "output": "Lung-RADS 4B. Recommend diagnostic chest CT with or without contrast, PET/CT and/or tissue sampling."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "timing": "growing",
+      "size_lt": 8
+     },
+     "category": "Lung-RADS 4A",
+     "severity": 4,
+     "output": "Lung-RADS 4A. Recommend LDCT in 3 months."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "timing": "growing",
+      "size_gte": 8
+     },
+     "category": "Lung-RADS 4B",
+     "severity": 5,
+     "output": "Lung-RADS 4B. Recommend diagnostic chest CT with or without contrast, PET/CT and/or tissue sampling."
+    },
+    {
+     "when": {
+      "nodule_type": "part_solid",
+      "timing": "baseline",
+      "size_lt": 6
+     },
+     "category": "Lung-RADS 2",
+     "severity": 2,
+     "output": "Lung-RADS 2. Continue annual screening with LDCT in 12 months."
+    },
+    {
+     "when": {
+      "nodule_type": "part_solid",
+      "timing": "baseline",
+      "size_gte": 6,
+      "solid_lt": 6
+     },
+     "category": "Lung-RADS 3",
+     "severity": 3,
+     "output": "Lung-RADS 3. Recommend LDCT in 6 months."
+    },
+    {
+     "when": {
+      "nodule_type": "part_solid",
+      "timing": "baseline",
+      "solid_gte": 6,
+      "solid_lt": 8
+     },
+     "category": "Lung-RADS 4A",
+     "severity": 4,
+     "output": "Lung-RADS 4A. Recommend LDCT in 3 months."
+    },
+    {
+     "when": {
+      "nodule_type": "part_solid",
+      "timing": "baseline",
+      "solid_gte": 8
+     },
+     "category": "Lung-RADS 4B",
+     "severity": 5,
+     "output": "Lung-RADS 4B. Recommend diagnostic chest CT, PET/CT and/or tissue sampling."
+    },
+    {
+     "when": {
+      "nodule_type": "part_solid",
+      "timing": "new",
+      "size_lt": 6
+     },
+     "category": "Lung-RADS 3",
+     "severity": 3,
+     "output": "Lung-RADS 3. Recommend LDCT in 6 months."
+    },
+    {
+     "when": {
+      "nodule_type": "part_solid",
+      "solid_lt": 4
+     },
+     "category": "Lung-RADS 4A",
+     "severity": 4,
+     "output": "Lung-RADS 4A (new or growing solid component less than 4 mm). Recommend LDCT in 3 months."
+    },
+    {
+     "when": {
+      "nodule_type": "part_solid",
+      "solid_gte": 4
+     },
+     "category": "Lung-RADS 4B",
+     "severity": 5,
+     "output": "Lung-RADS 4B (new or growing solid component 4 mm or larger). Recommend diagnostic chest CT, PET/CT and/or tissue sampling."
+    },
+    {
+     "when": {
+      "nodule_type": "ground_glass",
+      "size_lt": 30
+     },
+     "category": "Lung-RADS 2",
+     "severity": 2,
+     "output": "Lung-RADS 2. Continue annual screening with LDCT in 12 months."
+    },
+    {
+     "when": {
+      "nodule_type": "ground_glass",
+      "size_gte": 30
+     },
+     "category": "Lung-RADS 3",
+     "severity": 3,
+     "output": "Lung-RADS 3. Recommend LDCT in 6 months."
+    }
+   ],
+   "notes": [
+    "Growth = increase of more than 1.5 mm in mean diameter within 12 months.",
+    "Category 3 or 4 nodule stable at 3 or more months is downgraded (stepped management).",
+    "4X = category 3 or 4 nodule with additional suspicious features (spiculation, lymphadenopathy) - radiologist assigned.",
+    "S modifier for clinically significant non-lung-cancer findings."
+   ]
+  },
+  {
+   "id": "fleischner",
+   "finding": "Incidental pulmonary nodule (non-screening)",
+   "guideline": "Fleischner Society 2017",
+   "destination": "recommendation",
+   "applies_to": "Age 35 or older, incidental finding, no known cancer, not immunocompromised, NOT lung cancer screening",
+   "exclude_if": {
+    "exam": "screening"
+   },
+   "triggers": [
+    "pulmonary nodule",
+    "lung nodule",
+    "nodule in the",
+    "ground glass nodule",
+    "part solid nodule",
+    "subsolid nodule",
+    "pulmonary nodules"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "most_suspicious",
+    "reduce": "mean",
+    "precision": 0,
+    "solid_terms": [
+     "solid component"
+    ],
+    "note": "Average of long and short axis, rounded to nearest mm."
+   },
+   "context": {
+    "nodule_type": {
+     "solid": [
+      "solid"
+     ],
+     "part_solid": [
+      "part solid",
+      "part-solid",
+      "semi solid"
+     ],
+     "ground_glass": [
+      "ground glass",
+      "ground-glass",
+      "nonsolid",
+      "non-solid",
+      "ggo"
+     ]
+    },
+    "multiplicity": {
+     "single": [
+      "solitary",
+      "single",
+      "a nodule"
+     ],
+     "multiple": [
+      "multiple",
+      "several",
+      "nodules",
+      "additional nodules",
+      "bilateral nodules"
+     ]
+    },
+    "risk": "shared"
+   },
+   "ask_if_missing": {
+    "nodule_type": "Nodule type not stated (solid, part-solid, ground glass).",
+    "risk": "Patient risk (low or high) not stated."
+   },
+   "recommendations": [
+    {
+     "when": {
+      "nodule_type": "solid",
+      "multiplicity": "single",
+      "size_lt": 6,
+      "risk": "low"
+     },
+     "severity": 1,
+     "output": "No routine follow-up recommended (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "multiplicity": "single",
+      "size_lt": 6,
+      "risk": "high"
+     },
+     "severity": 2,
+     "output": "Optional CT at 12 months (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "multiplicity": "single",
+      "size_gte": 6,
+      "size_lte": 8,
+      "risk": "low"
+     },
+     "severity": 3,
+     "output": "CT at 6-12 months, then consider CT at 18-24 months (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "multiplicity": "single",
+      "size_gte": 6,
+      "size_lte": 8,
+      "risk": "high"
+     },
+     "severity": 3,
+     "output": "CT at 6-12 months, then CT at 18-24 months (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "multiplicity": "single",
+      "size_gt": 8
+     },
+     "severity": 5,
+     "output": "Consider CT at 3 months, PET/CT, or tissue sampling (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "multiplicity": "multiple",
+      "size_lt": 6,
+      "risk": "low"
+     },
+     "severity": 1,
+     "output": "No routine follow-up recommended (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "multiplicity": "multiple",
+      "size_lt": 6,
+      "risk": "high"
+     },
+     "severity": 2,
+     "output": "Optional CT at 12 months (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "multiplicity": "multiple",
+      "size_gte": 6,
+      "size_lte": 8,
+      "risk": "low"
+     },
+     "severity": 4,
+     "output": "CT at 3-6 months, then consider CT at 18-24 months (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "multiplicity": "multiple",
+      "size_gte": 6,
+      "size_lte": 8,
+      "risk": "high"
+     },
+     "severity": 4,
+     "output": "CT at 3-6 months, then CT at 18-24 months (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "solid",
+      "multiplicity": "multiple",
+      "size_gt": 8
+     },
+     "severity": 4,
+     "output": "CT at 3-6 months, then consider CT at 18-24 months (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "ground_glass",
+      "multiplicity": "single",
+      "size_lt": 6
+     },
+     "severity": 1,
+     "output": "No routine follow-up recommended (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "ground_glass",
+      "multiplicity": "single",
+      "size_gte": 6
+     },
+     "severity": 3,
+     "output": "CT at 6-12 months to confirm persistence, then CT every 2 years until 5 years (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "part_solid",
+      "multiplicity": "single",
+      "size_lt": 6
+     },
+     "severity": 1,
+     "output": "No routine follow-up recommended (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "nodule_type": "part_solid",
+      "multiplicity": "single",
+      "size_gte": 6
+     },
+     "severity": 4,
+     "output": "CT at 3-6 months to confirm persistence. If unchanged and solid component remains less than 6 mm, annual CT for 5 years (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "multiplicity": "multiple",
+      "size_lt": 6
+     },
+     "severity": 4,
+     "output": "Multiple subsolid nodules less than 6 mm: CT at 3-6 months; if stable, consider CT at 2 and 4 years (Fleischner 2017)."
+    },
+    {
+     "when": {
+      "multiplicity": "multiple",
+      "size_gte": 6
+     },
+     "severity": 4,
+     "output": "Multiple subsolid nodules: CT at 3-6 months; subsequent management based on the most suspicious nodule (Fleischner 2017)."
+    }
+   ],
+   "notes": [
+    "Persistent part-solid nodules with solid component 6 mm or larger are highly suspicious."
+   ],
+   "defaults": {
+    "multiplicity": "single"
+   }
+  },
+  {
+   "id": "pancreatic_cyst",
+   "finding": "Incidental pancreatic cyst",
+   "guideline": "ACR Incidental Findings Committee white paper 2017 (Megibow et al., JACR 2017;14:911-923)",
+   "destination": "recommendation",
+   "triggers": [
+    "pancreatic cyst",
+    "pancreatic cystic lesion",
+    "cystic lesion in the pancreas",
+    "cystic lesion of the pancreas",
+    "side branch ipmn",
+    "ipmn",
+    "pancreatic cystic"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "largest"
+   },
+   "context": {
+    "age": "shared",
+    "high_risk": {
+     "yes": [
+      "enhancing solid component",
+      "enhancing mural nodule",
+      "solid component",
+      "main duct dilated",
+      "main pancreatic duct dilatation",
+      "jaundice",
+      "obstructive jaundice"
+     ]
+    },
+    "worrisome": {
+     "yes": [
+      "thick enhancing wall",
+      "thickened enhancing wall",
+      "non-enhancing mural nodule",
+      "abrupt caliber change",
+      "duct 7 mm",
+      "pancreatitis"
+     ]
+    },
+    "mpd_communication": {
+     "yes": [
+      "communicates with the main duct",
+      "communicates with the pancreatic duct",
+      "duct communication",
+      "side branch"
+     ],
+     "no": [
+      "no duct communication",
+      "does not communicate"
+     ]
+    }
+   },
+   "ask_if_missing": {
+    "age": "Patient age not stated."
+   },
+   "recommendations": [
+    {
+     "when": {
+      "high_risk": "yes"
+     },
+     "output": "Pancreatic cyst with high-risk features. Recommend EUS/FNA and surgical consultation."
+    },
+    {
+     "when": {
+      "worrisome": "yes"
+     },
+     "output": "Pancreatic cyst with worrisome features. Recommend EUS/FNA."
+    },
+    {
+     "when": {
+      "age_gte": 80,
+      "size_lte": 25
+     },
+     "output": "Recommend follow-up MRI/MRCP every 2 years x 2, then stop if stable."
+    },
+    {
+     "when": {
+      "age_gte": 80
+     },
+     "output": "Recommend follow-up MRI/MRCP every 2 years x 2; EUS/FNA if high-risk features develop."
+    },
+    {
+     "when": {
+      "size_lt": 5,
+      "age_lt": 75
+     },
+     "output": "Subcentimeter pancreatic cystic lesion less than 5 mm. A single follow-up MRI at 2 years demonstrating stability may be sufficient."
+    },
+    {
+     "when": {
+      "size_lt": 15,
+      "age_lt": 65
+     },
+     "output": "Pancreatic cyst less than 1.5 cm. Recommend MRI/MRCP every year x 5; if stable, every 2 years x 2, then stop."
+    },
+    {
+     "when": {
+      "size_lt": 15,
+      "age_gte": 65,
+      "age_lt": 80
+     },
+     "output": "Pancreatic cyst less than 1.5 cm. Recommend MRI/MRCP every 2 years, ending at 10 years total or age 80, if stable."
+    },
+    {
+     "when": {
+      "size_gte": 15,
+      "size_lt": 20,
+      "mpd_communication": "yes"
+     },
+     "output": "Presumed side-branch IPMN 1.5-1.9 cm. Recommend MRI/MRCP every year x 5, then every 2 years x 2 if stable."
+    },
+    {
+     "when": {
+      "size_gte": 15,
+      "size_lte": 25
+     },
+     "output": "Pancreatic cyst 1.5-2.5 cm. Recommend MRI/MRCP every 6 months x 4, then yearly x 2, then every 2 years x 3, OR EUS/FNA."
+    },
+    {
+     "when": {
+      "size_gt": 25
+     },
+     "output": "Pancreatic cyst greater than 2.5 cm. Recommend EUS/FNA and/or close MRI/MRCP surveillance; consider surgical consultation if greater than 4 cm or high-risk features."
+    }
+   ],
+   "notes": [
+    "MRI/MRCP preferred; pancreatic protocol CT if MRI contraindicated.",
+    "Growth: increase frequency of follow-up and/or EUS-FNA; per ACR, a new 10-year period is generally not restarted."
+   ]
+  },
+  {
+   "id": "adrenal_nodule",
+   "finding": "Incidental adrenal nodule",
+   "guideline": "ACR Incidental Findings Committee white paper 2017 (Mayo-Smith et al.)",
+   "destination": "recommendation",
+   "triggers": [
+    "adrenal nodule",
+    "adrenal mass",
+    "adrenal lesion",
+    "adrenal adenoma",
+    "adrenal incidentaloma",
+    "adrenal thickening"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "largest"
+   },
+   "context": {
+    "benign_features": {
+     "yes": [
+      "10 hounsfield units or less",
+      "less than 10 hounsfield",
+      "lipid rich",
+      "macroscopic fat",
+      "myelolipoma",
+      "signal loss on out of phase",
+      "absolute washout greater than 60",
+      "stable for over a year",
+      "stable for 1 year",
+      "unchanged for more than a year"
+     ]
+    },
+    "cancer_history": {
+     "scope": "patient",
+     "yes": [
+      "history of cancer",
+      "known malignancy",
+      "oncologic history",
+      "metastatic"
+     ],
+     "no": [
+      "no history of cancer",
+      "no known malignancy"
+     ]
+    }
+   },
+   "recommendations": [
+    {
+     "when": {
+      "size_lt": 10
+     },
+     "output": "Adrenal nodule less than 1 cm. No further imaging follow-up."
+    },
+    {
+     "when": {
+      "benign_features": "yes"
+     },
+     "output": "Benign-appearing adrenal nodule. No further imaging follow-up. Consider biochemical evaluation for hormonal function if clinically indicated."
+    },
+    {
+     "when": {
+      "size_gte": 40,
+      "cancer_history": "yes"
+     },
+     "output": "Indeterminate adrenal mass 4 cm or larger in a patient with cancer history. Recommend PET/CT or biopsy."
+    },
+    {
+     "when": {
+      "size_gte": 40
+     },
+     "output": "Indeterminate adrenal mass 4 cm or larger. Recommend surgical consultation for resection; biochemical evaluation."
+    },
+    {
+     "when": {
+      "size_gte": 10,
+      "size_lt": 40
+     },
+     "output": "Indeterminate adrenal nodule 1-4 cm. Recommend adrenal protocol CT (washout) or chemical shift MRI; if prior imaging shows stability for 1 year or more, no further follow-up. Consider biochemical evaluation."
+    }
+   ]
+  },
+  {
+   "id": "thyroid_incidental_ct_mr",
+   "finding": "Incidental thyroid nodule on CT/MRI/PET",
+   "guideline": "ACR Incidental Findings Committee white paper 2015 (Hoang et al.)",
+   "destination": "recommendation",
+   "applies_to": "CT, MRI, PET/CT. For thyroid ultrasound use ti_rads.",
+   "exclude_if": {
+    "modality": "US"
+   },
+   "triggers": [
+    "thyroid nodule",
+    "thyroid lesion",
+    "nodule in the thyroid",
+    "thyroid hypodensity",
+    "hypodense thyroid",
+    "thyroid incidentaloma"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "largest"
+   },
+   "context": {
+    "age": "shared",
+    "suspicious": {
+     "yes": [
+      "pet avid",
+      "fdg avid",
+      "hypermetabolic",
+      "invasion",
+      "invades",
+      "suspicious lymph node",
+      "abnormal lymph node",
+      "pathologic lymph node"
+     ]
+    },
+    "limited_life_expectancy": {
+     "scope": "patient",
+     "yes": [
+      "hospice",
+      "limited life expectancy",
+      "comfort care"
+     ]
+    }
+   },
+   "ask_if_missing": {
+    "age": "Patient age not stated."
+   },
+   "recommendations": [
+    {
+     "when": {
+      "limited_life_expectancy": "yes"
+     },
+     "output": "No further evaluation of the thyroid nodule given clinical context."
+    },
+    {
+     "when": {
+      "suspicious": "yes"
+     },
+     "output": "Thyroid nodule with suspicious features. Recommend dedicated thyroid ultrasound."
+    },
+    {
+     "when": {
+      "age_lt": 35,
+      "size_gte": 10
+     },
+     "output": "Thyroid nodule 1 cm or larger in a patient younger than 35. Recommend dedicated thyroid ultrasound."
+    },
+    {
+     "when": {
+      "age_gte": 35,
+      "size_gte": 15
+     },
+     "output": "Thyroid nodule 1.5 cm or larger in a patient 35 or older. Recommend dedicated thyroid ultrasound."
+    },
+    {
+     "when": {},
+     "output": "No further evaluation of incidental thyroid nodule recommended."
+    }
+   ]
+  },
+  {
+   "id": "ti_rads",
+   "finding": "Thyroid nodule on ultrasound (TI-RADS)",
+   "guideline": "ACR TI-RADS 2017",
+   "destination": "recommendation",
+   "triggers": [
+    "tirads",
+    "ti-rads",
+    "ti rads",
+    "tr1",
+    "tr2",
+    "tr3",
+    "tr4",
+    "tr5",
+    "thyroid nodule",
+    "thyroid ultrasound"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "each_nodule",
+    "max_occurrences": 4,
+    "note": "Maximum dimension."
+   },
+   "context": {
+    "tr": {
+     "1": [
+      "tr1",
+      "tr 1",
+      "ti-rads 1",
+      "tirads 1"
+     ],
+     "2": [
+      "tr2",
+      "tr 2",
+      "ti-rads 2",
+      "tirads 2"
+     ],
+     "3": [
+      "tr3",
+      "tr 3",
+      "ti-rads 3",
+      "tirads 3"
+     ],
+     "4": [
+      "tr4",
+      "tr 4",
+      "ti-rads 4",
+      "tirads 4"
+     ],
+     "5": [
+      "tr5",
+      "tr 5",
+      "ti-rads 5",
+      "tirads 5"
+     ]
+    }
+   },
+   "ask_if_missing": {
+    "tr": "TI-RADS level or features (composition, echogenicity, shape, margin, echogenic foci) not stated."
+   },
+   "recommendations": [
+    {
+     "when": {
+      "tr": "1"
+     },
+     "output": "TR1. No FNA."
+    },
+    {
+     "when": {
+      "tr": "2"
+     },
+     "output": "TR2. No FNA."
+    },
+    {
+     "when": {
+      "tr": "3",
+      "size_gte": 25
+     },
+     "output": "TR3 nodule 2.5 cm or larger. Recommend FNA."
+    },
+    {
+     "when": {
+      "tr": "3",
+      "size_gte": 15
+     },
+     "output": "TR3 nodule 1.5 cm or larger. Recommend follow-up ultrasound at 1, 3, and 5 years."
+    },
+    {
+     "when": {
+      "tr": "3"
+     },
+     "output": "TR3 nodule less than 1.5 cm. No FNA or follow-up."
+    },
+    {
+     "when": {
+      "tr": "4",
+      "size_gte": 15
+     },
+     "output": "TR4 nodule 1.5 cm or larger. Recommend FNA."
+    },
+    {
+     "when": {
+      "tr": "4",
+      "size_gte": 10
+     },
+     "output": "TR4 nodule 1.0 cm or larger. Recommend follow-up ultrasound at 1, 2, 3, and 5 years."
+    },
+    {
+     "when": {
+      "tr": "4"
+     },
+     "output": "TR4 nodule less than 1 cm. No FNA or follow-up."
+    },
+    {
+     "when": {
+      "tr": "5",
+      "size_gte": 10
+     },
+     "output": "TR5 nodule 1.0 cm or larger. Recommend FNA."
+    },
+    {
+     "when": {
+      "tr": "5",
+      "size_gte": 5
+     },
+     "output": "TR5 nodule 0.5 cm or larger. Recommend annual follow-up ultrasound for up to 5 years."
+    },
+    {
+     "when": {
+      "tr": "5"
+     },
+     "output": "TR5 nodule less than 0.5 cm. No FNA or follow-up."
+    }
+   ],
+   "notes": [
+    "Limit FNA to the 2 highest-scoring nodules; no more than 4 nodules should be followed."
+   ],
+   "applies_to": "Thyroid ultrasound only.",
+   "requires": {
+    "modality": "US"
+   },
+   "derive": {
+    "key": "tr",
+    "method": "points",
+    "features": {
+     "composition": {
+      "cystic": {
+       "terms": [
+        "cystic",
+        "almost completely cystic"
+       ],
+       "points": 0
+      },
+      "spongiform": {
+       "terms": [
+        "spongiform"
+       ],
+       "points": 0,
+       "stop_scoring": true
+      },
+      "mixed": {
+       "terms": [
+        "mixed cystic and solid",
+        "mixed solid and cystic",
+        "partially cystic"
+       ],
+       "points": 1
+      },
+      "solid": {
+       "terms": [
+        "solid",
+        "almost completely solid"
+       ],
+       "points": 2
+      }
+     },
+     "echogenicity": {
+      "anechoic": {
+       "terms": [
+        "anechoic"
+       ],
+       "points": 0
+      },
+      "hyper_iso": {
+       "terms": [
+        "hyperechoic",
+        "isoechoic"
+       ],
+       "points": 1
+      },
+      "hypo": {
+       "terms": [
+        "hypoechoic"
+       ],
+       "points": 2
+      },
+      "very_hypo": {
+       "terms": [
+        "very hypoechoic",
+        "markedly hypoechoic"
+       ],
+       "points": 3
+      },
+      "indeterminate": {
+       "terms": [
+        "echogenicity cannot be determined"
+       ],
+       "points": 1
+      }
+     },
+     "shape": {
+      "wider": {
+       "terms": [
+        "wider than tall",
+        "wider-than-tall"
+       ],
+       "points": 0
+      },
+      "taller": {
+       "terms": [
+        "taller than wide",
+        "taller-than-wide"
+       ],
+       "points": 3
+      }
+     },
+     "margin": {
+      "smooth": {
+       "terms": [
+        "smooth margins",
+        "well circumscribed",
+        "ill defined",
+        "ill-defined"
+       ],
+       "points": 0
+      },
+      "irregular": {
+       "terms": [
+        "lobulated",
+        "irregular margins",
+        "irregular"
+       ],
+       "points": 2
+      },
+      "ete": {
+       "terms": [
+        "extrathyroidal extension",
+        "extra-thyroidal extension"
+       ],
+       "points": 3
+      }
+     },
+     "echogenic_foci": {
+      "additive": true,
+      "none": {
+       "terms": [
+        "no echogenic foci",
+        "comet tail",
+        "comet-tail"
+       ],
+       "points": 0
+      },
+      "macro": {
+       "terms": [
+        "macrocalcification",
+        "coarse calcification"
+       ],
+       "points": 1
+      },
+      "rim": {
+       "terms": [
+        "rim calcification",
+        "peripheral calcification",
+        "eggshell"
+       ],
+       "points": 2
+      },
+      "punctate": {
+       "terms": [
+        "punctate echogenic foci",
+        "microcalcification",
+        "microcalcifications"
+       ],
+       "points": 3
+      }
+     }
+    },
+    "points_to_level": [
+     {
+      "max": 1,
+      "level": "1"
+     },
+     {
+      "max": 2,
+      "level": "2"
+     },
+     {
+      "max": 3,
+      "level": "3"
+     },
+     {
+      "max": 6,
+      "level": "4"
+     },
+     {
+      "max": 99,
+      "level": "5"
+     }
+    ],
+    "notes": [
+     "Composition and echogenicity: pick one each. Margin and shape: pick one each. Echogenic foci: add every type present.",
+     "Spongiform: 0 points and no other categories are scored.",
+     "ACR assigns 0 points = TR1 and 2 points = TR2; a 1-point total is mapped to TR1 here, so confirm this."
+    ]
+   }
+  },
+  {
+   "id": "renal_cyst_bosniak",
+   "finding": "Renal cystic mass (Bosniak)",
+   "guideline": "Bosniak v2019 (Silverman et al., Radiology 2019); ACR Incidental Findings white paper 2017 (Herts et al.) for homogeneous HU rules",
+   "destination": "recommendation",
+   "triggers": [
+    "bosniak",
+    "renal cyst",
+    "kidney cyst",
+    "cystic renal lesion",
+    "cystic renal mass",
+    "renal lesion",
+    "kidney lesion",
+    "renal hypodensity",
+    "hypodense renal",
+    "cystic lesion of the kidney"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "largest",
+    "required": false,
+    "hu": "Extract HU value if dictated ('measures 12 Hounsfield units')."
+   },
+   "context": {
+    "bosniak": {
+     "1": [
+      "bosniak 1",
+      "bosniak one",
+      "bosniak i",
+      "simple renal cyst",
+      "simple cyst"
+     ],
+     "2": [
+      "bosniak 2",
+      "bosniak two",
+      "bosniak ii"
+     ],
+     "2F": [
+      "bosniak 2f",
+      "bosniak two f",
+      "bosniak iif",
+      "2f"
+     ],
+     "3": [
+      "bosniak 3",
+      "bosniak three",
+      "bosniak iii"
+     ],
+     "4": [
+      "bosniak 4",
+      "bosniak four",
+      "bosniak iv"
+     ]
+    },
+    "phase": {
+     "noncontrast": [
+      "noncontrast",
+      "non-contrast",
+      "unenhanced",
+      "without contrast"
+     ],
+     "contrast": [
+      "portal venous",
+      "with contrast",
+      "nephrographic",
+      "postcontrast"
+     ]
+    },
+    "homogeneous": {
+     "yes": [
+      "homogeneous",
+      "uniform",
+      "simple fluid"
+     ]
+    },
+    "enhancing_nodule": {
+     "yes": [
+      "enhancing nodule",
+      "enhancing mural nodule",
+      "enhancing soft tissue nodule"
+     ]
+    },
+    "thick_or_irregular": {
+     "yes": [
+      "thick enhancing septa",
+      "thick enhancing wall",
+      "irregular enhancing wall",
+      "irregular enhancing septa",
+      "nodular septal thickening",
+      "septa measuring 4 mm"
+     ]
+    },
+    "minimal_thickening": {
+     "yes": [
+      "minimally thickened",
+      "minimal thickening",
+      "3 mm septa",
+      "3 mm wall"
+     ]
+    },
+    "septa_count": {
+     "none": [
+      "no septa",
+      "no septations"
+     ],
+     "few": [
+      "thin septation",
+      "single septation",
+      "one septation",
+      "two septations",
+      "few thin septations",
+      "1 to 3 septa"
+     ],
+     "many": [
+      "multiple septations",
+      "many septations",
+      "numerous septations",
+      "4 or more septa"
+     ]
+    }
+   },
+   "ask_if_missing": {
+    "bosniak": "Bosniak category not stated."
+   },
+   "recommendations": [
+    {
+     "when": {
+      "homogeneous": "yes",
+      "hu_gte": -10,
+      "hu_lte": 20
+     },
+     "output": "Homogeneous renal lesion measuring -10 to 20 HU, consistent with a benign cyst. No follow-up needed."
+    },
+    {
+     "when": {
+      "bosniak": "1"
+     },
+     "output": "Bosniak I. Benign. No follow-up needed."
+    },
+    {
+     "when": {
+      "bosniak": "2"
+     },
+     "output": "Bosniak II. Benign. No follow-up needed."
+    },
+    {
+     "when": {
+      "bosniak": "2F"
+     },
+     "output": "Bosniak IIF. Recommend follow-up CT or MRI at 6 months and 12 months, then annually for 5 years."
+    },
+    {
+     "when": {
+      "bosniak": "3"
+     },
+     "output": "Bosniak III. Recommend urology referral for surgical or active surveillance management."
+    },
+    {
+     "when": {
+      "bosniak": "4"
+     },
+     "output": "Bosniak IV. Likely malignant. Recommend urology referral."
+    }
+   ],
+   "derive": {
+    "key": "bosniak",
+    "method": "first_match",
+    "rules": [
+     {
+      "when": {
+       "enhancing_nodule": "yes"
+      },
+      "class": "4"
+     },
+     {
+      "when": {
+       "thick_or_irregular": "yes"
+      },
+      "class": "3"
+     },
+     {
+      "when": {
+       "minimal_thickening": "yes"
+      },
+      "class": "2F"
+     },
+     {
+      "when": {
+       "septa_count": "many"
+      },
+      "class": "2F"
+     },
+     {
+      "when": {
+       "homogeneous": "yes",
+       "phase": "noncontrast",
+       "hu_gte": 70
+      },
+      "class": "2",
+      "note": "Homogeneous hyperattenuating (>=70 HU) unenhanced: benign hemorrhagic/proteinaceous cyst."
+     },
+     {
+      "when": {
+       "septa_count": "few"
+      },
+      "class": "2"
+     },
+     {
+      "when": {
+       "homogeneous": "yes",
+       "hu_gte": -9,
+       "hu_lte": 20,
+       "septa_count": "none"
+      },
+      "class": "1"
+     },
+     {
+      "when": {
+       "homogeneous": "yes",
+       "hu_gte": -9,
+       "hu_lte": 20
+      },
+      "class": "1"
+     },
+     {
+      "when": {
+       "homogeneous": "yes",
+       "phase": "contrast",
+       "hu_gte": 21,
+       "hu_lte": 30
+      },
+      "class": "2",
+      "note": "Homogeneous 21-30 HU in portal venous phase."
+     }
+    ],
+    "fallback_prompt": "Renal lesion not characterized. Recommend renal mass protocol CT or MRI if not a simple cyst."
+   },
+   "notes": [
+    "Bosniak v2019: walls/septa thin <=2 mm, minimally thick 3 mm, thick >=4 mm; nodule = convex protrusion >=4 mm with obtuse margins, or any size with acute margins.",
+    "Bosniak III/IV small masses may be managed with active surveillance depending on patient factors."
+   ]
+  },
+  {
+   "id": "aaa",
+   "finding": "Abdominal aortic aneurysm / ectasia",
+   "guideline": "Society for Vascular Surgery 2018 practice guidelines",
+   "destination": "recommendation",
+   "triggers": [
+    "abdominal aortic aneurysm",
+    "aortic aneurysm",
+    "aaa",
+    "infrarenal aorta measures",
+    "abdominal aorta measures",
+    "aortic ectasia",
+    "ectatic aorta"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "largest",
+    "note": "Maximum outer-to-outer diameter."
+   },
+   "context": {
+    "sex": {
+     "scope": "patient",
+     "female": [
+      "female",
+      "woman"
+     ],
+     "male": [
+      "male",
+      "man"
+     ]
+    }
+   },
+   "recommendations": [
+    {
+     "when": {
+      "size_lt": 25
+     },
+     "output": "Normal caliber abdominal aorta. No follow-up needed."
+    },
+    {
+     "when": {
+      "size_gte": 25,
+      "size_lt": 30
+     },
+     "output": "Ectatic abdominal aorta. Recommend repeat ultrasound in 10 years."
+    },
+    {
+     "when": {
+      "size_gte": 30,
+      "size_lt": 40
+     },
+     "output": "Abdominal aortic aneurysm 3.0-3.9 cm. Recommend ultrasound surveillance every 3 years."
+    },
+    {
+     "when": {
+      "size_gte": 40,
+      "size_lt": 50
+     },
+     "output": "Abdominal aortic aneurysm 4.0-4.9 cm. Recommend ultrasound surveillance every 12 months."
+    },
+    {
+     "when": {
+      "sex": "female",
+      "size_gte": 50
+     },
+     "output": "Abdominal aortic aneurysm 5.0 cm or larger in a female patient. Recommend vascular surgery referral for repair consideration."
+    },
+    {
+     "when": {
+      "size_gte": 50,
+      "size_lt": 55
+     },
+     "output": "Abdominal aortic aneurysm 5.0-5.4 cm. Recommend surveillance every 6 months and vascular surgery referral."
+    },
+    {
+     "when": {
+      "size_gte": 55
+     },
+     "output": "Abdominal aortic aneurysm 5.5 cm or larger. Recommend vascular surgery referral for repair."
+    }
+   ],
+   "notes": [
+    "Prefer patient demographics; match whole words only."
+   ]
+  },
+  {
+   "id": "gallbladder_polyp",
+   "finding": "Gallbladder polyp",
+   "guideline": "SRU consensus conference 2022 (Kamaya et al., Radiology 2022)",
+   "destination": "recommendation",
+   "triggers": [
+    "gallbladder polyp",
+    "gallbladder polyps",
+    "polypoid lesion of the gallbladder",
+    "gallbladder polypoid"
+   ],
+   "measure": {
+    "unit_output": "mm",
+    "use": "largest"
+   },
+   "context": {
+    "polyp_risk": {
+     "extremely_low": [
+      "ball on the wall",
+      "ball-on-the-wall",
+      "thin stalk",
+      "pedunculated with thin stalk"
+     ],
+     "low": [
+      "sessile",
+      "thick stalk",
+      "broad based",
+      "broad-based"
+     ],
+     "indeterminate": [
+      "focal wall thickening",
+      "wall thickening adjacent",
+      "invasion"
+     ]
+    }
+   },
+   "ask_if_missing": {
+    "polyp_risk": "Polyp morphology not stated (ball-on-the-wall/thin stalk, sessile/thick stalk)."
+   },
+   "recommendations": [
+    {
+     "when": {
+      "polyp_risk": "indeterminate"
+     },
+     "output": "Gallbladder polyp with adjacent focal wall thickening. Recommend surgical consultation."
+    },
+    {
+     "when": {
+      "size_gte": 15
+     },
+     "output": "Gallbladder polyp 15 mm or larger. Recommend surgical consultation."
+    },
+    {
+     "when": {
+      "polyp_risk": "extremely_low",
+      "size_lte": 9
+     },
+     "output": "Extremely low risk gallbladder polyp. No follow-up needed."
+    },
+    {
+     "when": {
+      "polyp_risk": "extremely_low",
+      "size_gte": 10
+     },
+     "output": "Extremely low risk gallbladder polyp 10-14 mm. Recommend ultrasound at 6, 12, and 24 months."
+    },
+    {
+     "when": {
+      "polyp_risk": "low",
+      "size_lte": 6
+     },
+     "output": "Low risk gallbladder polyp 6 mm or less. No follow-up needed."
+    },
+    {
+     "when": {
+      "polyp_risk": "low",
+      "size_gte": 7,
+      "size_lte": 9
+     },
+     "output": "Low risk gallbladder polyp 7-9 mm. Recommend ultrasound at 12 months."
+    },
+    {
+     "when": {
+      "polyp_risk": "low",
+      "size_gte": 10
+     },
+     "output": "Low risk gallbladder polyp 10-14 mm. Recommend ultrasound at 6, 12, and 24 months, or surgical consultation."
+    }
+   ],
+   "notes": [
+    "Discontinue follow-up if the polyp decreases by 4 mm or more or is no longer seen. Rapid growth (4 mm or more within 12 months) or reaching the next size threshold prompts surgical consultation or reassignment to the next follow-up tier."
+   ]
+  }
+ ],
+ "next_rules_to_add": [
+  "Incidental liver lesion (ACR 2017)",
+  "Splenic lesion (ACR 2013)",
+  "Thoracic aortic dilatation (ACR 2021)",
+  "LI-RADS (high-risk liver)",
+  "Mediastinal / incidental lymph nodes",
+  "Bone island vs sclerotic lesion",
+  "Renal solid mass / indeterminate renal lesion (ACR 2017)",
+  "Gallbladder wall thickening, common bile duct dilatation",
+  "BI-RADS (if breast imaging is in scope)"
+ ]
+}

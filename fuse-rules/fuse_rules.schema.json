@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "radiusos/fuse_rules.schema.json",
+  "title": "RadiusMD FUSE rules",
+  "description": "Editor aid for fuse_rules.json; validateFuseRules (doxvox/modules/fuse/fuseRulesConfig.js) is the authoritative validator. Report text -> trigger -> measurement + context -> first matching recommendation.",
+  "type": "object",
+  "required": ["version", "_readme", "rules"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "type": "integer", "minimum": 1 },
+    "retired_rule_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9_]+$" }
+    },
+    "_readme": {
+      "type": "object",
+      "required": ["version", "status"],
+      "properties": {
+        "purpose": { "type": "string" },
+        "how_it_works": { "type": "array", "items": { "type": "string" } },
+        "condition_keys": { "type": "object", "additionalProperties": { "type": "string" } },
+        "status": { "type": "string" },
+        "version": { "type": "string" }
+      }
+    },
+    "shared_context": {
+      "type": "object",
+      "propertyNames": { "not": { "const": "modality" } },
+      "additionalProperties": { "$ref": "#/$defs/contextEntry" }
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/rule" }
+    },
+    "next_rules_to_add": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false,
+
+  "$defs": {
+    "termList": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+
+    "scope": { "enum": ["patient", "lesion"] },
+
+    "modality": { "enum": ["US", "MR", "CT", "XR", "NM", "IR"] },
+
+    "contextEntry": {
+      "description": "'shared' (pull from shared_context), a named extractor, or a map of value -> phrases with an optional scope.",
+      "anyOf": [
+        { "const": "shared" },
+        {
+          "type": "object",
+          "properties": {
+            "extract": { "enum": ["age"] },
+            "note": { "type": "string" },
+            "scope": { "$ref": "#/$defs/scope" }
+          },
+          "required": ["extract"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "not": { "required": ["extract"] },
+          "properties": { "scope": { "$ref": "#/$defs/scope" } },
+          "minProperties": 1,
+          "additionalProperties": { "$ref": "#/$defs/termList" }
+        }
+      ]
+    },
+
+    "when": {
+      "description": "All conditions must match. Numeric keys: size_, solid_, age_, hu_ with gt/gte/lt/lte. Any other key equals a context value. Empty {} = default, last row only. 'modality' is not allowed here.",
+      "type": "object",
+      "propertyNames": { "not": { "const": "modality" } },
+      "patternProperties": {
+        "^(size|solid|age|hu)_(gt|gte|lt|lte)$": { "type": "number" }
+      },
+      "additionalProperties": { "type": "string" }
+    },
+
+    "gate": {
+      "description": "requires / exclude_if: 'modality' (from the template's scan type) or a context key.",
+      "type": "object",
+      "properties": { "modality": { "$ref": "#/$defs/modality" } },
+      "additionalProperties": { "type": "string" }
+    },
+
+    "recommendation": {
+      "type": "object",
+      "required": ["when", "output"],
+      "properties": {
+        "when": { "$ref": "#/$defs/when" },
+        "category": { "type": "string" },
+        "severity": { "type": "integer", "description": "Higher = worse; required when measure.use is most_suspicious." },
+        "output": { "type": "string", "minLength": 1, "pattern": "^[^{}]*$" },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+
+    "measure": {
+      "type": "object",
+      "required": ["unit_output", "use"],
+      "properties": {
+        "unit_output": { "enum": ["mm"] },
+        "use": { "enum": ["single", "largest", "most_suspicious", "each_nodule"] },
+        "reduce": { "enum": ["max", "mean"] },
+        "precision": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "solid_terms": { "$ref": "#/$defs/termList", "minItems": 1 },
+        "max_occurrences": { "type": "integer", "minimum": 1 },
+        "required": { "type": "boolean" },
+        "note": { "type": "string" },
+        "hu": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+
+    "pointsDerive": {
+      "type": "object",
+      "required": ["key", "method", "features", "points_to_level"],
+      "properties": {
+        "key": { "type": "string" },
+        "method": { "const": "points" },
+        "features": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": { "additive": { "type": "boolean" } },
+            "additionalProperties": {
+              "type": "object",
+              "required": ["terms", "points"],
+              "properties": {
+                "terms": { "$ref": "#/$defs/termList" },
+                "points": { "type": "integer", "minimum": 0 },
+                "stop_scoring": { "type": "boolean" }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "points_to_level": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["max", "level"],
+            "properties": { "max": { "type": "integer" }, "level": { "type": "string" } },
+            "additionalProperties": false
+          }
+        },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+
+    "firstMatchDerive": {
+      "type": "object",
+      "required": ["key", "method", "rules"],
+      "properties": {
+        "key": { "type": "string" },
+        "method": { "const": "first_match" },
+        "rules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["when", "class"],
+            "properties": {
+              "when": { "$ref": "#/$defs/when" },
+              "class": { "type": "string" },
+              "note": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "fallback_prompt": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+
+    "rule": {
+      "type": "object",
+      "required": ["id", "finding", "guideline", "triggers", "recommendations"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+        "finding": { "type": "string" },
+        "guideline": { "type": "string" },
+        "destination": { "enum": ["recommendation", "impression"] },
+        "applies_to": { "type": "string" },
+        "requires": { "$ref": "#/$defs/gate" },
+        "exclude_if": { "$ref": "#/$defs/gate" },
+        "triggers": { "$ref": "#/$defs/termList", "minItems": 1 },
+        "measure": { "$ref": "#/$defs/measure" },
+        "context": {
+          "type": "object",
+          "propertyNames": { "not": { "const": "modality" } },
+          "additionalProperties": { "$ref": "#/$defs/contextEntry" }
+        },
+        "defaults": { "type": "object", "additionalProperties": { "type": "string" } },
+        "ask_if_missing": { "type": "object", "additionalProperties": { "type": "string" } },
+        "derive": { "oneOf": [ { "$ref": "#/$defs/pointsDerive" }, { "$ref": "#/$defs/firstMatchDerive" } ] },
+        "recommendations": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/recommendation" } },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false,
+      "if": {
+        "properties": { "measure": { "properties": { "use": { "const": "most_suspicious" } }, "required": ["use"] } },
+        "required": ["measure"]
+      },
+      "then": {
+        "properties": { "recommendations": { "items": { "required": ["severity"] } } }
+      }
+    }
+  }
+}
