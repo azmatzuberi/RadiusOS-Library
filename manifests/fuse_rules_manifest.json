@@ -1,0 +1,5 @@
+{
+  "versions": [
+    { "fuseRulesVersion": "fuse-rules-v1", "minRadiusOS": "1.8", "maxRadiusOS": "1.8" }
+  ]
+}
