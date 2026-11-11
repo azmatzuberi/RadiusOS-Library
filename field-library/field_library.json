@@ -1,5 +1,5 @@
 {
-  "version": 13,
+  "version": 16,
   "fields": {
     "brain": {
       "label": "BRAIN",
@@ -416,10 +416,7 @@
     },
     "cranial_nerves": {
       "label": "CRANIAL NERVES",
-      "headerAliases": [
-        "VISUALIZED CRANIAL NERVES",
-        "CRANIAL NERVE ANATOMY"
-      ],
+      "headerAliases": ["VISUALIZED CRANIAL NERVES", "CRANIAL NERVE ANATOMY"],
       "terms": [
         "cranial nerve",
         "cranial nerves",
@@ -641,10 +638,7 @@
         "SCALP",
         "EXTRACRANIAL SOFT TISSUES"
       ],
-      "absorbs": [
-        "facial_bones",
-        "orbits"
-      ],
+      "absorbs": ["facial_bones", "orbits"],
       "terms": [
         "skull",
         "calvarium",
@@ -748,9 +742,18 @@
         "langerhans cell histiocytosis of the skull",
         "punched out lesions",
         "raindrop skull",
-        "salt and pepper skull"
+        "salt and pepper skull",
+        "parietal bone",
+        "occipital bone",
+        "lambdoid suture",
+        "coronal suture",
+        "sagittal suture",
+        "squamosal suture",
+        "pterion",
+        "basiocciput",
+        "basisphenoid"
       ],
-      "defaultNormalPlaceholder": "[Intact without fracture or aggressive osseous lesion. No scalp hematoma or radiopaque foreign body.]"
+      "defaultNormalPlaceholder": "[Unremarkable.]"
     },
     "orbits": {
       "label": "ORBITS",
@@ -891,9 +894,7 @@
         "SINONASAL CAVITY",
         "NASAL CAVITY AND SEPTUM"
       ],
-      "absorbs": [
-        "temporal_bones"
-      ],
+      "absorbs": ["temporal_bones"],
       "terms": [
         "paranasal sinus",
         "paranasal sinuses",
@@ -1184,7 +1185,10 @@
         "aural atresia",
         "exostosis",
         "surfer's ear",
-        "keratosis obturans"
+        "keratosis obturans",
+        "styloid process",
+        "petrous ridge",
+        "mastoid tip"
       ],
       "defaultNormalPlaceholder": "[Normal with an intact ossicular chain and a clear middle ear.]"
     },
@@ -1383,7 +1387,13 @@
         "fibula free flap",
         "mandibulectomy",
         "maxillectomy",
-        "fibular free flap"
+        "fibular free flap",
+        "ethmoid bone",
+        "vomer",
+        "lacrimal bone",
+        "palatine bone",
+        "nasal bone",
+        "nasal bones"
       ],
       "defaultNormalPlaceholder": "[Intact and normally aligned without acute fracture.]"
     },
@@ -1701,12 +1711,7 @@
     },
     "thyroid": {
       "label": "THYROID",
-      "headerAliases": [
-        "THYROID",
-        "THYROID GLAND",
-        "THYROID BED",
-        "THYROID UPTAKE"
-      ],
+      "headerAliases": ["THYROID GLAND", "THYROID BED", "THYROID UPTAKE"],
       "terms": [
         "thyroid",
         "thyroid gland",
@@ -1886,10 +1891,7 @@
     },
     "parathyroid_glands": {
       "label": "PARATHYROID GLANDS",
-      "headerAliases": [
-        "PARATHYROID",
-        "PARATHYROID GLANDS"
-      ],
+      "headerAliases": ["PARATHYROID"],
       "terms": [
         "parathyroid",
         "parathyroid gland",
@@ -1969,7 +1971,6 @@
       "label": "NECK",
       "headerAliases": [
         "NECK SOFT TISSUES",
-        "NECK",
         "CERVICAL SOFT TISSUES",
         "DEEP NECK SPACES",
         "SOFT TISSUES OF THE NECK",
@@ -2504,13 +2505,11 @@
         "LUNG PARENCHYMA",
         "LUNG FIELDS",
         "PULMONARY",
-        "Lung Nodules",
+        "LUNG NODULES",
         "LUNGS AND AIRWAYS",
         "LUNG BASES"
       ],
-      "absorbs": [
-        "pleura"
-      ],
+      "absorbs": ["pleura"],
       "terms": [
         "lung",
         "lungs",
@@ -2525,10 +2524,9 @@
         "lung fields",
         "consolidation",
         "infiltrates",
-        "infiltration",
         "ground glass",
         "emphysema",
-        "Emphysematous",
+        "emphysematous",
         "pulmonary nodule",
         "pulmonary edema",
         "atelectasis",
@@ -2548,7 +2546,8 @@
         "pulmonary nodules",
         "lung field",
         "consolidations",
-        "infiltrate",
+        "lung infiltrate",
+        "lung infiltration",
         "interstitial prominence",
         "lobectomy",
         "pneumonectomy",
@@ -2557,6 +2556,7 @@
         "lung volume reduction",
         "lung-rads",
         "lungrads",
+        "lung rads",
         "lung-rads 1",
         "lung-rads one",
         "lungrads 1",
@@ -2851,11 +2851,7 @@
     },
     "pleura": {
       "label": "PLEURA",
-      "headerAliases": [
-        "PLEURAL SPACES",
-        "PLEURA AND PLEURAL SPACES",
-        "PLEURAL SURFACES"
-      ],
+      "headerAliases": ["PLEURAL SPACES", "PLEURA AND PLEURAL SPACES", "PLEURAL SURFACES"],
       "terms": [
         "pleura",
         "pleural",
@@ -3003,10 +2999,7 @@
         "TRACHEA",
         "CENTRAL AIRWAYS"
       ],
-      "absorbs": [
-        "thyroid",
-        "parathyroid_glands"
-      ],
+      "absorbs": ["thyroid", "parathyroid_glands"],
       "terms": [
         "airway",
         "airways",
@@ -3217,16 +3210,12 @@
     "mediastinum": {
       "label": "MEDIASTINUM",
       "headerAliases": [
-        "MEDIASTINUM",
         "MEDIASTINAL STRUCTURES",
         "THYMUS",
         "CARDIOMEDIASTINAL SILHOUETTE",
         "MEDIASTINAL LYMPH NODES"
       ],
-      "absorbs": [
-        "heart",
-        "hila"
-      ],
+      "absorbs": ["heart", "hila"],
       "terms": [
         "mediastinum",
         "mediastinal",
@@ -3771,16 +3760,12 @@
     },
     "thoracic_aorta_and_great_vessels": {
       "label": "THORACIC AORTA AND GREAT VESSELS",
-      "headerAliases": [
-        "THORACIC AORTA",
-        "GREAT VESSELS",
-        "THORACIC VASCULATURE"
-      ],
+      "headerAliases": ["THORACIC AORTA", "GREAT VESSELS", "THORACIC VASCULATURE"],
       "terms": [
         "thoracic aorta",
         "aortic root",
         "ascending aorta",
-        "Aneurysmal sac",
+        "aneurysmal sac",
         "aortic arch",
         "descending thoracic aorta",
         "aortic dissection",
@@ -3798,7 +3783,7 @@
         "innominate veins",
         "subclavian arteries",
         "subclavian veins",
-        "Ascending aortic aneurysm",
+        "ascending aortic aneurysm",
         "ascending aortic dilatation",
         "ascending aortic dilation",
         "dilated ascending aorta",
@@ -3926,14 +3911,8 @@
     },
     "chest_wall": {
       "label": "CHEST WALL",
-      "headerAliases": [
-        "SOFT TISSUES OF THE CHEST",
-        "CHEST WALL",
-        "DIAPHRAGM"
-      ],
-      "absorbs": [
-        "breasts"
-      ],
+      "headerAliases": ["SOFT TISSUES OF THE CHEST", "DIAPHRAGM"],
+      "absorbs": ["breasts"],
       "terms": [
         "chest wall",
         "thoracic wall",
@@ -4445,6 +4424,7 @@
         "fatty liver",
         "steatotic liver",
         "focal fatty infiltration",
+        "fatty infiltration",
         "focal fatty sparing",
         "fat sparing",
         "geographic steatosis",
@@ -4627,7 +4607,7 @@
         "cholecystostomy",
         "intrahepatic duct",
         "pericholecystic fluid collections",
-        "Gallbladder surgically removed",
+        "gallbladder surgically removed",
         "cholecystectomy",
         "prior cholecystectomy",
         "post cholecystectomy",
@@ -4747,10 +4727,7 @@
     },
     "pancreas": {
       "label": "PANCREAS",
-      "headerAliases": [
-        "PANCREAS AND PANCREATIC DUCT",
-        "PANCREATIC PARENCHYMA"
-      ],
+      "headerAliases": ["PANCREAS AND PANCREATIC DUCT", "PANCREATIC PARENCHYMA"],
       "terms": [
         "pancreas",
         "pancreatic",
@@ -4860,10 +4837,7 @@
     },
     "spleen": {
       "label": "SPLEEN",
-      "headerAliases": [
-        "SPLENIC PARENCHYMA",
-        "SPLEEN AND SPLENIC VESSELS"
-      ],
+      "headerAliases": ["SPLENIC PARENCHYMA", "SPLEEN AND SPLENIC VESSELS"],
       "terms": [
         "spleen",
         "splenic",
@@ -4951,9 +4925,7 @@
     },
     "adrenal_glands": {
       "label": "ADRENAL GLANDS",
-      "headerAliases": [
-        "ADRENALS"
-      ],
+      "headerAliases": ["ADRENALS"],
       "terms": [
         "adrenal",
         "adrenals",
@@ -5042,7 +5014,7 @@
       "terms": [
         "kidney",
         "angiomyolipoma",
-        "Renal cell carcinoma",
+        "renal cell carcinoma",
         "kidneys",
         "renal",
         "renal parenchyma",
@@ -5538,13 +5510,7 @@
     },
     "peritoneum_and_mesentery": {
       "label": "PERITONEUM AND MESENTERY",
-      "headerAliases": [
-        "PERITONEUM",
-        "PERITONEAL CAVITY",
-        "MESENTERY",
-        "OMENTUM",
-        "FREE FLUID"
-      ],
+      "headerAliases": ["PERITONEUM", "PERITONEAL CAVITY", "MESENTERY", "OMENTUM", "FREE FLUID"],
       "terms": [
         "peritoneum",
         "peritoneal",
@@ -5597,10 +5563,7 @@
     },
     "retroperitoneum": {
       "label": "RETROPERITONEUM",
-      "headerAliases": [
-        "RETROPERITONEAL STRUCTURES",
-        "PERINEPHRIC SPACES"
-      ],
+      "headerAliases": ["RETROPERITONEAL STRUCTURES", "PERINEPHRIC SPACES"],
       "terms": [
         "retroperitoneum",
         "retroperitoneal",
@@ -5745,7 +5708,7 @@
         "scrotum_and_testes"
       ],
       "terms": [
-        "Intrauterine device",
+        "intrauterine device",
         "pelvis",
         "pelvic",
         "pelvic organs",
@@ -5804,9 +5767,7 @@
     },
     "bladder": {
       "label": "BLADDER",
-      "headerAliases": [
-        "URINARY BLADDER"
-      ],
+      "headerAliases": ["URINARY BLADDER"],
       "terms": [
         "bladder",
         "urinary bladder",
@@ -5862,9 +5823,7 @@
     },
     "uterus": {
       "label": "UTERUS",
-      "headerAliases": [
-        "CERVIX"
-      ],
+      "headerAliases": ["CERVIX"],
       "terms": [
         "uterus",
         "uterine",
@@ -6223,9 +6182,7 @@
     },
     "adnexa": {
       "label": "ADNEXA",
-      "headerAliases": [
-        "FALLOPIAN TUBES"
-      ],
+      "headerAliases": ["FALLOPIAN TUBES"],
       "terms": [
         "adnexa",
         "adnexal",
@@ -6336,13 +6293,7 @@
     },
     "scrotum_and_testes": {
       "label": "SCROTUM AND TESTES",
-      "headerAliases": [
-        "SCROTUM",
-        "TESTES",
-        "SCROTAL CONTENTS",
-        "EPIDIDYMIS",
-        "SPERMATIC CORD"
-      ],
+      "headerAliases": ["SCROTUM", "TESTES", "SCROTAL CONTENTS", "EPIDIDYMIS", "SPERMATIC CORD"],
       "terms": [
         "scrotum",
         "scrotal",
@@ -6452,10 +6403,7 @@
         "FETAL PRESENTATION",
         "NUCHAL TRANSLUCENCY"
       ],
-      "absorbs": [
-        "placenta_and_amniotic_fluid",
-        "maternal_structures"
-      ],
+      "absorbs": ["placenta_and_amniotic_fluid", "maternal_structures"],
       "terms": [
         "gestational sac",
         "yolk sac",
@@ -6574,12 +6522,7 @@
     },
     "placenta_and_amniotic_fluid": {
       "label": "PLACENTA AND AMNIOTIC FLUID",
-      "headerAliases": [
-        "PLACENTA",
-        "AMNIOTIC FLUID",
-        "UMBILICAL CORD",
-        "CORD"
-      ],
+      "headerAliases": ["PLACENTA", "AMNIOTIC FLUID", "UMBILICAL CORD", "CORD"],
       "terms": [
         "placenta",
         "placental",
@@ -6668,12 +6611,7 @@
     },
     "maternal_structures": {
       "label": "MATERNAL STRUCTURES",
-      "headerAliases": [
-        "MATERNAL CERVIX",
-        "CERVICAL LENGTH",
-        "MATERNAL ADNEXA",
-        "MATERNAL ANATOMY"
-      ],
+      "headerAliases": ["MATERNAL CERVIX", "CERVICAL LENGTH", "MATERNAL ADNEXA", "MATERNAL ANATOMY"],
       "terms": [
         "cervical length",
         "maternal cervix",
@@ -6735,7 +6673,7 @@
         "THORACIC SPINE",
         "LUMBAR SPINE",
         "SACRUM AND COCCYX",
-        "Bone Density",
+        "BONE DENSITY",
         "SACROILIAC JOINTS"
       ],
       "terms": [
@@ -6789,7 +6727,7 @@
         "microdiscectomy",
         "spinal fusion",
         "posterior spinal fusion",
-        "Tarlov cyst",
+        "tarlov cyst",
         "interbody fusion",
         "pedicle screws",
         "thoracolumbar scoliosis",
@@ -6837,26 +6775,48 @@
         "hemilaminectomy",
         "foraminotomy",
         "corpectomy",
-        "vertebrectomy"
+        "vertebrectomy",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "t8",
+        "t9",
+        "t10",
+        "t11",
+        "t12",
+        "t1 vertebral body",
+        "t2 vertebral body",
+        "t1 level",
+        "t2 level",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "vertebral pedicle",
+        "vertebral pedicles",
+        "lamina",
+        "laminae",
+        "vertebral arch",
+        "lateral mass",
+        "lateral masses"
       ],
       "defaultNormalPlaceholder": "[Alignment maintained.]"
     },
     "alignment": {
       "label": "ALIGNMENT",
-      "headerAliases": [
-        "SPINAL ALIGNMENT",
-        "VERTEBRAL ALIGNMENT",
-        "ALIGNMENT AND CURVATURE"
-      ],
+      "headerAliases": ["SPINAL ALIGNMENT", "VERTEBRAL ALIGNMENT", "ALIGNMENT AND CURVATURE"],
       "terms": [
         "alignment",
         "spinal alignment",
         "listhesis",
         "spondylolisthesis",
         "dextroscoliosis",
-        "Levodextroscoliosis",
-        "Dextrolevoscolosis",
-        "S-shaped spine",
+        "levodextroscoliosis",
+        "dextrolevoscolosis",
+        "s-shaped spine",
         "levoscoliosis",
         "kyphoscolosis",
         "anterolisthesis",
@@ -6903,11 +6863,7 @@
     },
     "vertebral_bodies": {
       "label": "VERTEBRAL BODIES",
-      "headerAliases": [
-        "VERTEBRAL BODIES AND MARROW",
-        "VERTEBRAL BODY HEIGHTS",
-        "VERTEBRAL MARROW"
-      ],
+      "headerAliases": ["VERTEBRAL BODIES AND MARROW", "VERTEBRAL BODY HEIGHTS", "VERTEBRAL MARROW"],
       "terms": [
         "vertebral body",
         "vertebral bodies",
@@ -6989,10 +6945,7 @@
     },
     "facet_joints": {
       "label": "FACET JOINTS",
-      "headerAliases": [
-        "POSTERIOR ELEMENTS",
-        "FACETS"
-      ],
+      "headerAliases": ["POSTERIOR ELEMENTS", "FACETS"],
       "terms": [
         "facet",
         "facet joint",
@@ -7121,12 +7074,7 @@
     },
     "intervertebral_discs": {
       "label": "INTERVERTEBRAL DISCS",
-      "headerAliases": [
-        "DISCS",
-        "DISC LEVELS",
-        "DISC SPACES",
-        "DISC HEIGHTS"
-      ],
+      "headerAliases": ["DISCS", "DISC LEVELS", "DISC SPACES", "DISC HEIGHTS"],
       "terms": [
         "disc",
         "discs",
@@ -7592,16 +7540,15 @@
         "sternoclavicular dislocation",
         "pectoralis major tear",
         "bankart repair",
-        "latarjet"
+        "latarjet",
+        "acromial",
+        "clavicular head"
       ],
       "defaultNormalPlaceholder": "[Normal alignment without fracture or dislocation. The acromioclavicular joint is normal.]"
     },
     "humerus": {
       "label": "HUMERUS",
-      "headerAliases": [
-        "UPPER ARM",
-        "HUMERAL SHAFT"
-      ],
+      "headerAliases": ["UPPER ARM", "HUMERAL SHAFT"],
       "terms": [
         "humerus",
         "humeri",
@@ -7676,10 +7623,7 @@
     },
     "elbow": {
       "label": "ELBOW",
-      "headerAliases": [
-        "ELBOW JOINT",
-        "ELBOWS"
-      ],
+      "headerAliases": ["ELBOW JOINT", "ELBOWS"],
       "terms": [
         "elbow",
         "elbows",
@@ -7785,10 +7729,7 @@
     },
     "forearm": {
       "label": "FOREARM",
-      "headerAliases": [
-        "RADIUS AND ULNA",
-        "BOTH BONE FOREARM"
-      ],
+      "headerAliases": ["RADIUS AND ULNA", "BOTH BONE FOREARM"],
       "terms": [
         "forearm",
         "forearms",
@@ -7867,10 +7808,7 @@
     },
     "wrist": {
       "label": "WRIST",
-      "headerAliases": [
-        "WRIST JOINT",
-        "CARPAL BONES"
-      ],
+      "headerAliases": ["WRIST JOINT", "CARPAL BONES"],
       "terms": [
         "wrist",
         "wrists",
@@ -8051,12 +7989,7 @@
     },
     "hand_and_fingers": {
       "label": "HAND AND FINGERS",
-      "headerAliases": [
-        "HAND",
-        "HANDS",
-        "FINGERS",
-        "THUMB"
-      ],
+      "headerAliases": ["HAND", "HANDS", "FINGERS", "THUMB"],
       "terms": [
         "hand",
         "hands",
@@ -8412,7 +8345,22 @@
         "femoral head-neck junction",
         "pelvic bones",
         "periacetabular osteotomy",
-        "iliac crest harvest"
+        "iliac crest harvest",
+        "ilium",
+        "iliac crest",
+        "pubis",
+        "pubic bone",
+        "innominate bone",
+        "obturator ring",
+        "obturator foramen",
+        "ischiopubic ramus",
+        "quadrilateral plate",
+        "iliopectineal line",
+        "ilioischial line",
+        "iliac spine",
+        "anterior superior iliac spine",
+        "posterior superior iliac spine",
+        "ischial ramus"
       ],
       "defaultNormalPlaceholder": "[Femoral heads are normally located and congruent with an intact pelvic ring. No acute fracture, dislocation, or avascular necrosis.]"
     },
@@ -8451,7 +8399,7 @@
         "posterolateral corner",
         "patella",
         "patellar",
-        "Phlebella",
+        "phlebella",
         "patellofemoral",
         "quadriceps tendon",
         "patellar tendon",
@@ -8596,9 +8544,7 @@
     },
     "femur": {
       "label": "FEMUR",
-      "headerAliases": [
-        "FEMORAL SHAFT"
-      ],
+      "headerAliases": ["FEMORAL SHAFT"],
       "terms": [
         "femur",
         "femurs",
@@ -8685,11 +8631,7 @@
     },
     "tibia_and_fibula": {
       "label": "TIBIA AND FIBULA",
-      "headerAliases": [
-        "TIB-FIB",
-        "TIB FIB",
-        "LOWER LEG"
-      ],
+      "headerAliases": ["TIB-FIB", "TIB FIB", "LOWER LEG"],
       "terms": [
         "tibia",
         "tibial",
@@ -8800,11 +8742,7 @@
     },
     "ankle": {
       "label": "ANKLE",
-      "headerAliases": [
-        "ANKLE JOINT",
-        "ANKLE LIGAMENTS AND TENDONS",
-        "ACHILLES TENDON"
-      ],
+      "headerAliases": ["ANKLE JOINT", "ANKLE LIGAMENTS AND TENDONS", "ACHILLES TENDON"],
       "terms": [
         "ankle",
         "ankles",
@@ -8962,19 +8900,14 @@
         "talar shift",
         "talocrural angle",
         "lateral ankle instability",
-        "ankle instability"
+        "ankle instability",
+        "talus"
       ],
       "defaultNormalPlaceholder": "[Ankle mortise is intact and symmetric without fracture or joint effusion.]"
     },
     "foot": {
       "label": "FOOT",
-      "headerAliases": [
-        "FEET",
-        "TOES",
-        "FOREFOOT",
-        "MIDFOOT",
-        "HINDFOOT"
-      ],
+      "headerAliases": ["FEET", "TOES", "FOREFOOT", "MIDFOOT", "HINDFOOT"],
       "terms": [
         "foot",
         "feet",
@@ -9192,7 +9125,11 @@
         "first mtp fusion",
         "foot arthroplasty",
         "hallux arthroplasty",
-        "silastic implant"
+        "silastic implant",
+        "sesamoid",
+        "sesamoids",
+        "sustentaculum tali",
+        "os peroneum"
       ],
       "defaultNormalPlaceholder": "[Intact with normal alignment without fracture.]"
     },
@@ -9206,7 +9143,6 @@
         "BONE MARROW",
         "RIBS",
         "STERNUM",
-        "OSSEOUS STRUCTURES",
         "OSSEOUS",
         "CLAVICLES"
       ],
@@ -9304,6 +9240,7 @@
         "narrow zone of transition",
         "wide zone of transition",
         "sclerotic margin",
+        "sclerotic lesion",
         "sclerotic rim",
         "matrix mineralization",
         "chondroid matrix",
@@ -9439,18 +9376,43 @@
         "fatty marrow",
         "marrow contusion",
         "intraosseous line",
-        "radiation osteonecrosis"
+        "radiation osteonecrosis",
+        "sclerotic bone",
+        "bone sclerosis",
+        "osseous sclerosis",
+        "osteosclerosis",
+        "sclerotic focus",
+        "sclerotic foci",
+        "sclerotic changes",
+        "sclerotic change",
+        "reactive sclerosis",
+        "patchy sclerosis",
+        "diffuse osseous sclerosis",
+        "mixed lytic and sclerotic lesion",
+        "mixed lytic-sclerotic lesion",
+        "bone lucency",
+        "osseous lucency",
+        "lucent bone lesion",
+        "lucent lesion",
+        "radiolucent lesion",
+        "costal cartilage",
+        "costal cartilages",
+        "costal cartilage calcification",
+        "first rib",
+        "twelfth rib",
+        "floating rib",
+        "sternal body",
+        "body of the sternum",
+        "xiphoid process",
+        "inner table",
+        "outer table",
+        "diploe"
       ],
       "defaultNormalPlaceholder": "[No acute fracture or aggressive osseous lesion.]"
     },
     "joints_and_cartilage": {
       "label": "JOINTS AND CARTILAGE",
-      "headerAliases": [
-        "JOINTS",
-        "JOINT SPACES",
-        "ARTICULAR CARTILAGE",
-        "CARTILAGE"
-      ],
+      "headerAliases": ["JOINTS", "JOINT SPACES", "ARTICULAR CARTILAGE", "CARTILAGE"],
       "terms": [
         "joint",
         "joints",
@@ -9709,14 +9671,8 @@
     },
     "soft_tissues": {
       "label": "SOFT TISSUES",
-      "headerAliases": [
-        "VISUALIZED SOFT TISSUES",
-        "SUBCUTANEOUS TISSUES",
-        "SOFT TISSUE STRUCTURES"
-      ],
-      "absorbs": [
-        "muscles_and_tendons"
-      ],
+      "headerAliases": ["VISUALIZED SOFT TISSUES", "SUBCUTANEOUS TISSUES", "SOFT TISSUE STRUCTURES"],
+      "absorbs": ["muscles_and_tendons"],
       "terms": [
         "soft tissue",
         "soft tissues",
@@ -10030,12 +9986,7 @@
     },
     "bone_age_and_skeletal_maturity": {
       "label": "BONE AGE AND SKELETAL MATURITY",
-      "headerAliases": [
-        "BONE AGE",
-        "SKELETAL MATURITY",
-        "PHYSES",
-        "GROWTH PLATES"
-      ],
+      "headerAliases": ["BONE AGE", "SKELETAL MATURITY", "PHYSES", "GROWTH PLATES"],
       "terms": [
         "bone age",
         "skeletal maturity",
@@ -10808,10 +10759,7 @@
     },
     "inferior_vena_cava": {
       "label": "INFERIOR VENA CAVA",
-      "headerAliases": [
-        "IVC",
-        "INFERIOR VENA CAVA AND FILTER"
-      ],
+      "headerAliases": ["IVC", "INFERIOR VENA CAVA AND FILTER"],
       "terms": [
         "inferior vena cava",
         "ivc",
@@ -11587,12 +11535,7 @@
     },
     "history": {
       "label": "HISTORY",
-      "headerAliases": [
-        "INDICATION",
-        "CLINICAL INDICATION",
-        "HISTORY",
-        "REASON FOR EXAM"
-      ],
+      "headerAliases": ["INDICATION", "CLINICAL INDICATION", "REASON FOR EXAM"],
       "terms": [
         "clinical history",
         "indication",
@@ -11604,16 +11547,8 @@
     },
     "technique": {
       "label": "TECHNIQUE",
-      "headerAliases": [
-        "PROTOCOL",
-        "EXAMINATION TECHNIQUE",
-        "EXAM TECHNIQUE",
-        "SEQUENCES"
-      ],
-      "absorbs": [
-        "contrast",
-        "limitations"
-      ],
+      "headerAliases": ["PROTOCOL", "EXAMINATION TECHNIQUE", "EXAM TECHNIQUE", "SEQUENCES"],
+      "absorbs": ["side", "limitations"],
       "terms": [
         "technique",
         "protocol",
@@ -11785,18 +11720,7 @@
         "three views of the sacrum",
         "views of the sacrum",
         "radiograph of the sacrum",
-        "radiographs of the sacrum"
-      ],
-      "defaultNormalPlaceholder": "[Standard images of the ___ were obtained.]"
-    },
-    "contrast": {
-      "label": "CONTRAST",
-      "headerAliases": [
-        "IV CONTRAST",
-        "CONTRAST ADMINISTRATION",
-        "CONTRAST AND FLUOROSCOPY"
-      ],
-      "terms": [
+        "radiographs of the sacrum",
         "intravenous contrast",
         "iv contrast",
         "oral contrast",
@@ -11832,20 +11756,7 @@
         "primovist",
         "lipiodol",
         "definity contrast",
-        "definity bubbles"
-      ],
-      "defaultNormalPlaceholder": "[Contrast was administered without immediate adverse reaction.]"
-    },
-    "radiation_dose_and_fluoroscopy_time": {
-      "label": "RADIATION DOSE AND FLUOROSCOPY TIME",
-      "headerAliases": [
-        "FLUOROSCOPY TIME",
-        "RADIATION DOSE",
-        "FLUOROSCOPY TIME AND RADIATION DOSE",
-        "RADIATION EXPOSURE",
-        "FLUOROSCOPY AND RADIATION DOSE"
-      ],
-      "terms": [
+        "definity bubbles",
         "fluoroscopy time",
         "dose area product",
         "air kerma",
@@ -11868,15 +11779,24 @@
         "fluoroscopy minutes",
         "fluoroscopy dose"
       ],
-      "defaultNormalPlaceholder": "[Fluoroscopy time and radiation dose are documented in the procedural record.]"
+      "defaultNormalPlaceholder": "[Standard images of the ___ were obtained.]"
+    },
+    "side": {
+      "label": "SIDE",
+      "headerAliases": ["LATERALITY", "SIDE OF EXAMINATION"],
+      "terms": [
+        "right side",
+        "left side",
+        "laterality",
+        "right-sided examination",
+        "left-sided examination",
+        "right and left sides"
+      ],
+      "defaultNormalPlaceholder": "[___]"
     },
     "comparison": {
       "label": "COMPARISON",
-      "headerAliases": [
-        "PRIOR STUDIES",
-        "COMPARISON STUDIES",
-        "PRIORS"
-      ],
+      "headerAliases": ["PRIOR STUDIES", "COMPARISON STUDIES", "PRIORS"],
       "terms": [
         "comparison",
         "compared to",
@@ -11891,11 +11811,7 @@
     },
     "limitations": {
       "label": "LIMITATIONS",
-      "headerAliases": [
-        "TECHNICAL QUALITY",
-        "EXAM QUALITY",
-        "LIMITATIONS OF THE EXAMINATION"
-      ],
+      "headerAliases": ["TECHNICAL QUALITY", "EXAM QUALITY", "LIMITATIONS OF THE EXAMINATION"],
       "terms": [
         "limitation",
         "limitations",
@@ -11928,10 +11844,7 @@
     },
     "incidental_findings": {
       "label": "INCIDENTAL FINDINGS",
-      "headerAliases": [
-        "INCIDENTAL",
-        "INCIDENTAL NOTE"
-      ],
+      "headerAliases": ["INCIDENTAL", "INCIDENTAL NOTE"],
       "terms": [
         "incidental",
         "incidental finding",
@@ -11943,14 +11856,8 @@
     },
     "other": {
       "label": "OTHER",
-      "headerAliases": [
-        "OTHER FINDINGS",
-        "ADDITIONAL FINDINGS",
-        "REMAINDER OF THE EXAMINATION"
-      ],
-      "absorbs": [
-        "incidental_findings"
-      ],
+      "headerAliases": ["OTHER FINDINGS", "ADDITIONAL FINDINGS", "REMAINDER OF THE EXAMINATION"],
+      "absorbs": ["incidental_findings"],
       "terms": [
         "other findings",
         "otherwise unremarkable",
@@ -11963,53 +11870,29 @@
     },
     "impression": {
       "label": "IMPRESSION",
-      "headerAliases": [
-        "CONCLUSION",
-        "SUMMARY",
-        "IMPRESSION AND RECOMMENDATION"
-      ],
-      "absorbs": [
-        "recommendation",
-        "critical_result_communication"
-      ],
-      "terms": [
-        "impression",
-        "in summary",
-        "in conclusion",
-        "impressions"
-      ],
+      "headerAliases": ["CONCLUSION", "SUMMARY", "IMPRESSION AND RECOMMENDATION"],
+      "absorbs": ["recommendation", "critical_result_communication"],
+      "terms": ["impression", "in summary", "in conclusion", "impressions"],
       "defaultNormalPlaceholder": "[Dictated by the interpreting radiologist.]"
     },
     "recommendation": {
       "label": "RECOMMENDATION",
-      "headerAliases": [
-        "RECOMMENDATIONS",
-        "FOLLOW-UP",
-        "RECOMMEND",
-        "FOLLOW-UP RECOMMENDATIONS"
-      ],
+      "headerAliases": ["RECOMMENDATIONS", "FOLLOW-UP", "RECOMMEND", "FOLLOW-UP RECOMMENDATIONS"],
       "terms": [
         "recommendation",
         "follow-up recommended",
         "suggest correlation",
         "clinical correlation",
         "lung-rads follow-up",
-        "LungRADS",
-        "Lung rads",
-        "Lung-RADS",
         "follow up imaging",
-        "Further evaluation",
+        "further evaluation",
         "recommendations"
       ],
       "defaultNormalPlaceholder": "[None.]"
     },
     "critical_result_communication": {
       "label": "CRITICAL RESULT COMMUNICATION",
-      "headerAliases": [
-        "CRITICAL RESULTS",
-        "CRITICAL FINDINGS",
-        "COMMUNICATION"
-      ],
+      "headerAliases": ["CRITICAL RESULTS", "CRITICAL FINDINGS", "COMMUNICATION"],
       "terms": [
         "critical result",
         "critical finding",
