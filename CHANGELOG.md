@@ -6,6 +6,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### CLU commands: version 1 (not yet tagged; manifest pending release)
+
+- First publication of the built-in commands' names & wording (`clu-commands/clu_commands.json`, `version` 1): the 6 built-in slash commands (`calc`, `edu`, `diff`, `or`, `cme`, `ci`) with label, description, usage and spoken names, and the names of the 10 radiology calculators. The file is read-only to the app's users; it names and presents — it cannot add a command or calculator, and every built-in command id & calculator key appears exactly once.
+
+### Term expansions: version 1 (not yet tagged; manifest pending release)
+
+- First publication of the default term table (`term-expansion/term_expansion.json`, `version` 1): 245 dictated terms, each with the wording it expands into report sections — Findings rows routed to field-library labels and optional Impressions & Recommendations text. The file is read-only to the app's users; a release replaces their copy whole.
+
 ### Field library: working copy at `version` 13 (not yet tagged; manifest still serves v10)
 
 Uploaded in several revisions, 2026-10-16 to 2026-10-30.

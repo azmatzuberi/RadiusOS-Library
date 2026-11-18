@@ -1,12 +1,14 @@
 # RadiusOS Library
 
-The clinical content library behind **RadiusOS**, RadiusMD's radiology dictation and reporting app. This repository holds data, not code. It has four parts:
+The clinical content library behind **RadiusOS**, RadiusMD's radiology dictation and reporting app. This repository holds data, not code. It has six parts:
 
 | Component | Path | What RadiusOS uses it for |
 | --- | --- | --- |
 | **Report templates** | [`templates/`](templates/) | Starting structure and default-normal text for each study type, plus per-template instructions for report generation |
 | **Field library** | [`field-library/field_library.json`](field-library/field_library.json) | Canonical report sections ("fields"). Maps template headers and dictated terms onto them |
 | **FUSE rules** | [`fuse-rules/`](fuse-rules/) | Guideline-based follow-up recommendations, triggered by findings in the dictation |
+| **Term expansions** | [`term-expansion/term_expansion.json`](term-expansion/term_expansion.json) | Default dictated terms, each with the wording it expands into report sections |
+| **CLU commands** | [`clu-commands/clu_commands.json`](clu-commands/clu_commands.json) | Names, labels and wording for the built-in slash commands and radiology calculators |
 | **Manifests** | [`manifests/`](manifests/) | Which released version of each component supports which RadiusOS versions |
 
 > [!WARNING]
@@ -20,6 +22,8 @@ The clinical content library behind **RadiusOS**, RadiusMD's radiology dictation
 - [Report templates](#report-templates)
 - [Field library](#field-library)
 - [FUSE rules](#fuse-rules)
+- [Term expansions](#term-expansions)
+- [CLU commands](#clu-commands)
 - [Manifests, versions and releases](#manifests-versions-and-releases)
 - [Branches](#branches)
 - [Validating changes](#validating-changes)
@@ -32,11 +36,15 @@ The clinical content library behind **RadiusOS**, RadiusMD's radiology dictation
 
 ```text
 .
+├── clu-commands/
+│   └── clu_commands.json           # 6 built-in slash commands, 10 calculator names (v1)
 ├── field-library/
 │   └── field_library.json          # 95 fields, ~10.7k terms (working copy, internal version 13)
 ├── fuse-rules/
 │   ├── fuse_rules.json             # 11 guideline rules (DRAFT)
 │   └── fuse_rules.schema.json      # JSON Schema (draft 2020-12), editor aid
+├── term-expansion/
+│   └── term_expansion.json         # 245 default dictated terms (v1)
 ├── manifests/
 │   ├── field_library_manifest.json # release tag -> supported RadiusOS range
 │   └── fuse_rules_manifest.json
@@ -247,6 +255,42 @@ Rule order matters. The female-specific ≥ 50 mm entry sits above the general �
 - The **authoritative** validator is `validateFuseRules` in the RadiusOS codebase (`doxvox/modules/fuse/fuseRulesConfig.js`). A file can pass the schema and still be rejected there.
 - The file carries two version markers. `version` (integer) is the format/release number. `_readme.version` (for example `2026.11.06b`) is the content revision stamp. Bump `_readme.version` on every content edit.
 - Rule `id`s are permanent. To remove a rule, delete it and add its id to `retired_rule_ids`. Never reuse an id.
+
+---
+
+## Term expansions
+
+[`term-expansion/term_expansion.json`](term-expansion/term_expansion.json) is the default term table RadiusOS ships with: the words and phrases the app recognizes in dictation, each with the wording it expands into the report.
+
+```json
+{
+  "version": 1,
+  "terms": [
+    {
+      "term": "abdominal",
+      "findingRows": [
+        { "text": "Liver: There is no intra-or extrahepatic ductal dilatation.", "destination": "LIVER" }
+      ],
+      "impressions": "...",
+      "recommendations": "..."
+    }
+  ]
+}
+```
+
+Each term carries one or more sections with wording: `findingRows` (one sentence of pre-written finding text and the `destination` it is routed to — a field-library label, or `AUTO` to match each sentence against the field library, or `UNROUTED` to leave it in the input box) and optional free-text `impressions` and `recommendations`.
+
+**The app treats this file as read-only.** Users cannot edit it, and there is no per-user copy to merge: a release replaces the user's copy whole. Every release is validated with `validateTermExpansionLibrary` before it is tagged.
+
+---
+
+## CLU commands
+
+[`clu-commands/clu_commands.json`](clu-commands/clu_commands.json) names and presents the built-in slash commands and radiology calculators: each command's `label`, `description` and `usage`, the names it answers to when spoken, and the names each calculator (`/calc`) answers to.
+
+**What the file cannot change:** the file presents and names — code decides what exists. It cannot add a command or a calculator (that needs an app release), and every built-in command id and calculator key must appear in the file exactly once: it can neither invent a built-in (an id with no behaviour behind it) nor drop one (a command with no wording to present it by).
+
+**The app treats this file as read-only.** A release replaces the user's copy whole. Every release is validated with `validateCluCommandLibrary` before it is tagged.
 
 ---
 

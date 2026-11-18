@@ -7,6 +7,8 @@ This repository is clinical content that RadiusOS reads at runtime. A typo in a 
 - [Editing templates](#editing-templates)
 - [Editing the field library](#editing-the-field-library)
 - [Editing FUSE rules](#editing-fuse-rules)
+- [Editing term expansions](#editing-term-expansions)
+- [Editing CLU commands](#editing-clu-commands)
 - [Releasing a component](#releasing-a-component)
 - [Commit messages](#commit-messages)
 - [Pull request checklist](#pull-request-checklist)
@@ -98,6 +100,36 @@ Process:
 
 ---
 
+## Editing term expansions
+
+File: `term-expansion/term_expansion.json`. It is the default term table RadiusOS ships with (described in [README → Term expansions](README.md#term-expansions)). The app treats the file as read-only: a release replaces the user's copy whole, so the published file is the whole library.
+
+Rules the app's validator (`validateTermExpansionLibrary` in radiusmd-frontend) and the Term Expansions dialog enforce:
+
+- **A term is never repeated, ignoring case.** Before adding one, check no earlier entry uses the same words. Term length is at most 200 characters.
+- **Each term needs at least one section with wording:** Findings rows and/or Impressions and Recommendations text.
+- **Destinations are labels, not field ids.** A Findings row's `destination` is a field-library `label` or `headerAlias`, or `AUTO` (match each sentence against the field library as ordinary dictation), or `UNROUTED` (the text stays in the input box). A destination is at most 100 characters.
+- **Findings rows:** at most 50 per term, each with text (at most 5,000 characters) and a destination.
+- **Bump `version`** (integer) on **any** change: the app compares versions to say whether a release is newer.
+- Keep the file as valid, 2-space-indented JSON with a trailing newline, as the app writes user copies.
+
+---
+
+## Editing CLU commands
+
+File: `clu-commands/clu_commands.json`. It names and presents the built-in slash commands and radiology calculators (described in [README → CLU commands](README.md#clu-commands)). It cannot add a command or calculator — ids, keys and behaviour live in code, and a new one needs an app release.
+
+Rules the app's validator (`validateCluCommandLibrary` in radiusmd-frontend) enforces:
+
+- **Every built-in command id and calculator key appears exactly once.** The release can neither invent a built-in (an id with no behaviour) nor drop one (a command with no wording).
+- **Command entries:** `label` is `/` then the command id, in any case; `description` and `usage` are non-empty text; `spokenNames` is a list of names.
+- **Calculator entries:** `names` is a non-empty list of names; the first is canonical.
+- **Names are unique** as the voice parser hears them (after spoken-phrase normalization), across and within entries: two commands or calculators cannot share a name.
+- **Bump `version`** (integer) on **any** change: the app compares versions to say whether a release is newer.
+- Keep the file as valid, 2-space-indented JSON with a trailing newline, as the app writes user copies.
+
+---
+
 ## Releasing a component
 
 Releases are annotated tags on the content commit, followed by a commit that updates the manifest. Using the field library as the example:
@@ -121,6 +153,8 @@ git checkout dev && git merge --ff-only main && git push origin dev
 ```
 
 For FUSE rules use tag `fuse-rules-vN`, tag message `FUSE rules vN`, and `manifests/fuse_rules_manifest.json`.
+
+For term expansions use tag `term-expansion-vN`, tag message `Term expansion vN`, and `manifests/term_expansion_manifest.json`. For CLU commands use tag `clu-commands-vN`, tag message `CLU commands vN`, and `manifests/clu_commands_manifest.json`.
 
 So far each release has *replaced* the previous manifest entry. If an older release must keep serving older RadiusOS versions, *add* an entry and make the RadiusOS ranges non-overlapping instead.
 
