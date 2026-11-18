@@ -1,0 +1,5 @@
+{
+  "versions": [
+    { "cluCommandsVersion": "clu-commands-v1", "minRadiusOS": "1.0", "maxRadiusOS": "1.8" }
+  ]
+}

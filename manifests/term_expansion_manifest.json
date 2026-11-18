@@ -1,0 +1,5 @@
+{
+  "versions": [
+    { "termExpansionVersion": "term-expansion-v1", "minRadiusOS": "1.0", "maxRadiusOS": "1.8" }
+  ]
+}
