@@ -1,0 +1,2968 @@
+{
+  "version": 1,
+  "terms": [
+    {
+      "term": "abdominal",
+      "findingRows": [
+        {
+          "text": "Heart and lung bases: The lung bases are clear.",
+          "destination": "HEART"
+        },
+        {
+          "text": "Liver: There is no intra-or extrahepatic ductal dilatation.",
+          "destination": "LIVER"
+        },
+        {
+          "text": "Gallbladder: No pericholecystic fluid.",
+          "destination": "BILIARY SYSTEM"
+        },
+        {
+          "text": "Spleen: No splenomegaly.",
+          "destination": "SPLEEN"
+        },
+        {
+          "text": "Pancreas: No peripancreatic fluid or stranding or surrounding collection seen",
+          "destination": "PANCREAS"
+        },
+        {
+          "text": "Adrenal glands: No adrenal gland mass.",
+          "destination": "ADRENAL GLANDS"
+        },
+        {
+          "text": "Kidneys/bladder: Bilateral kidneys without hydronephrosis or nephrolithiasis.",
+          "destination": "KIDNEYS"
+        },
+        {
+          "text": "Pelvic structures: Bladder appears unremarkable.",
+          "destination": "PELVIS"
+        },
+        {
+          "text": "Bowel: No bowel dilatation identified. Incomplete opacification of the bowel with contrast.",
+          "destination": "BOWEL"
+        },
+        {
+          "text": "Abdominal wall/mesentery: No ventral herniation seen.",
+          "destination": "ABDOMINAL WALL"
+        },
+        {
+          "text": "Aorta and vascularity: No abdominal aortic aneurysm.",
+          "destination": "VASCULAR"
+        },
+        {
+          "text": "Osseous structures: No compression fracture seen.",
+          "destination": "OSSEOUS STRUCTURES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "abi",
+      "findingRows": [
+        {
+          "text": "The right ankle/brachial index is [1.0] and the left ankle/brachial index is [1.0]",
+          "destination": "ANKLE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "abnormal stripe",
+      "findingRows": [
+        {
+          "text": "Endometrial stripe thickness abnormal for age. Differential includes hyperplasia versus endometrial carcinoma.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "AC adj",
+      "findingRows": [
+        {
+          "text": "There is AC joint arthropathy.",
+          "destination": "JOINTS AND CARTILAGE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "AC arthropathy",
+      "findingRows": [
+        {
+          "text": "There is mild AC joint arthropathy.",
+          "destination": "JOINTS AND CARTILAGE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "ac down",
+      "findingRows": [
+        {
+          "text": "AC joint arthropathy and downsloping of the chromium likely cause of impingement.",
+          "destination": "JOINTS AND CARTILAGE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "acetabular spur",
+      "findingRows": [
+        {
+          "text": "Mild acetabular spurring is present.",
+          "destination": "HIPS AND BONY PELVIS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Achilles spur",
+      "findingRows": [
+        {
+          "text": "Spurring along the Achilles tendinous insertion.",
+          "destination": "ANKLE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Achilles spurring",
+      "findingRows": [
+        {
+          "text": "Calcaneal spurring along the Achilles tendinous insertion.",
+          "destination": "FOOT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "adrenal tidbit",
+      "findingRows": [
+        {
+          "text": "( HU <10 is 71% sensitive and 98% specific for adrenal adenoma.)",
+          "destination": "ADRENAL GLANDS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Age of",
+      "findingRows": [
+        {
+          "text": "Age of findings are unknown based on images submitted.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Age related",
+      "findingRows": [
+        {
+          "text": "Likely age-related ventricle prominence and brain atrophy with small vessel ischemic disease.",
+          "destination": "VENTRICLES AND CSF SPACES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "alignment yes",
+      "findingRows": [
+        {
+          "text": "Alignment is maintained.",
+          "destination": "ALIGNMENT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "aneurysm",
+      "findingRows": [
+        {
+          "text": "Visualized aorta without aneurysm.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "aorta",
+      "findingRows": [
+        {
+          "text": "Aorta is tortuous and calcified.  There is no cardiomegaly.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "aortic calc",
+      "findingRows": [
+        {
+          "text": "Arteriosclerotic calcification of the aorta and its branches are present.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "aortic calcifcations",
+      "findingRows": [
+        {
+          "text": "[Arteriosclerotic calcification of the aorta and its branches are present.]",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "aortic disease",
+      "findingRows": [
+        {
+          "text": "There is atherosclerotic disease.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Appendix normal",
+      "findingRows": [
+        {
+          "text": "Appendix visualized and within normal limits.  No pericecal stranding or adenopathy.  No appendicolith seen.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "appendix seen",
+      "findingRows": [
+        {
+          "text": "[Appendix visualized and within normal limits.]",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "appy normal",
+      "findingRows": [
+        {
+          "text": "Appendix was visualized and within normal limits.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "as above",
+      "findingRows": [
+        {
+          "text": "As recommended above.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "athero",
+      "findingRows": [
+        {
+          "text": "Atherosclerotic disease of the aorta [and its branches. and the coronary arteries.]  Atherosclerotic disease.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "biapical",
+      "findingRows": [
+        {
+          "text": "Biapical scarring is present.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "bladder under",
+      "findingRows": [
+        {
+          "text": "Bladder underdistended for evaluation.",
+          "destination": "BLADDER"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "bladder wall",
+      "findingRows": [
+        {
+          "text": "Bladder wall thickness in mm:  [].",
+          "destination": "BLADDER"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "bone lesion",
+      "findingRows": [
+        {
+          "text": "Further evaluation with nuclear medicine bone scan imaging versus MRI with IV contrast advised particularly if focal pain or cancer history.",
+          "destination": "OSSEOUS STRUCTURES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "bowel obscures",
+      "findingRows": [
+        {
+          "text": "Bowel obscures the sacrum.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "bronchiolitis yes",
+      "findingRows": [
+        {
+          "text": "FINDINGS: There is hyperinflation and peribronchial cuffing with shaggy appearance to the hilum bilaterally. No definite consolidation is seen. No pleural effusion or pneumothorax seen. There is no cardiomegaly. Underlying osseous structures normal for age. There is a left sided aortic arch.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "IMPRESSION: Findings compatible with bronchiolitis.",
+          "destination": "IMPRESSION"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "BTW",
+      "findingRows": [
+        {
+          "text": "By the way",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "bunion",
+      "findingRows": [
+        {
+          "text": "Hallux Valgus deformity of the first metatarsal is present.",
+          "destination": "FOOT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "bunion and spur",
+      "findingRows": [
+        {
+          "text": "Findings: Calcaneal spurring is present along the Achilles and plantar tendinous insertion.  No fracture or dislocation seen.Hallux Valgus deformity of the first metatarsal is present.  No joint effusion.  No significant soft tissue swelling.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "IMPRESSION:",
+          "destination": "IMPRESSION"
+        },
+        {
+          "text": "Hallux Valgus deformity of the first metatarsal is present.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "Calcaneal spurring is present along the Achilles and plantar tendinous insertion.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "bunion surgery",
+      "findingRows": [
+        {
+          "text": "Surgical changes from prior bunionectomy is present.",
+          "destination": "POSTSURGICAL CHANGES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "C7-T1 not",
+      "findingRows": [
+        {
+          "text": "C7-T1 not well visualized on the lateral view.",
+          "destination": "SPINE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "cabg",
+      "findingRows": [
+        {
+          "text": "Sternotomy wires and clips from prior CABG procedure is present.",
+          "destination": "HARDWARE AND PROSTHESES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "calcific rot",
+      "findingRows": [
+        {
+          "text": "Calcific tendinosis along rotator cuff.",
+          "destination": "MUSCLES AND TENDONS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "calcific troch",
+      "findingRows": [
+        {
+          "text": "Calcific tendinosis along greater trochanter.",
+          "destination": "MUSCLES AND TENDONS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "calcified aorta",
+      "findingRows": [
+        {
+          "text": "Vascular calcifications are present.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "calcified lymph",
+      "findingRows": [
+        {
+          "text": "Calcified lymph nodes likely from prior granulomatous infection.",
+          "destination": "LYMPH NODES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "callcific rotator cuff",
+      "findingRows": [
+        {
+          "text": "There is calcific tendinosis along the rotator cuff.",
+          "destination": "MUSCLES AND TENDONS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Cam type",
+      "findingRows": [
+        {
+          "text": "Remodeling of the femoral neck may represent Cam type impingement.",
+          "destination": "HIPS AND BONY PELVIS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "cardio",
+      "findingRows": [
+        {
+          "text": "There is cardiomegaly.",
+          "destination": "HEART"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "carotid ratios",
+      "findingRows": [
+        {
+          "text": "Internal carotid artery to common carotid arterial ratio (ICA/CCA) is [] on the right and [] on the left.",
+          "destination": "INTRACRANIAL VESSELS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "carotids no",
+      "findingRows": [
+        {
+          "text": "No evidence for hemodynamically significant stenosis seen bilaterally. Atherosclerotic disease is present.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "cc",
+      "findingRows": [
+        {
+          "text": "Cholelithiasis without evidence of cholecystitis.",
+          "destination": "BILIARY SYSTEM"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "cerumen",
+      "findingRows": [
+        {
+          "text": "Cerumen seen within the right external auditory canal.",
+          "destination": "TEMPORAL BONES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "chest",
+      "findingRows": [
+        {
+          "text": "Lower Neck: Unremarkable.",
+          "destination": "UNROUTED"
+        },
+        {
+          "text": "Mediastinum: No bulky mediastinal adenopathy.",
+          "destination": "MEDIASTINUM"
+        },
+        {
+          "text": "Heart/aortic arch: No ascending aortic aneurysm.",
+          "destination": "HEART"
+        },
+        {
+          "text": "Upper abdomen: Grossly unremarkable.",
+          "destination": "ABDOMEN"
+        },
+        {
+          "text": "Thoracic esophagus: No large hiatal hernia seen.",
+          "destination": "BOWEL"
+        },
+        {
+          "text": "Chest wall/Visualized bones: Underlying osseous structures are intact. Mild degenerative changes are present.  No compression fracture.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "Airways/lung parenchyma: There is no pulmonary masses.",
+          "destination": "AIRWAYS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Chronicity",
+      "findingRows": [
+        {
+          "text": "Age of findings are unknown based on images submitted.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "clips",
+      "findingRows": [
+        {
+          "text": "Surgical clips from prior cholecystectomy is seen.",
+          "destination": "POSTSURGICAL CHANGES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "constipation",
+      "findingRows": [
+        {
+          "text": "Findings may reflect constipation.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "core",
+      "findingRows": [
+        {
+          "text": "Corpora amylacea of the prostate gland is present.",
+          "destination": "PROSTATE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "CT Dose",
+      "findingRows": [
+        {
+          "text": "CTDI (mGy): [Not reported]",
+          "destination": "AUTO"
+        },
+        {
+          "text": "DLP (mGy-cm): [Not reported]",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "cta pelvic",
+      "findingRows": [
+        {
+          "text": "Patent left common, external and internal iliac artery. Patent common femoral artery.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "demon",
+      "findingRows": [
+        {
+          "text": "There is demineralization of bone.",
+          "destination": "OSSEOUS STRUCTURES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "dental hard",
+      "findingRows": [
+        {
+          "text": "Dental hardware is present.",
+          "destination": "FACIAL BONES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Dextra",
+      "findingRows": [
+        {
+          "text": "Mild dextroscoliosis is present.",
+          "destination": "ALIGNMENT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "DIP DJD",
+      "findingRows": [
+        {
+          "text": "Osteoarthritic degenerative changes along the DIP joints with joint space loss with sclerosis and no marginal erosive changes.",
+          "destination": "HAND AND FINGERS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "disc loss",
+      "findingRows": [
+        {
+          "text": "There is disc space loss at L5-S1 level.",
+          "destination": "INTERVERTEBRAL DISCS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "disc narrowing",
+      "findingRows": [
+        {
+          "text": "Multilevel disc space narrowing is present.",
+          "destination": "INTERVERTEBRAL DISCS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Divertic",
+      "findingRows": [
+        {
+          "text": "Diverticular disease.  Uncomplicated diverticulosis.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "DJD",
+      "findingRows": [
+        {
+          "text": "Degenerative changes are present.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "DJD lumbar",
+      "findingRows": [
+        {
+          "text": "Degenerative changes of the lumbar spine are present.",
+          "destination": "SPINE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "dvt no",
+      "findingRows": [
+        {
+          "text": "No evidence for deep venous thrombosis.",
+          "destination": "VEINS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "echogenic kidneys",
+      "findingRows": [
+        {
+          "text": "The kidneys are echogenic which is likely related to underlying medical renal disease.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Emphysematous bases",
+      "findingRows": [
+        {
+          "text": "Emphysematous changes are seen along the lung bases.",
+          "destination": "LUNGS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "endo tidbit",
+      "findingRows": [
+        {
+          "text": "Endometrial stripe thickness abnormal in a postmenopausal patient. Hyperplasia versus endometrial carcinoma as part of the differential.",
+          "destination": "ENDOMETRIUM"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "endplate and loss",
+      "findingRows": [
+        {
+          "text": "Mild degenerative changes are present with disc space loss and endplate degenerative changes.",
+          "destination": "INTERVERTEBRAL DISCS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "endplate djd",
+      "findingRows": [
+        {
+          "text": "Endplate degenerative changes are present.",
+          "destination": "VERTEBRAL BODIES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "erosive no",
+      "findingRows": [
+        {
+          "text": "No erosive changes present.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Extension views",
+      "findingRows": [
+        {
+          "text": "No unstable subluxation on flexion or extension views.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "fair amount",
+      "findingRows": [
+        {
+          "text": "Fair amount of stool seen within the colon.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "fatty",
+      "findingRows": [
+        {
+          "text": "Hepatic steatosis is present.",
+          "destination": "LIVER"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "fatty hilum",
+      "findingRows": [
+        {
+          "text": "There is preservation of the fatty central hilum and lentiform shaped.",
+          "destination": "HILA"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "filling defect",
+      "findingRows": [
+        {
+          "text": "Abnormal appearance to the endometrial canal suggesting a filling defect.  Correlation with patient's menstrual cycle and further evaluation with pelvic ultrasound exam advised.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Fleischner",
+      "findingRows": [
+        {
+          "text": "Fleischner recommendations for follow-up and management of pulmonary nodules:",
+          "destination": "LUNGS"
+        },
+        {
+          "text": "LOW Risk Patient:",
+          "destination": "AUTO"
+        },
+        {
+          "text": "Less than or equal to 4 mm: No follow-up needed.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "4-6 mm: Follow-up CT at 12 months. If unchanged, no further follow-up.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "6-8 mm: Initial follow-up CT at 6-12 months, then at 18-24 months if no change.",
+          "destination": "AUTO"
+        },
+        {
+          "text": ">8 mm: Follow up CT at 3, 9, and 24 months, dynamic contrast-enhanced CT, PET, and/or biopsy.",
+          "destination": "CONTRAST"
+        },
+        {
+          "text": "HIGH Risk Patient:",
+          "destination": "AUTO"
+        },
+        {
+          "text": "Less than or equal to 4 mm: Follow-up CT at 12 months. If unchanged, no further follow-up.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "4-6 mm: Initial follow-up CT at 6-12 months, then at 18-24 months if no change.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "6-8 mm: Initial follow-up CT at 3-6 months, then at 9-12 months, and 24 months if no change.",
+          "destination": "AUTO"
+        },
+        {
+          "text": ">8 mm: Follow-up CT at around 3, 9, and 24 months, then a contrast-enhanced CT, PET, and/or biopsy.",
+          "destination": "CONTRAST"
+        },
+        {
+          "text": "Above criteria pertains to newly detected indeterminate nodule in persons 35 years of age or older.",
+          "destination": "LYMPH NODES"
+        },
+        {
+          "text": "Low risk: Minimal or absent history of smoking or other known risk factors.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "High risk: History of smoking or other known risk factors.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "Known risk factors: History of lung cancer in a first-degree relative, exposure to asbestos, radon, or urine.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "Note: Non-solid, partially solid, or ground-glass nodules may require longer follow-up to exclude indolent adenocarcinoma.",
+          "destination": "UNROUTED"
+        },
+        {
+          "text": "Note: Guidelines do not apply to patient's with known or suspected cancer outside of the lungs, patients younger than 35 years of age, or patients with unexplained fever.",
+          "destination": "LUNGS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "follow same",
+      "findingRows": [
+        {
+          "text": "Follow-up per initial CT recommendation.",
+          "destination": "RECOMMENDATION"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "full thick",
+      "findingRows": [
+        {
+          "text": "Likely full-thickness tear involving the rotator cuff. No retraction to suggest a complete tear.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "further eval",
+      "findingRows": [
+        {
+          "text": "Further evaluation advised if symptoms persist.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "growth plates",
+      "findingRows": [
+        {
+          "text": "Growth plates and joint spaces are preserved.",
+          "destination": "BONE AGE AND SKELETAL MATURITY"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "hardware intact",
+      "findingRows": [
+        {
+          "text": "Arthroplasty hardware appears intact and well-seated. No evidence for loosening or osteolysis.",
+          "destination": "HARDWARE AND PROSTHESES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "hardware no",
+      "findingRows": [
+        {
+          "text": "No evidence for hardware complication.",
+          "destination": "HARDWARE AND PROSTHESES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "heart disease",
+      "findingRows": [
+        {
+          "text": "Atherosclerotic disease of the aorta including the coronary arteries.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Heman",
+      "findingRows": [
+        {
+          "text": "ill-defined lesion with central filling on the delayed imaging and nodular peripheral pattern of enhancement on the arterial phase. Hepatic lesion likely represents a hemangioma given the pattern of enhancement.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "hepatic mass recommendation",
+      "findingRows": [
+        {
+          "text": "Further evaluation with renal mass CT utilizing dynamic range of IV contrast versus MRI with IV contrast advised.",
+          "destination": "KIDNEYS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "hepatic too small",
+      "findingRows": [
+        {
+          "text": "Subcentimeter low density lesion(s) seen within liver are too small to characterize by CT.",
+          "destination": "LIVER"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "HH",
+      "findingRows": [
+        {
+          "text": "Small hiatal hernias present.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "hilar calcifications",
+      "findingRows": [
+        {
+          "text": "There is hilar calcifications.",
+          "destination": "HILA"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "hilar granulomas",
+      "findingRows": [
+        {
+          "text": "Hilar calcifications are present likely from prior granulomatous infection.",
+          "destination": "HILA"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "histo",
+      "findingRows": [
+        {
+          "text": "Patient status post hysterectomy.",
+          "destination": "UTERUS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Hounsfield",
+      "findingRows": [
+        {
+          "text": "(HU wo/w).",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "incomplete bowel",
+      "findingRows": [
+        {
+          "text": "Incomplete opacification of the bowel with contrast.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "incomplete opacification",
+      "findingRows": [
+        {
+          "text": "There is incomplete opacification of the bowel with contrast.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "intact fusion",
+      "findingRows": [
+        {
+          "text": "Posterior spinal fusion hardware is present.",
+          "destination": "SPINE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "knee djd",
+      "findingRows": [
+        {
+          "text": "FINDINGS:  Tricompartmental degenerative changes are present.  Overall alignment is anatomic.  There is no fracture or dislocation. No joint effusion.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "IMPRESSION: Tricompartmental degenerative changes are present. No acute process seen radiographically.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "L4 slip",
+      "findingRows": [
+        {
+          "text": "Grade 1 anterolisthesis of L4 on L5.",
+          "destination": "ALIGNMENT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "L5 slip",
+      "findingRows": [
+        {
+          "text": "Grade 1 anterolisthesis of L5 on S1.",
+          "destination": "ALIGNMENT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "level by",
+      "findingRows": [
+        {
+          "text": "Please see above level by level detail regarding findings.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "levo",
+      "findingRows": [
+        {
+          "text": "Mild levoscoliosis of the spine.",
+          "destination": "ALIGNMENT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "liver calcifications",
+      "findingRows": [
+        {
+          "text": "Scattered liver calcifications are present.",
+          "destination": "LIVER"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "liver no",
+      "findingRows": [
+        {
+          "text": "No visualized liver masses.  Please correlate with alpha-fetoprotein level.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "liver too small",
+      "findingRows": [
+        {
+          "text": "Numerous hypodense lesions within the liver.  Dominant lesion appear to be a cyst.  Remaining are too small to fully characterize.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "LOL",
+      "findingRows": [
+        {
+          "text": "Laugh out loud - lol",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Low dose disclaimer",
+      "findingRows": [
+        {
+          "text": "A low dose CT does not have adequate image resolution for a diagnostic evaluation of the low neck, mediastinum, hilar structures and upper abdomen.  However, obvious abnormalities will be reported.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "Negative screening CT of the lungs does not exclude the presence of a lung cancer.  Some tumors are not detectable on the low dose CT screening exam.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "low-dose",
+      "findingRows": [
+        {
+          "text": "Follow-up with low-dose CT of the chest.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "lumbar no",
+      "findingRows": [
+        {
+          "text": "FINDINGS: Alignment is maintained. Vertebral body height and disc spaces are preserved. Paraspinal tissues are unremarkable. Bones appear normal for age.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "IMPRESSION: No acute osseous process.  No significant degenerative changes.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "lung negative",
+      "findingRows": [
+        {
+          "text": "The lungs are clear. No pleural effusion or pneumothorax. No suspicious pulmonary nodularities.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "many tstc",
+      "findingRows": [
+        {
+          "text": "Numerous hypodense lesions seen within the liver. Dominant happen to be cyst. Remaining are too small to characterize.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "MCP degenerative",
+      "findingRows": [
+        {
+          "text": "Mild osteoarthritic degenerative changes involving the first MCP joint.",
+          "destination": "HAND AND FINGERS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "MCP DJ",
+      "findingRows": [
+        {
+          "text": "Degenerative changes along the first MCP joint is present in particular.",
+          "destination": "HAND AND FINGERS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "medial comp",
+      "findingRows": [
+        {
+          "text": "Medial compartment narrowing is present.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "mild aorto",
+      "findingRows": [
+        {
+          "text": "Mild aortic iliac disease is present.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "mild djd",
+      "findingRows": [
+        {
+          "text": "Mild degenerative changes are present.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "mild IP",
+      "findingRows": [
+        {
+          "text": "Mild interstitial prominence.  In acute setting this may represent edema versus atypical pneumonitis.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "mineralization yes",
+      "findingRows": [
+        {
+          "text": "Mineralization is appropriate for age.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "moderate hiatal",
+      "findingRows": [
+        {
+          "text": "Moderate sized hiatal hernia.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "motion",
+      "findingRows": [
+        {
+          "text": "Motion artifact is present.",
+          "destination": "LIMITATIONS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "mri ac",
+      "findingRows": [
+        {
+          "text": "There is AC joint arthropathy with impression on the rotator cuff and decrease in the acromial-humeral interface and likely cause of impingement.",
+          "destination": "JOINTS AND CARTILAGE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "narrowing L4",
+      "findingRows": [
+        {
+          "text": "Disc space loss is worse at the L4-L5 level with perhaps mild neuroforaminal narrowing.",
+          "destination": "INTERVERTEBRAL DISCS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "narrowing L5",
+      "findingRows": [
+        {
+          "text": "Disc space loss is worse at the L5-S1 level with perhaps mild neuroforaminal narrowing.",
+          "destination": "INTERVERTEBRAL DISCS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "narrowing lower lumbar",
+      "findingRows": [
+        {
+          "text": "Disc space loss is worse at the L4-L5 and L5-S1 level with perhaps mild neuroforaminal narrowing.",
+          "destination": "INTERVERTEBRAL DISCS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "new findings",
+      "findingRows": [
+        {
+          "text": "Findings are new from prior study examination.",
+          "destination": "COMPARISON"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "NF L5",
+      "findingRows": [
+        {
+          "text": "Probable mild neuroforaminal narrowing L5-S1 level.",
+          "destination": "SPINE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "nipple",
+      "findingRows": [
+        {
+          "text": "Query [RIGHT] lower lobe nodularity versus nipple shadow. Nipple markers with oblique views could be obtained to help confirm versus further evaluation with low-dose CT of the chest.",
+          "destination": "BREASTS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no abs",
+      "findingRows": [
+        {
+          "text": "No abdominal aortic aneurysm.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "No adeno",
+      "findingRows": [
+        {
+          "text": "No bulky mediastinal, hilar or axillary adenopathy by unenhanced exam.",
+          "destination": "MEDIASTINUM"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no air",
+      "findingRows": [
+        {
+          "text": "No air-fluid level seen to suggest acute sinusitis.",
+          "destination": "PARANASAL SINUSES AND MASTOIDS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no aneurysm",
+      "findingRows": [
+        {
+          "text": "No evidence for abdominal aortic aneurysm.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no bending",
+      "findingRows": [
+        {
+          "text": "No subluxation on flexion or extension.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no bleed",
+      "findingRows": [
+        {
+          "text": "No acute intracranial process by unenhanced exam. No intracranial bleed seen.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no brain",
+      "findingRows": [
+        {
+          "text": "No intracranial process seen by unenhanced study examination.  No evidence for bleed.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no bulk",
+      "findingRows": [
+        {
+          "text": "No bulky adenopathy.",
+          "destination": "LYMPH NODES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no chest",
+      "findingRows": [
+        {
+          "text": "No acute process seen within the chest.  No focal consolidation.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no chole",
+      "findingRows": [
+        {
+          "text": "No evidence for acute cholecystitis.",
+          "destination": "BILIARY SYSTEM"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no chole or obstruction",
+      "findingRows": [
+        {
+          "text": "No evidence for acute cholecystitis.",
+          "destination": "BILIARY SYSTEM"
+        },
+        {
+          "text": "No obstructive uropathy.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no choline",
+      "findingRows": [
+        {
+          "text": "No evidence for cholecystitis.",
+          "destination": "BILIARY SYSTEM"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no coal",
+      "findingRows": [
+        {
+          "text": "No findings to suggest acute cholecystitis.",
+          "destination": "BILIARY SYSTEM"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no comp",
+      "findingRows": [
+        {
+          "text": "No compression fracture seen.",
+          "destination": "OSSEOUS STRUCTURES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no DJ",
+      "findingRows": [
+        {
+          "text": "No significant degenerative changes.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "No emboli",
+      "findingRows": [
+        {
+          "text": "No evidence for pulmonary emboli within the main or segmental pulmonary arterial branches.",
+          "destination": "PULMONARY ARTERIES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no endo",
+      "findingRows": [
+        {
+          "text": "Endometrial stripe thickness within normal limits.",
+          "destination": "ENDOMETRIUM"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no Eso",
+      "findingRows": [
+        {
+          "text": "No esophageal thickening.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no foreign",
+      "findingRows": [
+        {
+          "text": "No radiopaque foreign body.",
+          "destination": "SOFT TISSUES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "No fx",
+      "findingRows": [
+        {
+          "text": "No fracture or dislocation.",
+          "destination": "OSSEOUS STRUCTURES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no gout",
+      "findingRows": [
+        {
+          "text": "Findings: Multiple views of the first digit demonstrate no fracture, dislocation, or subluxation.  Bone density is osteopenic but uniform.  No periarticular osteopenia.  No punched out joint erosions.  There is no unusual arthropathy.  The soft tissues are normal without radiopaque foreign body or tophaceous deposits.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "IMPRESSION:",
+          "destination": "IMPRESSION"
+        },
+        {
+          "text": "No erosive or inflammatory arthritic disease radiographically.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no hardware",
+      "findingRows": [
+        {
+          "text": "No acute osseous process.  No evidence for hardware complication.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no hemo",
+      "findingRows": [
+        {
+          "text": "No evidence for hemodynamically significant stenosis.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "[No significant ICA stenosis based on velocity or ratio measurements.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "Reference: Society of Radiologists in Ultrasound Consensus Conference Radiology 2003; 229 (2) 340-34]",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no infarct",
+      "findingRows": [
+        {
+          "text": "No evidence for bleed or large territorial infarct.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no intra",
+      "findingRows": [
+        {
+          "text": "There is no intra-or extrahepatic ductal dilatation.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no itis",
+      "findingRows": [
+        {
+          "text": "Uncomplicated diverticulosis.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "No j",
+      "findingRows": [
+        {
+          "text": "There is no joint effusion.",
+          "destination": "JOINTS AND CARTILAGE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no loose",
+      "findingRows": [
+        {
+          "text": "No loosening or osteolysis seen.",
+          "destination": "HARDWARE AND PROSTHESES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no mets",
+      "findingRows": [
+        {
+          "text": "No evidence for metastatic disease. No signs of tumor recurrence.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no new",
+      "findingRows": [
+        {
+          "text": "No new nodularities identified.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "No no",
+      "findingRows": [
+        {
+          "text": "No acute process seen.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no OB",
+      "findingRows": [
+        {
+          "text": "No obstructive uropathy or nephrolithiasis.",
+          "destination": "KIDNEYS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no osseous",
+      "findingRows": [
+        {
+          "text": "No acute osseous process.   No erosive or inflammatory arthritic disease.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no ovaries",
+      "findingRows": [
+        {
+          "text": "Bilateral ovaries not well visualized.",
+          "destination": "OVARIES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no pan",
+      "findingRows": [
+        {
+          "text": "Pancreas is obscured.",
+          "destination": "PANCREAS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no pcos",
+      "findingRows": [
+        {
+          "text": "These do not have the classic \"string of pearl sign\" or increased stromal thickening to suggest polycystic ovaries were some criteria.",
+          "destination": "OVARIES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no PE",
+      "findingRows": [
+        {
+          "text": "No filling defects seen within the main or segmental pulmonary arterial branches.",
+          "destination": "PULMONARY ARTERIES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no PN",
+      "findingRows": [
+        {
+          "text": "No evidence for pneumonitis.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no priors",
+      "findingRows": [
+        {
+          "text": "No priors for comparison purposes.",
+          "destination": "COMPARISON"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no ribs",
+      "findingRows": [
+        {
+          "text": "No displaced rib fracture seen. If pain continues recommend repeat study examination to evaluate for occult injury.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no sig",
+      "findingRows": [
+        {
+          "text": "No significant abnormality.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "No sinusitis",
+      "findingRows": [
+        {
+          "text": "No air-fluid levels seen to suggest acute sinusitis.",
+          "destination": "PARANASAL SINUSES AND MASTOIDS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "No sub",
+      "findingRows": [
+        {
+          "text": "No compression fracture or subluxation seen.",
+          "destination": "OSSEOUS STRUCTURES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no suspect",
+      "findingRows": [
+        {
+          "text": "No suspicious pulmonary nodularities or pulmonary masses.",
+          "destination": "LUNGS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no suspicious",
+      "findingRows": [
+        {
+          "text": "No suspicious pulmonary nodularities.",
+          "destination": "LUNGS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no thyroid",
+      "findingRows": [
+        {
+          "text": "No suspicious thyroid nodularities.",
+          "destination": "THYROID AND PARATHYROID"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no trach",
+      "findingRows": [
+        {
+          "text": "No tracheal deviation.",
+          "destination": "AIRWAYS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no trans",
+      "findingRows": [
+        {
+          "text": "Unremarkable transabdominal pelvic ultrasound examination.",
+          "destination": "PELVIS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "no uterine",
+      "findingRows": [
+        {
+          "text": "No uterine or ovarian masses seen sonographically.",
+          "destination": "UTERUS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "nodule disclaimer",
+      "findingRows": [
+        {
+          "text": "Of note: Chest x-rays are not sensitive for detection of small millimetric pulmonary nodules and if",
+          "destination": "AUTO"
+        },
+        {
+          "text": "additional clinical concern for small millimetric pulmonary nodules consider correlation with CT exam.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "normal abdomen",
+      "findingRows": [
+        {
+          "text": "No abdominal aortic aneurysm.",
+          "destination": "VASCULAR"
+        },
+        {
+          "text": "No obstructive uropathy.",
+          "destination": "UNROUTED"
+        },
+        {
+          "text": "No evidence for acute cholecystitis.",
+          "destination": "BILIARY SYSTEM"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "normal appendix",
+      "findingRows": [
+        {
+          "text": "Appendix visualized and within normal limits.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "normal chest",
+      "findingRows": [
+        {
+          "text": "No acute process within the chest.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "normal thyroid",
+      "findingRows": [
+        {
+          "text": "No suspicious thyroid nodularities.  Overall homogeneous gland.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "occult",
+      "findingRows": [
+        {
+          "text": "If pain continues recommend repeat study examination to evaluate for occult injury.",
+          "destination": "RECOMMENDATION"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "opacification",
+      "findingRows": [
+        {
+          "text": "There is incomplete opacification of the bowel with contrast.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "or positional",
+      "findingRows": [
+        {
+          "text": "Mild scoliosis or positional.",
+          "destination": "ALIGNMENT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "orbits no",
+      "findingRows": [
+        {
+          "text": "No radiopaque foreign body seen in the region of the orbits.",
+          "destination": "SOFT TISSUES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "ovarian cystic",
+      "findingRows": [
+        {
+          "text": "adnexal hypodense lesion may reflect an complex ovarian cystic process.  Recommend correlation with pelvic ultrasound.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "pacer",
+      "findingRows": [
+        {
+          "text": "Left cardiac pacer is present.",
+          "destination": "HEART"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "panc not seen",
+      "findingRows": [
+        {
+          "text": "Pancreas suboptimally visualized due to bowel gas.",
+          "destination": "PANCREAS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "pancreas obscured",
+      "findingRows": [
+        {
+          "text": "Pancreas obscured by bowel gas.",
+          "destination": "PANCREAS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "patellar spurring",
+      "findingRows": [
+        {
+          "text": "Degenerative spurring along the quadriceps and patella tendinous insertion.",
+          "destination": "KNEE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "pelvis dj",
+      "findingRows": [
+        {
+          "text": "AP view of the pelvis demonstrates maintained anatomic alignment. The sacroiliac joints and hips articulate normally. Bone density is normal and surrounding soft tissues are unremarkable. Mild degenerative changes involving the hips are present.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "IMPRESSION",
+          "destination": "IMPRESSION"
+        },
+        {
+          "text": "Mild degenerative changes.",
+          "destination": "AUTO"
+        },
+        {
+          "text": "No acute osseous process. No erosive or inflammatory arthritic disease.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "pelvis no",
+      "findingRows": [
+        {
+          "text": "No uterine or ovarian masses.",
+          "destination": "UTERUS"
+        },
+        {
+          "text": "Endometrial stripe thickness within normal limits.",
+          "destination": "ENDOMETRIUM"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "pes planus",
+      "findingRows": [
+        {
+          "text": "Pes planus deformity is present.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "phleboliths",
+      "findingRows": [
+        {
+          "text": "Phleboliths are present.",
+          "destination": "PELVIS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "plantar spur",
+      "findingRows": [
+        {
+          "text": "Spurring along the plantar tendinous insertion.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "plantar spurring",
+      "findingRows": [
+        {
+          "text": "Calcaneal spurring along the plantar tendinous insertion.",
+          "destination": "FOOT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "please see above",
+      "findingRows": [
+        {
+          "text": "[Please see above for level by level detail.]",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "poly",
+      "findingRows": [
+        {
+          "text": "Enlarged bilateral ovaries with increase in stromal echogenicity and peripheral appearing follicle.  These are nonspecific findings may be seen in polycystic ovarian syndrome.  Please correlate clinically.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "positional scoliosis",
+      "findingRows": [
+        {
+          "text": "Mild scoliosis or positional.",
+          "destination": "ALIGNMENT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "postional",
+      "findingRows": [
+        {
+          "text": "There is leftward scoliosis or related to positioning.",
+          "destination": "ALIGNMENT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "postsurgical",
+      "findingRows": [
+        {
+          "text": "Postsurgical changes are present.",
+          "destination": "POSTSURGICAL CHANGES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "pre and post",
+      "findingRows": [
+        {
+          "text": "[Prevoid bladder volume in ml : []",
+          "destination": "AUTO"
+        },
+        {
+          "text": "Post void residual in ml : []].",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "prostate",
+      "findingRows": [
+        {
+          "text": "Enlarged prostate.  Please correlate with PSA.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "prostate disclaimer",
+      "findingRows": [
+        {
+          "text": "Disclaimer: Transabdominal ultrasound of the prostate is not an adequate exam to exclude prostate cancer.  Evaluation could include: PSA values, serial PSA values, digital rectal exam and endorectal ultrasound of the prostate with biopsy in the appropriate clinical setting.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "pulmonary hypertension",
+      "findingRows": [
+        {
+          "text": "Prominence of the pulmonary arteries likely reflective of pulmonary arterial hypertension.",
+          "destination": "PULMONARY ARTERIES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "punctate left",
+      "findingRows": [
+        {
+          "text": "Punctate left renal stone is present.",
+          "destination": "KIDNEYS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "punctate right",
+      "findingRows": [
+        {
+          "text": "Punctate right renal stone is present.",
+          "destination": "KIDNEYS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "quad spur",
+      "findingRows": [
+        {
+          "text": "Spurring along the quadriceps tendinous insertion.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "recommend lumbar MRI",
+      "findingRows": [
+        {
+          "text": "Recommend further evaluation with MRI if not contraindicated given degree of neuroforaminal narrowing and canal stenosis.  MRI would be a more sensitive and specific exam to assess these findings.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "retro yes",
+      "findingRows": [
+        {
+          "text": "Retrocardiac opacity is present. This may be due to small pleural effusion with passive atelectasis versus pneumonitis.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "rotator tendinosis",
+      "findingRows": [
+        {
+          "text": "Calcific tendinosis along the rotator cuff.",
+          "destination": "MUSCLES AND TENDONS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "same same",
+      "findingRows": [
+        {
+          "text": "Previous pulmonary nodularities are again identified and without significant change. No new suspicious nodularity seen.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "screening",
+      "findingRows": [
+        {
+          "text": "Recommend screening CT of the chest to assess for additional nodularities and initiate a follow-up screening program.",
+          "destination": "RECOMMENDATION"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "screening protocol",
+      "findingRows": [
+        {
+          "text": "Low-dose CT of the chest to assess for additional nodules and to initiate a lung screening protocol.",
+          "destination": "LUNGS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "secretory phase",
+      "findingRows": [
+        {
+          "text": "Endometrial stripe thickness may be normal in the secretory phase in a  non-menopausal patient.  Please correlate clinically.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "shoulder fluid",
+      "findingRows": [
+        {
+          "text": "Subacromial and subdeltoid fluid is present.",
+          "destination": "SHOULDER"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "single fibroid",
+      "findingRows": [
+        {
+          "text": "Statistically likely single uterine fibroid.",
+          "destination": "UTERUS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "small J",
+      "findingRows": [
+        {
+          "text": "Small joint effusion.",
+          "destination": "JOINTS AND CARTILAGE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "small vessel",
+      "findingRows": [
+        {
+          "text": "Small vessel ischemic disease is present within the periventricular white matter tracts.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "solitary tstc",
+      "findingRows": [
+        {
+          "text": "Subcentimeter hypodense lesion seen within the liver. Overall too small to characterize.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "spasm",
+      "findingRows": [
+        {
+          "text": "Straightening of the spine may represent spasm.",
+          "destination": "SPINE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "Splenic calcifications",
+      "findingRows": [
+        {
+          "text": "Scattered splenic calcifications are present.",
+          "destination": "SPLEEN"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "spurring",
+      "findingRows": [
+        {
+          "text": "Calcaneal spurring is present along the [Achilles] [and plantar] tendinous insertion.",
+          "destination": "FOOT"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "stern",
+      "findingRows": [
+        {
+          "text": "Sternotomy wires are present.",
+          "destination": "HARDWARE AND PROSTHESES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "STP",
+      "findingRows": [
+        {
+          "text": "Similar to prior.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "straightening C-spine",
+      "findingRows": [
+        {
+          "text": "There is straightening of the cervical spine which may reflect spasm.",
+          "destination": "SPINE"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "streak artifact",
+      "findingRows": [
+        {
+          "text": "Streak artifact from dental hardware is present and limiting view of the mandibular and maxillary regions.",
+          "destination": "LIMITATIONS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "STS",
+      "findingRows": [
+        {
+          "text": "Soft tissue swelling is present.",
+          "destination": "SOFT TISSUES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "subcentimeter",
+      "findingRows": [
+        {
+          "text": "subcentimeter hypodense lesion is too small to characterize.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "suboptimal oblique",
+      "findingRows": [
+        {
+          "text": "Oblique views are suboptimal in evaluating the neural foramen due to positioning.",
+          "destination": "LIMITATIONS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "T1 not",
+      "findingRows": [
+        {
+          "text": "T1 not well visualized on the lateral view.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "tail",
+      "findingRows": [
+        {
+          "text": "Pancreatic tail not well seen.",
+          "destination": "PANCREAS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "tech",
+      "findingRows": [
+        {
+          "text": "Tech Comments: []",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "thyroid tidbit",
+      "findingRows": [
+        {
+          "text": "Recommendation:",
+          "destination": "RECOMMENDATION"
+        },
+        {
+          "text": "American College of Radiology TI-RADS Categories and Recommendations (2017):",
+          "destination": "AUTO"
+        },
+        {
+          "text": "TR1: 0 points, Benign, No FNA",
+          "destination": "AUTO"
+        },
+        {
+          "text": "TR2: 2 points, Not suspicious, No FNA",
+          "destination": "AUTO"
+        },
+        {
+          "text": "TR3: 3 points, Mildly suspicious, FNA if 2.5 cm+, Follow if 1.5 cm+",
+          "destination": "AUTO"
+        },
+        {
+          "text": "TR4: 4-6 points, Moderately Suspicious, FNA if 1.5 cm+, Follow if 1 cm+",
+          "destination": "AUTO"
+        },
+        {
+          "text": "TR5: 7+ points, Highly Suspicious, FNA if 1 cm+, Follow if 0.5 cm+",
+          "destination": "AUTO"
+        },
+        {
+          "text": "Follow-up ultrasound guidelines:",
+          "destination": "UNROUTED"
+        },
+        {
+          "text": "TR5: yearly for 5 years, if no growth or change in TI-RADS level",
+          "destination": "AUTO"
+        },
+        {
+          "text": "TR4: at 1, 2, 3 and 5 years, if no growth or change in TI-RADS level",
+          "destination": "AUTO"
+        },
+        {
+          "text": "TR3: at 1, 3 and 5 years, if no growth or change in TI-RADS level",
+          "destination": "AUTO"
+        },
+        {
+          "text": "If change but below threshold for FNA, repeat in one year.",
+          "destination": "UNROUTED"
+        },
+        {
+          "text": "Source: ACR Thyroid Imaging, Reporting and Data System (TI-RADS): White Paper of the",
+          "destination": "AUTO"
+        },
+        {
+          "text": "ACR TI-RADS Committee. Tesler et al., J Am Coll Radiol 2017;14:587-595.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "tics",
+      "findingRows": [
+        {
+          "text": "Sigmoid diverticulosis without evidence for diverticulitis.",
+          "destination": "BOWEL"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "TLDR",
+      "findingRows": [
+        {
+          "text": "Too long don't read",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "tortuous",
+      "findingRows": [
+        {
+          "text": "Aorta is tortuous.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "vascular",
+      "findingRows": [
+        {
+          "text": "Vascular calcifications are present.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "vascular calcifications",
+      "findingRows": [
+        {
+          "text": "Vascular calcifications are present.",
+          "destination": "VASCULAR"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "visualized air",
+      "findingRows": [
+        {
+          "text": "Visualized air column is patent.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "visualized lungs",
+      "findingRows": [
+        {
+          "text": "Visualized lungs are clear.",
+          "destination": "LUNGS"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "WD",
+      "findingRows": [
+        {
+          "text": "With and delayed images.  Isovue 300 75 cc.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "WHO normal",
+      "findingRows": [
+        {
+          "text": "By WHO criteria, patient is considered to have normal bone mineralization.  Fracture risk is not increased.",
+          "destination": "OSSEOUS STRUCTURES"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "WHO osteo",
+      "findingRows": [
+        {
+          "text": "By WHO criteria, patient has Osteoporosis.  Fracture risk is increased.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "WHO osteopenia",
+      "findingRows": [
+        {
+          "text": "By WHO criteria, patient has osteopenia.  Fracture risk is increased.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "WHO osteopenic",
+      "findingRows": [
+        {
+          "text": "By WHO classification patient is considered osteopenic.  Fracture risk is increased.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "WHO osteoporotic",
+      "findingRows": [
+        {
+          "text": "By WHO classification and patient is considered osteoporotic.  Fracture risk is increased.",
+          "destination": "AUTO"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "wrist impression",
+      "findingRows": [
+        {
+          "text": "No acute osseous process.  No inflammatory or erosive arthritic disease.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    },
+    {
+      "term": "WWD",
+      "findingRows": [
+        {
+          "text": "With, without and delayed images.  75 cc of Isovue 300.",
+          "destination": "UNROUTED"
+        }
+      ],
+      "impressions": "",
+      "recommendations": ""
+    }
+  ]
+}

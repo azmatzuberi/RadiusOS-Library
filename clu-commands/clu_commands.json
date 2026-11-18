@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "commands": [
+    {
+      "name": "calc",
+      "label": "/calc",
+      "description": "Run radiology calculators",
+      "usage": "/calc adrenal washout 10 100 40",
+      "spokenNames": []
+    },
+    {
+      "name": "edu",
+      "label": "/edu",
+      "description": "Concise radiology education summary",
+      "usage": "/edu adrenal lesions",
+      "spokenNames": [
+        "education"
+      ]
+    },
+    {
+      "name": "diff",
+      "label": "/diff",
+      "description": "Radiologic differential diagnosis",
+      "usage": "/diff adrenal mass",
+      "spokenNames": [
+        "differential"
+      ]
+    },
+    {
+      "name": "or",
+      "label": "/OR",
+      "description": "Combine prior report and new findings",
+      "usage": "/OR prior report and new findings",
+      "spokenNames": [
+        "combine reports"
+      ]
+    },
+    {
+      "name": "cme",
+      "label": "/CME",
+      "description": "Find CME lectures or Case in Point",
+      "usage": "/CME adrenal mass",
+      "spokenNames": [
+        "cme",
+        "case in point"
+      ]
+    },
+    {
+      "name": "ci",
+      "label": "/CI",
+      "description": "Clinical insight and follow-up guidance",
+      "usage": "/CI renal cyst follow-up",
+      "spokenNames": [
+        "clinical insight"
+      ]
+    }
+  ],
+  "calculators": [
+    {
+      "key": "adrenalWashout",
+      "names": [
+        "adrenal washout",
+        "adrenal"
+      ]
+    },
+    {
+      "key": "relativeWashout",
+      "names": [
+        "relative washout",
+        "relative adrenal washout"
+      ]
+    },
+    {
+      "key": "liverSpleen",
+      "names": [
+        "liver spleen",
+        "steatosis"
+      ]
+    },
+    {
+      "key": "ellipsoidVolume",
+      "names": [
+        "ellipsoid volume",
+        "volume"
+      ]
+    },
+    {
+      "key": "psaDensity",
+      "names": [
+        "psa density",
+        "prostate volume"
+      ]
+    },
+    {
+      "key": "splenicVolume",
+      "names": [
+        "splenic volume",
+        "spleen volume"
+      ]
+    },
+    {
+      "key": "resistiveIndex",
+      "names": [
+        "resistive index"
+      ]
+    },
+    {
+      "key": "pulsatilityIndex",
+      "names": [
+        "pulsatility index"
+      ]
+    },
+    {
+      "key": "meanDiameter",
+      "names": [
+        "mean diameter",
+        "nodule diameter"
+      ]
+    },
+    {
+      "key": "doublingTime",
+      "names": [
+        "doubling time",
+        "volume doubling time"
+      ]
+    }
+  ]
+}
