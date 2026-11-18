@@ -19,6 +19,10 @@ Uploaded in several revisions, 2026-10-16 to 2026-10-30.
 
 - Added `README.md`, `CONTRIBUTING.md`, `CHANGELOG.md`, `SECURITY.md` and a pull request template.
 
+## [fuse-rules-v2] - 2026-11-18
+
+- FUSE rules v2 (`fuse-rules/fuse_rules.json`, `version` 2, content stamp `2026.11.18`): 13 rules, 125 recommendation rows, for RadiusOS 1.8; new rules `lung_rads_category` and `thoracic_aorta`. See the [release notes](https://github.com/azmatzuberi/RadiusOS-Library/releases/tag/fuse-rules-v2).
+
 ## [fuse-rules-v1] - 2026-11-11
 
 ### Added
@@ -48,7 +52,8 @@ Uploaded in several revisions, 2026-10-16 to 2026-10-30.
 
 - Moved the modality folders under `templates/`. Added the merged CT set (`templates/CT/_Merged/`) and the import log (`templates/_organize_report.csv`). Promoted from `dev` to `main` via PR #1.
 
-[Unreleased]: https://github.com/azmatzuberi/RadiusOS-Library/compare/fuse-rules-v1...HEAD
+[Unreleased]: https://github.com/azmatzuberi/RadiusOS-Library/compare/fuse-rules-v2...HEAD
+[fuse-rules-v2]: https://github.com/azmatzuberi/RadiusOS-Library/releases/tag/fuse-rules-v2
 [fuse-rules-v1]: https://github.com/azmatzuberi/RadiusOS-Library/releases/tag/fuse-rules-v1
 [field-library-v10]: https://github.com/azmatzuberi/RadiusOS-Library/releases/tag/field-library-v10
 [field-library-v9]: https://github.com/azmatzuberi/RadiusOS-Library/releases/tag/field-library-v9
