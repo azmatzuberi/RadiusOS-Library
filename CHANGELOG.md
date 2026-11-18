@@ -6,14 +6,6 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-### CLU commands: version 1 (not yet tagged; manifest pending release)
-
-- First publication of the built-in commands' names & wording (`clu-commands/clu_commands.json`, `version` 1): the 6 built-in slash commands (`calc`, `edu`, `diff`, `or`, `cme`, `ci`) with label, description, usage and spoken names, and the names of the 10 radiology calculators. The file is read-only to the app's users; it names and presents — it cannot add a command or calculator, and every built-in command id & calculator key appears exactly once.
-
-### Term expansions: version 1 (not yet tagged; manifest pending release)
-
-- First publication of the default term table (`term-expansion/term_expansion.json`, `version` 1): 245 dictated terms, each with the wording it expands into report sections — Findings rows routed to field-library labels and optional Impressions & Recommendations text. The file is read-only to the app's users; a release replaces their copy whole.
-
 ### Field library: working copy at `version` 13 (not yet tagged; manifest still serves v10)
 
 Uploaded in several revisions, 2026-10-16 to 2026-10-30.
@@ -26,6 +18,20 @@ Uploaded in several revisions, 2026-10-16 to 2026-10-30.
 ### Repository
 
 - Added `README.md`, `CONTRIBUTING.md`, `CHANGELOG.md`, `SECURITY.md` and a pull request template.
+
+## [term-expansion-v1] - 2026-11-19
+
+### Added
+
+- First release of the default term table (`term-expansion/term_expansion.json`, `version` 1): 245 dictated terms, each with the wording it expands into report sections — Findings rows routed to field-library labels and optional Impressions & Recommendations text. The file is read-only to the app's users; a release replaces their copy whole.
+- `manifests/term_expansion_manifest.json`: `term-expansion-v1` for RadiusOS 1.0 – 1.8.
+
+## [clu-commands-v1] - 2026-11-19
+
+### Added
+
+- First release of the built-in commands' names & wording (`clu-commands/clu_commands.json`, `version` 1): the 6 built-in slash commands (`calc`, `edu`, `diff`, `or`, `cme`, `ci`) with label, description, usage and spoken names, and the names of the 10 radiology calculators. The file is read-only to the app's users; it names and presents — it cannot add a command or calculator, and every built-in command id & calculator key appears exactly once.
+- `manifests/clu_commands_manifest.json`: `clu-commands-v1` for RadiusOS 1.0 – 1.8.
 
 ## [fuse-rules-v2] - 2026-11-18
 
@@ -61,6 +67,8 @@ Uploaded in several revisions, 2026-10-16 to 2026-10-30.
 - Moved the modality folders under `templates/`. Added the merged CT set (`templates/CT/_Merged/`) and the import log (`templates/_organize_report.csv`). Promoted from `dev` to `main` via PR #1.
 
 [Unreleased]: https://github.com/azmatzuberi/RadiusOS-Library/compare/fuse-rules-v2...HEAD
+[term-expansion-v1]: https://github.com/azmatzuberi/RadiusOS-Library/releases/tag/term-expansion-v1
+[clu-commands-v1]: https://github.com/azmatzuberi/RadiusOS-Library/releases/tag/clu-commands-v1
 [fuse-rules-v2]: https://github.com/azmatzuberi/RadiusOS-Library/releases/tag/fuse-rules-v2
 [fuse-rules-v1]: https://github.com/azmatzuberi/RadiusOS-Library/releases/tag/fuse-rules-v1
 [field-library-v10]: https://github.com/azmatzuberi/RadiusOS-Library/releases/tag/field-library-v10
