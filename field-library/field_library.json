@@ -2529,6 +2529,7 @@
         "emphysematous",
         "pulmonary nodule",
         "pulmonary edema",
+        "hyperinflation",
         "atelectasis",
         "lingula",
         "lingular",
@@ -3215,7 +3216,8 @@
         "CARDIOMEDIASTINAL SILHOUETTE",
         "MEDIASTINAL LYMPH NODES"
       ],
-      "absorbs": ["heart", "hila"],
+      "absorbs": ["heart", "thoracic_aorta_and_great_vessels", "pulmonary_arteries", "hila"],
+      
       "terms": [
         "mediastinum",
         "mediastinal",
@@ -3851,6 +3853,7 @@
         "aortic knob",
         "aortic knob calcification",
         "tortuous aorta",
+        "tortuous and calcified aorta",
         "tortuous thoracic aorta",
         "unfolded aorta",
         "uncoiled aorta",
@@ -4274,7 +4277,7 @@
         "extracapsular rupture",
         "extracapsular silicone",
         "free silicone",
-        "silicone granuloma",
+        "silicone breast granuloma",
         "silicone adenopathy",
         "step ladder sign",
         "stepladder sign",
@@ -6094,6 +6097,7 @@
         "prostate volume",
         "benign prostatic hypertrophy",
         "bph",
+        "pre-PAE",
         "peripheral zone",
         "transition zone",
         "central zone",
@@ -10121,8 +10125,6 @@
       "absorbs": [
         "veins",
         "stents_grafts_and_access",
-        "pulmonary_arteries",
-        "thoracic_aorta_and_great_vessels",
         "inferior_vena_cava"
       ],
       "terms": [
@@ -10158,8 +10160,8 @@
         "periaortic soft tissue",
         "periaortic stranding",
         "iliac vessel",
-        "accessary artery",
-        "abberant artery",
+        "accessory artery",
+        "aberrant artery",
         "aortic aneurysms",
         "aortic atheromas",
         "aneurysm",
@@ -11541,6 +11543,8 @@
         "indication",
         "history of",
         "presenting complaint",
+        "history",
+        "[History]:",
         "reason for exam"
       ],
       "defaultNormalPlaceholder": "[As provided by the ordering clinician.]"
